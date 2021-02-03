@@ -21,9 +21,17 @@ html, body {
 }
 
 #s1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.4fr 0.6fr;
+      grid-template-rows: 0.4fr 0.6fr;
+  grid-gap: 10px;
+      grid-template-areas: "name" "desc";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: s1;
@@ -32,15 +40,71 @@ html, body {
   background-clip: padding-box;
 }
 
+.title {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+  font-size: 3em;
+  font-weight: bold;
+  height: 100%;
+}
+
+.name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#s1Desc {
+  overflow: hidden;
+  padding: 10px;
+  margin: 0 1em 0 1em;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: desc;
+  border: solid thick #efefef;
+  border-bottom: 0;
+}
+
 #s2 {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "skills" "projects" "footer";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  background-attachment: #efefef;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s2;
   text-align: center;
 }
 
-.content {
-  height: 100%;
-  padding: 0.8em;
+#skills {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: skills;
+  background-color: peachpuff;
+}
+
+#projects {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: projects;
+  background-color: steelblue;
+}
+
+#footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background-color: rosybrown;
 }
 /*# sourceMappingURL=style.css.map */
