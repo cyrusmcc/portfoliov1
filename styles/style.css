@@ -25,10 +25,9 @@ html, body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.4fr 0.6fr;
-      grid-template-rows: 0.4fr 0.6fr;
-  grid-gap: 10px;
-      grid-template-areas: "name" "desc";
+  -ms-grid-rows: 0.15fr 0.04fr 0.75fr;
+      grid-template-rows: 0.15fr 0.04fr 0.75fr;
+      grid-template-areas: "title" "s1C1" "s1C2";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -41,70 +40,123 @@ html, body {
 }
 
 .title {
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin: 0;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: name;
-  font-size: 3em;
+  grid-area: title;
   font-weight: bold;
   height: 100%;
 }
 
 .name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 0.47em;
+  color: #efefef;
+  border-bottom: thick solid #efefef;
+  border-radius: 2px;
 }
 
-#s1Desc {
-  overflow: hidden;
-  padding: 10px;
-  margin: 0 1em 0 1em;
+#firstName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+}
+
+#lastName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+}
+
+#s1C1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: desc;
+  grid-area: s1C1;
+  font-weight: bold;
+  margin-left: 0.8em;
+}
+
+#s1C2 {
+  overflow: hidden;
+  padding: 2px 2px 2px 4px;
+  margin: 0 0.85em 0 0.85em;
+  border-radius: 2px 2px 0 0;
+  border-right: 0;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: s1C2;
+  color: #171919;
   border: solid thick #efefef;
-  border-bottom: 0;
+  background-color: #efefef;
+  text-align: left;
 }
 
 #s2 {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "skills" "projects" "footer";
+      grid-template-areas: "s2C1" "s2C2" "s2C3";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
-  background-attachment: #efefef;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s2;
   text-align: center;
 }
 
-#skills {
+#s2C1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: skills;
-  background-color: peachpuff;
+  grid-area: s2C1;
+  background-color: #efefef;
 }
 
-#projects {
+#skills {
+  height: 92%;
+  margin: 0.85em;
+  background-color: #171919;
+  border: thick solid #171919;
+  border-radius: 2px 2px 0 0;
+}
+
+#s2C2 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: projects;
+  grid-area: s2C2;
   background-color: steelblue;
 }
 
-#footer {
+#s2C3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: footer;
+  grid-area: s2C3;
   background-color: rosybrown;
 }
 /*# sourceMappingURL=style.css.map */
