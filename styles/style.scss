@@ -1,5 +1,5 @@
 $background:#171919;
-$text: #efefef;
+$text: #219915;
 
 $screen-md: 820px;
 $screen-lg: 1224px;
@@ -23,7 +23,7 @@ $screen-lg: 1224px;
 }
 
 html, body {
-    font-family: sans-serif;
+    font-family: monospace;
     margin: 0;
     color: $text;
 }
@@ -43,7 +43,7 @@ html, body {
 #s1 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.15fr 0.04fr 0.75fr;
+    grid-template-rows: 0.15fr 0.06fr 0.34fr;
     grid-template-areas: 
             "title"
             "s1C1"
@@ -56,6 +56,7 @@ html, body {
 }
 
 .title {
+    position: relative;
     display: flex;
     align-items: flex-end;
     margin: 0;
@@ -68,7 +69,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 0.47em;
+    margin-left: 0.45em;
     color: $text;
     border-bottom: thick solid $text;
     border-radius: 2px;
@@ -84,25 +85,34 @@ html, body {
     justify-self: flex-start;   
 }
 
+#portrait {
+    position: absolute;
+    right: 1em;
+    background-color: $background;
+    border: solid thin $text;
+    border-radius: 12em;
+    height: 2.5em;
+    width: 2.5em;
+}
+
 #s1C1 {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     grid-area: s1C1;
     font-weight: bold;
-    margin-left: 0.8em;
+    margin-left: 0.9em;
 }
 
 #s1C2 {
     overflow: hidden;
-    padding: 2px 2px 2px 4px;
+    padding: 7px;
     margin: 0 0.85em 0 0.85em;
     border-radius: 2px 2px 0 0;
     border-right: 0;
     grid-area: s1C2;
-    color: $background;
-    border: solid thick $text;
-    background-color: $text;
+    color: $text;
+    border: solid thin $text;
     text-align: left;
 }
 

@@ -3,9 +3,9 @@
 }
 
 html, body {
-  font-family: sans-serif;
+  font-family: monospace;
   margin: 0;
-  color: #efefef;
+  color: #219915;
 }
 
 .parent {
@@ -25,8 +25,8 @@ html, body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.15fr 0.04fr 0.75fr;
-      grid-template-rows: 0.15fr 0.04fr 0.75fr;
+  -ms-grid-rows: 0.15fr 0.06fr 0.34fr;
+      grid-template-rows: 0.15fr 0.06fr 0.34fr;
       grid-template-areas: "title" "s1C1" "s1C2";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -40,6 +40,7 @@ html, body {
 }
 
 .title {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,9 +66,9 @@ html, body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-left: 0.47em;
-  color: #efefef;
-  border-bottom: thick solid #efefef;
+  margin-left: 0.45em;
+  color: #219915;
+  border-bottom: thick solid #219915;
   border-radius: 2px;
 }
 
@@ -85,6 +86,16 @@ html, body {
   justify-self: flex-start;
 }
 
+#portrait {
+  position: absolute;
+  right: 1em;
+  background-color: #171919;
+  border: solid thin #219915;
+  border-radius: 12em;
+  height: 2.5em;
+  width: 2.5em;
+}
+
 #s1C1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,28 +103,27 @@ html, body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s1C1;
   font-weight: bold;
-  margin-left: 0.8em;
+  margin-left: 0.9em;
 }
 
 #s1C2 {
   overflow: hidden;
-  padding: 2px 2px 2px 4px;
+  padding: 7px;
   margin: 0 0.85em 0 0.85em;
   border-radius: 2px 2px 0 0;
   border-right: 0;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: s1C2;
-  color: #171919;
-  border: solid thick #efefef;
-  background-color: #efefef;
+  color: #219915;
+  border: solid thin #219915;
   text-align: left;
 }
 
@@ -135,7 +145,7 @@ html, body {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: s2C1;
-  background-color: #efefef;
+  background-color: #219915;
 }
 
 #skills {
