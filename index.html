@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyrus McCormick</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./static/style.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
@@ -25,7 +25,9 @@
                 </div>
 
                 <div id="portrait">
+                    <!--
                     <img src="assets/portrait.png" alt="self portait" id="portraitImg">
+                -->
                 </div>
 
                 </h1>
@@ -57,14 +59,19 @@
 
             <div class="content" id="s2C1">
                 <div id="skills">
-                    <img src="assets/java.svg" alt="java logo" id="javaImg">
-                    <img src="assets/spring.svg" alt="spring framework logo" id="springImg">
-                    <img src="assets/hibernate.svg" alt="hibernate logo" id="hibernateImg">
-                    <img src="assets/mysql.svg" alt="mysql logo" id="mysqlImg">
-                    <img src="assets/js.svg" alt="javascript logo" id="jsImg">
-                    <img src="assets/css.svg" alt="css logo" id="cssImg">
-                    <img src="assets/html.svg" alt="html logo" id="htmlImg">
-                    <img src="assets/sass.svg" alt="sass logo" id="sassImg">
+                    <img class="cImg" id="cImg1" src="assets/css.svg" alt="css logo" id="cssImg">
+                    <img class="cImg" id="cImg2" src="assets/sass.svg" alt="sass logo" id="sassImg">
+                    <img class="cImg" id="cImg3" src="assets/js.svg" alt="javascript logo" id="jsImg">
+                    <img class="cImg" id="cImg4" src="assets/hibernate.svg" alt="hibernate logo" id="hibernateImg">
+                    <img class="cImg" id="cImg5" src="assets/mysql.svg" alt="mysql logo" id="mysqlImg">
+                    <img class="cImg" id="cImg6" src="assets/spring.svg" alt="spring framework logo" id="springImg">
+                    <img class="cImg" id="cImg7" src="assets/java.svg" alt="java logo" id="javaImg">
+                    <img class="cImg" id="cImg8" src="assets/html.svg" alt="html logo" id="htmlImg">
+
+                    <div class="cImgButtonCont">
+                        <div onmouseover="overBack()" onmouseout="out()" class="cImgButton">back end</div>
+                        <div class="cImgButton">front end</div>
+                    </div>
                 </div>
             </div>    
             
@@ -78,6 +85,9 @@
         </div>
 
     </div>
+
+    <script src="static/js/main.js"></script>
+
 
 </body>
 </html>

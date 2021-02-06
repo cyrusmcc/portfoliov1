@@ -213,72 +213,75 @@ html, body {
   width: 15em;
   background-color: #171919;
   border-radius: 150px;
-  border: thin solid #219915;
+  border: thin solid gray;
+  opacity: 0.5;
+}
+
+.cImgButton {
+  margin: 1.5em;
+  opacity: 0.5;
+}
+
+.cImgButton:hover {
+  opacity: 1;
 }
 
 /* SKILL LOGOS */
-#javaImg {
+.cImg {
+  border: thin solid #219915;
+  background-color: #171919;
+  padding: 3px;
+  height: 2em;
+  width: 2em;
   position: absolute;
-  top: 5.5em;
-  left: -1.2em;
-  width: 2.5em;
-  height: 2.5em;
+  left: 50%;
+  top: 50%;
+  margin-left: -1em;
+  margin-top: -1em;
+  opacity: 0.5;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
-#springImg {
-  position: absolute;
-  top: 0em;
-  left: 2em;
-  width: 2.5em;
-  height: 2.5em;
+#skills .cImg:nth-child(1) {
+  -webkit-transform: rotate(0deg) translate(7.5em);
+          transform: rotate(0deg) translate(7.5em);
 }
 
-#hibernateImg {
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
-  width: 2.5em;
-  height: 2.5em;
+#skills .cImg:nth-child(2) {
+  -webkit-transform: rotate(45deg) translate(7.5em) rotate(-45deg);
+          transform: rotate(45deg) translate(7.5em) rotate(-45deg);
 }
 
-#mysqlImg {
-  position: absolute;
-  top: -1em;
-  right: 5.5em;
-  width: 2.5em;
-  height: 2.5em;
+#skills .cImg:nth-child(3) {
+  height: 1.7em;
+  -webkit-transform: rotate(90deg) translate(7.5em) rotate(-90deg);
+          transform: rotate(90deg) translate(7.5em) rotate(-90deg);
 }
 
-#jsImg {
-  position: absolute;
-  right: -1em;
-  top: 5em;
-  width: 2.5em;
-  height: 2.5em;
+#skills .cImg:nth-child(4) {
+  -webkit-transform: rotate(135deg) translate(7.5em) rotate(-135deg);
+          transform: rotate(135deg) translate(7.5em) rotate(-135deg);
 }
 
-#cssImg {
-  position: absolute;
-  bottom: 0.5em;
-  right: 1.5em;
-  width: 2.5em;
-  height: 2.5em;
+#skills .cImg:nth-child(5) {
+  -webkit-transform: rotate(180deg) translate(7.5em) rotate(-180deg);
+          transform: rotate(180deg) translate(7.5em) rotate(-180deg);
 }
 
-#htmlImg {
-  position: absolute;
-  bottom: -1.2em;
-  right: 6.2em;
-  width: 2.5em;
-  height: 2.5em;
+#skills .cImg:nth-child(6) {
+  -webkit-transform: rotate(225deg) translate(7.5em) rotate(-225deg);
+          transform: rotate(225deg) translate(7.5em) rotate(-225deg);
 }
 
-#sassImg {
-  position: absolute;
-  top: 0;
-  right: 1em;
-  width: 2.5em;
-  height: 2.5em;
+#skills .cImg:nth-child(7) {
+  -webkit-transform: rotate(270deg) translate(7.5em) rotate(-270deg);
+          transform: rotate(270deg) translate(7.5em) rotate(-270deg);
+}
+
+#skills .cImg:nth-child(8) {
+  -webkit-transform: rotate(315deg) translate(7.5em) rotate(-315deg);
+          transform: rotate(315deg) translate(7.5em) rotate(-315deg);
 }
 
 #s2C2 {
