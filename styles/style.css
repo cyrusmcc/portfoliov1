@@ -1,9 +1,9 @@
 :root {
-  font-size: 4vw;
+  font-size: 5vw;
 }
 
 html, body {
-  font-family: monospace;
+  font-family: 'Inconsolata', monospace;
   margin: 0;
   color: #219915;
 }
@@ -25,9 +25,9 @@ html, body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.15fr 0.06fr 0.34fr;
-      grid-template-rows: 0.15fr 0.06fr 0.34fr;
-      grid-template-areas: "title" "s1C1" "s1C2";
+  -ms-grid-rows: 0.12fr 0.05fr 0.5fr 1fr;
+      grid-template-rows: 0.12fr 0.05fr 0.5fr 1fr;
+      grid-template-areas: "title" "s1C1" "s1C2" "s1C3";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -40,18 +40,20 @@ html, body {
 }
 
 .title {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.3em  0.5em;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
-  font-weight: bold;
+  font-weight: 100;
   height: 100%;
 }
 
@@ -66,7 +68,6 @@ html, body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-left: 0.45em;
   color: #219915;
   border-bottom: thick solid #219915;
   border-radius: 2px;
@@ -87,13 +88,11 @@ html, body {
 }
 
 #portrait {
-  position: absolute;
-  right: 1em;
   background-color: #171919;
   border: solid thin #219915;
   border-radius: 12em;
-  height: 2.5em;
-  width: 2.5em;
+  height: 2.8em;
+  width: 2.8em;
 }
 
 #s1C1 {
@@ -110,21 +109,50 @@ html, body {
   -ms-grid-column: 1;
   grid-area: s1C1;
   font-weight: bold;
-  margin-left: 0.9em;
+  margin-left: 1em;
 }
 
 #s1C2 {
   overflow: hidden;
-  padding: 7px;
-  margin: 0 0.85em 0 0.85em;
+  padding: 7px 7px 0 0;
+  margin: 0.5em 0.85em 0 0.85em;
   border-radius: 2px 2px 0 0;
-  border-right: 0;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: s1C2;
   color: #219915;
-  border: solid thin #219915;
+  border: thin solid #219915;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
   text-align: left;
+}
+
+#s1C3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: s1C3;
+  margin: 1em;
+  text-align: start;
+  font-weight: bold;
+}
+
+.project {
+  height: 90%;
+  margin: 10px 0 10px 0;
+  border: thin solid #219915;
+}
+
+.projectLegend {
+  font-size: 1em;
+  font-weight: 100;
 }
 
 #s2 {
@@ -133,8 +161,8 @@ html, body {
       grid-template-areas: "s2C1" "s2C2" "s2C3";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: 2fr 0.5fr 0.5fr;
+      grid-template-rows: 2fr 0.5fr 0.5fr;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s2;
@@ -142,18 +170,108 @@ html, body {
 }
 
 #s2C1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: s2C1;
-  background-color: #219915;
+  background-color: #171919;
 }
 
 #skills {
-  height: 92%;
-  margin: 0.85em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 15em;
+  width: 15em;
   background-color: #171919;
-  border: thick solid #171919;
-  border-radius: 2px 2px 0 0;
+  border-radius: 150px;
+}
+
+#tempCircle {
+  height: 18em;
+  width: 18em;
+  border-radius: 1000px;
+  border: thin solid #219915;
+}
+
+/* SKILL LOGOS */
+#javaImg {
+  position: absolute;
+  top: 5.5em;
+  left: -1.2em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#springImg {
+  position: absolute;
+  top: 0em;
+  left: 2em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#hibernateImg {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#mysqlImg {
+  position: absolute;
+  top: -1em;
+  right: 5.5em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#jsImg {
+  position: absolute;
+  right: -1em;
+  top: 5em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#cssImg {
+  position: absolute;
+  bottom: 0.5em;
+  right: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#htmlImg {
+  position: absolute;
+  bottom: -1.2em;
+  right: 6.2em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#sassImg {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  width: 2.5em;
+  height: 2.5em;
 }
 
 #s2C2 {
