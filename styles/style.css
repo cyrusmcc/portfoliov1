@@ -88,11 +88,24 @@ html, body {
 }
 
 #portrait {
+  position: relative;
   background-color: #171919;
   border: solid thin #219915;
   border-radius: 12em;
   height: 2.8em;
   width: 2.8em;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#portraitImg {
+  position: absolute;
+  right: 0em;
+  bottom: -0.5em;
+  height: 140%;
 }
 
 #s1C1 {
@@ -200,12 +213,6 @@ html, body {
   width: 15em;
   background-color: #171919;
   border-radius: 150px;
-}
-
-#tempCircle {
-  height: 18em;
-  width: 18em;
-  border-radius: 1000px;
   border: thin solid #219915;
 }
 
