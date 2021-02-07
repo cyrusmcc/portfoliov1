@@ -18,8 +18,6 @@ function overBack() {
     document.getElementById("cImg6").style.filter = "grayscale(0)";
     document.getElementById("cImg7").style.filter = "grayscale(0)";
 
-    console.log("in");
-
 }
 
 function overFront() {
@@ -65,6 +63,5 @@ function out() {
     document.getElementById("cImg7").style.filter = "grayscale(1)";
     document.getElementById("cImg8").style.filter = "grayscale(1)";
 
-    console.log("out");
 }
 
