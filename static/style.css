@@ -12,6 +12,7 @@ html, body {
 .parent {
   display: -ms-grid;
   display: grid;
+  min-height: 100%;
   max-width: 100%;
   height: 200vh;
   -ms-grid-columns: 1fr;
@@ -19,47 +20,28 @@ html, body {
   -ms-grid-rows: 100vh 100vh;
       grid-template-rows: 100vh 100vh;
       grid-template-areas: "s1" "s2";
-  grid-gap: 50px;
+  grid-gap: 20px;
+  margin: 0.85em 0.85em 0.85em 0.85em;
 }
 
 #s1 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 0.12fr 0.05fr 0.5fr 1fr;
-      grid-template-rows: 0.12fr 0.05fr 0.5fr 1fr;
-      grid-template-areas: "title" "s1C1" "s1C2" "s1C3";
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: s1;
-  text-align: center;
-  background-color: #171919;
-  background-clip: padding-box;
-}
-
-.title {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0.3em  0.5em;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: title;
-  font-weight: 100;
-  height: 100%;
+  row-gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #171919;
+  background-clip: padding-box;
+  overflow: hidden;
 }
 
-.name {
+.title {
+  height: 20%;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,35 +49,57 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-area: title;
+  font-weight: 100;
+}
+
+#name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-weight: bold;
   color: #219915;
-  border-bottom: thick solid #219915;
   border-radius: 2px;
 }
 
-#firstName {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-self: flex-start;
+#role {
+  background: #219915;
+  color: #171919;
+  font-weight: bold;
+  padding: 5px;
+  border-top: thin solid #219915;
+  font-size: 0.6em;
 }
 
-#lastName {
+#portraitCont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30%;
+  width: 100%;
 }
 
 #portrait {
   position: relative;
   background-color: #171919;
   border: solid thin #219915;
-  border-radius: 12em;
-  height: 2.8em;
-  width: 2.8em;
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
   overflow: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -120,30 +124,27 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: s1C1;
   font-weight: bold;
   margin-left: 1em;
 }
 
 #s1C2 {
-  overflow: hidden;
-  padding: 7px 7px 0 0;
-  margin: 0.5em 0.85em 0 0.85em;
+  height: 35%;
   border-radius: 2px 2px 0 0;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  margin: 0 2em;
+  padding: 0.5em;
   grid-area: s1C2;
   color: #219915;
-  border: thin solid #219915;
-  border-right: 0;
-  border-left: 0;
-  border-bottom: 0;
+  border-right: thin solid #219915;
+  border-left: thin solid #219915;
+  border-top: thin solid #219915;
   text-align: left;
+  overflow: hidden;
 }
 
 #s1C3 {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,16 +152,15 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: s1C3;
-  margin: 1em;
+  margin: 0 1em;
   text-align: start;
   font-weight: bold;
+  display: none;
 }
 
 .project {
-  height: 90%;
+  height: 30%;
   margin: 10px 0 10px 0;
   border: thin solid #219915;
 }
@@ -172,6 +172,15 @@ html, body {
 
 #p1 {
   overflow: hidden;
+  position: relative;
+}
+
+#p1Button {
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  bottom: -11%;
+  right: 5%;
 }
 
 #s2 {
@@ -180,8 +189,8 @@ html, body {
       grid-template-areas: "s2C1" "s2C2" "s2C3";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1.7fr 0.5fr 0fr;
-      grid-template-rows: 1.7fr 0.5fr 0fr;
+  -ms-grid-rows: 1.5fr 0.5fr 0fr;
+      grid-template-rows: 1.5fr 0.5fr 0fr;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s2;
@@ -207,6 +216,7 @@ html, body {
 }
 
 #skillTitle {
+  margin-top: 2.5em;
   font-weight: bold;
   position: absolute;
   top: 0;

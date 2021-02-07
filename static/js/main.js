@@ -11,6 +11,8 @@ function overBack() {
 
     document.getElementById("skillDesc").style.display = "block";
 
+    document.getElementById("skillDesc").innerText = "Java, Spring, MySQL, Hibernate";
+
     setTimeout('document.getElementById("cImg4").style.opacity = "1";', 100);
     setTimeout('document.getElementById("cImg5").style.opacity = "1";', 150);
     setTimeout('document.getElementById("cImg6").style.opacity = "1";', 200);
@@ -34,6 +36,9 @@ function overFront() {
 
     document.getElementById("cImgMask").style.bottom = "7em";
     document.getElementById("cImgMask").style.left = "-5.4em";
+
+    document.getElementById("skillDesc").innerText = "HTML, CSS, SASS, JavaScript";
+
 
     setTimeout('document.getElementById("cImg8").style.opacity = "1";', 100);
     setTimeout('document.getElementById("cImg1").style.opacity = "1";', 150);
