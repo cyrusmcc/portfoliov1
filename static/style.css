@@ -252,8 +252,8 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: thin solid #219915;
   background-color: #171919;
+  border-radius: 50%;
   height: 2em;
   width: 2em;
   position: absolute;
@@ -261,14 +261,14 @@ html, body {
   top: 50%;
   margin-left: -1em;
   margin-top: -1em;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
 }
 
 .cImg {
   opacity: 0.5;
   height: 1.5em;
   width: 1.5em;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 #cImgMask {

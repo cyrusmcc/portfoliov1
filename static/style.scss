@@ -211,8 +211,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: thin solid $text;
     background-color: $background;
+    border-radius: 50%;
     height: 2em;
     width: 2em;
     position: absolute;
@@ -220,13 +220,13 @@ html, body {
     top: 50%;
     margin-left: -1em;
     margin-top: -1em;
-    filter: grayscale(1);
 }
 
 .cImg {
     opacity: 0.5;
     height: 1.5em;
     width: 1.5em;
+    filter: grayscale(1);
 }
 
 #cImgMask {
