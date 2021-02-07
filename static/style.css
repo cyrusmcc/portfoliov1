@@ -196,6 +196,7 @@ html, body {
   -ms-grid-column: 1;
   grid-area: s2C1;
   background-color: #171919;
+  overflow: hidden;
 }
 
 #skills {
@@ -211,9 +212,19 @@ html, body {
   position: relative;
   height: 15em;
   width: 15em;
-  background-color: #171919;
-  border-radius: 150px;
-  border: thin solid gray;
+  border-radius: 50%;
+  background: #171919;
+  border: thin solid rgba(128, 128, 128, 0.5);
+}
+
+#skillsMask {
+  display: none;
+  position: absolute;
+  height: 15em;
+  width: 15em;
+  border-radius: 50%;
+  background: none;
+  border: thin solid grey;
   opacity: 0.5;
 }
 
@@ -226,11 +237,23 @@ html, body {
   opacity: 1;
 }
 
+.cImgButtonCont {
+  position: absolute;
+}
+
 /* SKILL LOGOS */
-.cImg {
+.cImgCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: thin solid #219915;
   background-color: #171919;
-  padding: 3px;
   height: 2em;
   width: 2em;
   position: absolute;
@@ -238,48 +261,70 @@ html, body {
   top: 50%;
   margin-left: -1em;
   margin-top: -1em;
-  opacity: 0.5;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-#skills .cImg:nth-child(1) {
+.cImg {
+  opacity: 0.5;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+#cImgMask {
+  display: none;
+  position: absolute;
+  background-color: #171919;
+  width: inherit;
+  height: 7em;
+  bottom: 2.2em;
+  left: 5.4em;
+  -webkit-transform: rotate(115deg);
+          transform: rotate(115deg);
+}
+
+#cImg3 {
+  height: 1.12em;
+  width: 1.12em;
+}
+
+#skills .cImgCont:nth-child(3) {
   -webkit-transform: rotate(0deg) translate(7.5em);
           transform: rotate(0deg) translate(7.5em);
 }
 
-#skills .cImg:nth-child(2) {
+#skills .cImgCont:nth-child(4) {
   -webkit-transform: rotate(45deg) translate(7.5em) rotate(-45deg);
           transform: rotate(45deg) translate(7.5em) rotate(-45deg);
 }
 
-#skills .cImg:nth-child(3) {
+#skills .cImgCont:nth-child(5) {
   height: 1.7em;
   -webkit-transform: rotate(90deg) translate(7.5em) rotate(-90deg);
           transform: rotate(90deg) translate(7.5em) rotate(-90deg);
 }
 
-#skills .cImg:nth-child(4) {
+#skills .cImgCont:nth-child(6) {
   -webkit-transform: rotate(135deg) translate(7.5em) rotate(-135deg);
           transform: rotate(135deg) translate(7.5em) rotate(-135deg);
 }
 
-#skills .cImg:nth-child(5) {
+#skills .cImgCont:nth-child(7) {
   -webkit-transform: rotate(180deg) translate(7.5em) rotate(-180deg);
           transform: rotate(180deg) translate(7.5em) rotate(-180deg);
 }
 
-#skills .cImg:nth-child(6) {
+#skills .cImgCont:nth-child(8) {
   -webkit-transform: rotate(225deg) translate(7.5em) rotate(-225deg);
           transform: rotate(225deg) translate(7.5em) rotate(-225deg);
 }
 
-#skills .cImg:nth-child(7) {
+#skills .cImgCont:nth-child(9) {
   -webkit-transform: rotate(270deg) translate(7.5em) rotate(-270deg);
           transform: rotate(270deg) translate(7.5em) rotate(-270deg);
 }
 
-#skills .cImg:nth-child(8) {
+#skills .cImgCont:nth-child(10) {
   -webkit-transform: rotate(315deg) translate(7.5em) rotate(-315deg);
           transform: rotate(315deg) translate(7.5em) rotate(-315deg);
 }

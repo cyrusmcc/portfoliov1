@@ -165,6 +165,7 @@ html, body {
     justify-content: center;
     grid-area: s2C1;
     background-color:$background;
+    overflow: hidden;
 }
 
 #skills {
@@ -174,11 +175,22 @@ html, body {
     position: relative;
     height: 15em;
     width: 15em;
-    background-color: #171919;
-    border-radius: 150px;
-    border: thin solid gray;
+    border-radius: 50%;
+    background: $background;
+    border: thin solid rgba($color: grey, $alpha: 0.5);
+}
+
+#skillsMask {
+    display: none;
+    position: absolute;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%; 
+    background: none;
+    border: thin solid grey;
     opacity: 0.5;
 }
+
 
 .cImgButton {
     margin: 1.5em;
@@ -189,12 +201,18 @@ html, body {
     opacity: 1;
 }
 
+.cImgButtonCont {
+    position: absolute;
+}
+
 /* SKILL LOGOS */
 
-.cImg {
+.cImgCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: thin solid $text;
     background-color: $background;
-    padding: 3px;
     height: 2em;
     width: 2em;
     position: absolute;
@@ -202,41 +220,62 @@ html, body {
     top: 50%;
     margin-left: -1em;
     margin-top: -1em;
-    opacity: 0.5;
     filter: grayscale(1);
 }
 
-#skills .cImg:nth-child(1) {
+.cImg {
+    opacity: 0.5;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#cImgMask {
+    display: none;
+    position: absolute;
+    background-color:$background;
+    width: inherit;
+    height: 7em;
+    bottom: 2.2em;
+    left: 5.4em;
+    transform: rotate(115deg);
+}
+
+#cImg3 {
+    height: 1.12em;
+    width: 1.12em;
+}
+
+#skills .cImgCont:nth-child(3) {
     transform: rotate(0deg) translate(7.5em);
 }
 
-#skills .cImg:nth-child(2) {
+#skills .cImgCont:nth-child(4) {
     transform: rotate(45deg) translate(7.5em) rotate(-45deg);
 }
 
-#skills .cImg:nth-child(3) {
+#skills .cImgCont:nth-child(5) {
     height: 1.7em;
     transform: rotate(90deg) translate(7.5em) rotate(-90deg);
 
 }
 
-#skills .cImg:nth-child(4) {
+#skills .cImgCont:nth-child(6) {
     transform: rotate(135deg) translate(7.5em) rotate(-135deg);
 }
 
-#skills .cImg:nth-child(5) {
+#skills .cImgCont:nth-child(7) {
     transform: rotate(180deg) translate(7.5em) rotate(-180deg);
 }
 
-#skills .cImg:nth-child(6) {
+#skills .cImgCont:nth-child(8) {
     transform: rotate(225deg) translate(7.5em) rotate(-225deg);
 }
 
-#skills .cImg:nth-child(7) {
+#skills .cImgCont:nth-child(9) {
     transform: rotate(270deg) translate(7.5em) rotate(-270deg);
 }
 
-#skills .cImg:nth-child(8) {
+#skills .cImgCont:nth-child(10) {
     transform: rotate(315deg) translate(7.5em) rotate(-315deg);
 }
 
