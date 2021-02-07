@@ -26,6 +26,7 @@ html, body {
     font-family: 'Inconsolata', monospace;
     margin: 0;
     color: $text;
+    background-color: $background;
 }
 
 
@@ -38,6 +39,8 @@ html, body {
     grid-template-areas: 
             "s1"
             "s2";
+
+    grid-gap: 50px;
 }
 
 #s1 {
@@ -147,6 +150,10 @@ html, body {
     font-weight: 100;
 }
 
+#p1 {
+    overflow: hidden;
+}
+
 #s2 {
     display: grid;
     grid-template-areas: 
@@ -154,18 +161,25 @@ html, body {
             "s2C2"
             "s2C3";
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 0.5fr 0.5fr;
+    grid-template-rows: 1.7fr 0.5fr 0fr;
     grid-area: s2;
     text-align: center;
 }
 
 #s2C1 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     grid-area: s2C1;
     background-color:$background;
     overflow: hidden;
+}
+
+#skillTitle {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
 }
 
 #skills {
@@ -189,6 +203,14 @@ html, body {
     background: none;
     border: thin solid grey;
     opacity: 0.5;
+}
+
+#skillDesc {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    border: thin solid $text;
+    margin: 1em;
 }
 
 
