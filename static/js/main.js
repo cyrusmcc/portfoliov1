@@ -84,6 +84,8 @@ function out() {
 
 function onClickProject() {
 
+    console.log(counter);
+
     if(counter == 0) {
         document.getElementById("p1").style.height = "auto";
         counter = 1;

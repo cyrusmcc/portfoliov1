@@ -134,13 +134,13 @@ html, body {
 
 #s1C2 {
     height: 35%;
-    border-radius: 2px 2px 0 0;
     margin: 0 2em;
     padding: 0.5em;
     grid-area: s1C2;
     color: $text;
-    border-top: thin solid $text;
-    text-align: left;
+    border: thin solid $text;
+    border-top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    text-align: left;
     overflow: hidden;
 }
 
@@ -161,6 +161,7 @@ html, body {
     margin: 10px 0 10px 0;
     border: thin solid $text;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .projectLegend {
@@ -168,7 +169,10 @@ html, body {
     font-weight: 100;
 }
 
-.projectText {
+#projectCont {
+    position: absolute;
+    height: inherit;
+    top: 0;
 }
 
 #p1 {
@@ -200,7 +204,7 @@ html, body {
     grid-area: s2C1;
     background-color:$background;
     overflow: hidden;
-    height: 56em;
+    height: 70em;
 }
 
 #skillTitle {
@@ -329,14 +333,14 @@ html, body {
 }
 
 #s2C2 {
+    position: relative;
     grid-area: s2C2;
     background-color: $background;
-    height: fit-content;
+    height: 100%;
     text-align: start;
 }
 
 #s2C2Title {
-    margin-left: 1em;
     margin-bottom: 3em;
     font-weight: bold;
     text-align: center;
