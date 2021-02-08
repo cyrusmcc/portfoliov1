@@ -1,3 +1,5 @@
+var counter = 0;
+
 function overBack() {
 
     document.getElementById("cImgMask").style.bottom = "2.2em";
@@ -78,5 +80,17 @@ function out() {
     document.getElementById("cImg7").style.filter = "grayscale(1)";
     document.getElementById("cImg8").style.filter = "grayscale(1)";
 
+}
+
+function onClickProject() {
+
+    if(counter == 0) {
+        document.getElementById("p1").style.height = "auto";
+        counter = 1;
+    }
+    else if(counter = 1) {
+        document.getElementById("p1").style.height = "5em";
+        counter = 0;
+    }
 }
 

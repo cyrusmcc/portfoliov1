@@ -14,13 +14,13 @@ html, body {
   display: grid;
   min-height: 100%;
   max-width: 100%;
-  height: 200vh;
+  height: 300vh;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100vh 100vh;
-      grid-template-rows: 100vh 100vh;
+  -ms-grid-rows: 100vh 200vh;
+      grid-template-rows: 100vh 200vh;
       grid-template-areas: "s1" "s2";
-  grid-gap: 20px;
+  grid-gap: 10px;
   margin: 0.85em 0.85em 0.85em 0.85em;
 }
 
@@ -31,7 +31,7 @@ html, body {
   }
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 812px) {
   .parent {
     font-size: 2.5vh;
   }
@@ -171,9 +171,10 @@ html, body {
 }
 
 .project {
-  height: 30%;
+  height: 5em;
   margin: 10px 0 10px 0;
   border: thin solid #219915;
+  overflow: hidden;
 }
 
 .projectLegend {
@@ -223,7 +224,7 @@ html, body {
   grid-area: s2C1;
   background-color: #171919;
   overflow: hidden;
-  height: 55%;
+  height: 56em;
 }
 
 #skillTitle {
@@ -372,11 +373,25 @@ html, body {
 
 #s2C2 {
   grid-area: s2C2;
-  background-color: steelblue;
+  background-color: #171919;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: start;
+}
+
+#s2C2Title {
+  margin-left: 1em;
+  margin-bottom: 3em;
+  font-weight: bold;
+  text-align: center;
 }
 
 #s2C3 {
   grid-area: s2C3;
   background-color: rosybrown;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
 }
 /*# sourceMappingURL=style.css.map */
