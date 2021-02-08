@@ -45,6 +45,19 @@ html, body {
     margin: 0.85em 0.85em 0.85em 0.85em;
 }
 
+/* MEDIA QUERIES */
+@include screen-lg() {
+    .parent {
+        font-size: 3vh;
+    }
+}
+
+@include screen-md() {
+    .parent {
+        font-size: 2.5vh;
+    }
+}
+
 #s1 {
     height: 100%;
     display: flex;
@@ -126,8 +139,6 @@ html, body {
     padding: 0.5em;
     grid-area: s1C2;
     color: $text;
-    border-right: thin solid $text;
-    border-left: thin solid $text;
     border-top: thin solid $text;
     text-align: left;
     overflow: hidden;
@@ -170,15 +181,11 @@ html, body {
 }
 
 #s2 {
-    display: grid;
-    grid-template-areas: 
-            "s2C1"
-            "s2C2"
-            "s2C3";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 0.5fr 0fr;
+    display: flex;
+    flex-direction: column;
     grid-area: s2;
     text-align: center;
+    height: 100%;
 }
 
 #s2C1 {
@@ -189,10 +196,10 @@ html, body {
     grid-area: s2C1;
     background-color:$background;
     overflow: hidden;
+    height: 55%;
 }
 
 #skillTitle {
-    margin-top: 2.5em;
     font-weight: bold;
     position: absolute;
     top: 0;
@@ -213,8 +220,8 @@ html, body {
 #skillsMask {
     display: none;
     position: absolute;
-    height: 15em;
-    width: 15em;
+    height: inherit;
+    width: inherit;
     border-radius: 50%; 
     background: none;
     border: thin solid grey;

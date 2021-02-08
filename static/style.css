@@ -24,6 +24,19 @@ html, body {
   margin: 0.85em 0.85em 0.85em 0.85em;
 }
 
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1224px) {
+  .parent {
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .parent {
+    font-size: 2.5vh;
+  }
+}
+
 #s1 {
   height: 100%;
   display: -webkit-box;
@@ -136,8 +149,6 @@ html, body {
   padding: 0.5em;
   grid-area: s1C2;
   color: #219915;
-  border-right: thin solid #219915;
-  border-left: thin solid #219915;
   border-top: thin solid #219915;
   text-align: left;
   overflow: hidden;
@@ -184,17 +195,18 @@ html, body {
 }
 
 #s2 {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "s2C1" "s2C2" "s2C3";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1.5fr 0.5fr 0fr;
-      grid-template-rows: 1.5fr 0.5fr 0fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s2;
   text-align: center;
+  height: 100%;
 }
 
 #s2C1 {
@@ -208,15 +220,13 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: s2C1;
   background-color: #171919;
   overflow: hidden;
+  height: 55%;
 }
 
 #skillTitle {
-  margin-top: 2.5em;
   font-weight: bold;
   position: absolute;
   top: 0;
@@ -243,8 +253,8 @@ html, body {
 #skillsMask {
   display: none;
   position: absolute;
-  height: 15em;
-  width: 15em;
+  height: inherit;
+  width: inherit;
   border-radius: 50%;
   background: none;
   border: thin solid grey;
@@ -361,15 +371,11 @@ html, body {
 }
 
 #s2C2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: s2C2;
   background-color: steelblue;
 }
 
 #s2C3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: s2C3;
   background-color: rosybrown;
 }

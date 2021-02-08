@@ -61,10 +61,14 @@ function out() {
 
     document.getElementById("skills").style.border = "thin solid rgba(128, 128, 128, 0.5)";
 
+    document.getElementById("cImg1").style.opacity = "0.5";
+    document.getElementById("cImg2").style.opacity = "0.5";
+    document.getElementById("cImg3").style.opacity = "0.5";
     document.getElementById("cImg4").style.opacity = "0.5";
     document.getElementById("cImg5").style.opacity = "0.5";
     document.getElementById("cImg6").style.opacity = "0.5";
     document.getElementById("cImg7").style.opacity = "0.5";
+    document.getElementById("cImg8").style.opacity = "0.5";
     document.getElementById("cImg1").style.filter = "grayscale(1)";
     document.getElementById("cImg2").style.filter = "grayscale(1)";
     document.getElementById("cImg3").style.filter = "grayscale(1)";
