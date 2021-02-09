@@ -17,9 +17,9 @@ html, body {
   height: 300vh;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100vh 200vh;
-      grid-template-rows: 100vh 200vh;
-      grid-template-areas: "s1" "s2";
+  -ms-grid-rows: 100vh 100vh 100vh;
+      grid-template-rows: 100vh 100vh 100vh;
+      grid-template-areas: "s1" "s2" "s3";
   grid-gap: 10px;
   margin: 0.85em 0.85em 0.85em 0.85em;
 }
@@ -52,7 +52,7 @@ html, body {
   overflow: hidden;
 }
 
-.title {
+#s1Title {
   height: 20%;
   margin: 0;
   display: -webkit-box;
@@ -90,6 +90,7 @@ html, body {
   padding: 5px;
   border-top: thin solid #219915;
   font-size: 0.6em;
+  border-radius: 2px;
 }
 
 #portraitCont {
@@ -145,7 +146,7 @@ html, body {
 #s1C2 {
   height: 35%;
   margin: 0 2em;
-  padding: 0.5em;
+  padding: 0 0.5em 0.5em;
   grid-area: s1C2;
   color: #219915;
   border: thin solid #219915;
@@ -154,6 +155,8 @@ html, body {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: left;
   overflow: hidden;
+  border-radius: 0 0 3px 3px;
+  background: #151717;
 }
 
 #s1C3 {
@@ -185,7 +188,7 @@ html, body {
   font-weight: 100;
 }
 
-#projectCont {
+#s3C1 {
   position: absolute;
   height: inherit;
   top: 0;
@@ -217,6 +220,14 @@ html, body {
   grid-area: s2;
   text-align: center;
   height: 100%;
+  border-bottom: thin solid #219915;
+}
+
+#s3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: s3;
+  position: relative;
 }
 
 #s2C1 {
@@ -233,10 +244,10 @@ html, body {
   grid-area: s2C1;
   background-color: #171919;
   overflow: hidden;
-  height: 70em;
+  height: 25em;
 }
 
-#skillTitle {
+#s2Title {
   font-weight: bold;
   position: absolute;
   top: 0;
@@ -271,7 +282,7 @@ html, body {
   opacity: 0.5;
 }
 
-#skillDesc {
+#s2Desc {
   display: none;
   position: absolute;
   bottom: 0;
@@ -279,16 +290,16 @@ html, body {
   margin: 1em;
 }
 
-.cImgButton {
+.s2Button {
   margin: 1.5em;
   opacity: 0.5;
 }
 
-.cImgButton:hover {
+.s2Button:hover {
   opacity: 1;
 }
 
-.cImgButtonCont {
+.s2ButtonCont {
   position: absolute;
 }
 
@@ -386,6 +397,7 @@ html, body {
   background-color: #171919;
   height: 100%;
   text-align: start;
+  margin-top: 5em;
 }
 
 #s2C2Title {

@@ -11,9 +11,9 @@ function overBack() {
 
     document.getElementById("cImgMask").style.display = "block";
 
-    document.getElementById("skillDesc").style.display = "block";
+    document.getElementById("s2Desc").style.display = "block";
 
-    document.getElementById("skillDesc").innerText = "Java, Spring, MySQL, Hibernate";
+    document.getElementById("s2Desc").innerText = "Java, Spring, MySQL, Hibernate";
 
     setTimeout('document.getElementById("cImg4").style.opacity = "1";', 100);
     setTimeout('document.getElementById("cImg5").style.opacity = "1";', 150);
@@ -32,14 +32,14 @@ function overFront() {
 
     document.getElementById("cImgMask").style.display = "block";
     
-    document.getElementById("skillDesc").style.display = "block";
+    document.getElementById("s2Desc").style.display = "block";
 
     document.getElementById("skills").style.border = "solid thin #219915";
 
     document.getElementById("cImgMask").style.bottom = "7em";
     document.getElementById("cImgMask").style.left = "-5.4em";
 
-    document.getElementById("skillDesc").innerText = "HTML, CSS, SASS, JavaScript";
+    document.getElementById("s2Desc").innerText = "HTML, CSS, SASS, JavaScript";
 
 
     setTimeout('document.getElementById("cImg8").style.opacity = "1";', 100);
@@ -59,7 +59,7 @@ function out() {
 
     document.getElementById("cImgMask").style.display = "none";
     
-    document.getElementById("skillDesc").style.display = "none";
+    document.getElementById("s2Desc").style.display = "none";
 
     document.getElementById("skills").style.border = "thin solid rgba(128, 128, 128, 0.5)";
 
@@ -87,11 +87,11 @@ function onClickProject() {
     console.log(counter);
 
     if(counter == 0) {
-        document.getElementById("p1").style.height = "auto";
+        document.getElementById("p1").style.height = "5em";
         counter = 1;
     }
     else if(counter = 1) {
-        document.getElementById("p1").style.height = "5em";
+        document.getElementById("p1").style.height = "auto";
         counter = 0;
     }
 }
