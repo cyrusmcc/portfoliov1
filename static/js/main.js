@@ -1,4 +1,7 @@
-var counter = 0;
+var p1Counter = 0;
+var p2Counter = 0;
+var p3Counter = 0;
+
 
 function overBack() {
 
@@ -82,17 +85,39 @@ function out() {
 
 }
 
-function onClickProject() {
+function onClickProject(project, projectText) {
+    var projectId = project.id;
+    var projectTextId = projectText.id;
 
-    console.log(counter);
+    if(p1Counter == 0) {
 
-    if(counter == 0) {
-        document.getElementById("p1").style.height = "auto";
-        counter = 1;
+        document.getElementById(projectId).style.height = "auto";
+    
+        document.getElementById(projectTextId).style.webkitMaskImage = "none";
+   
+        p1Counter = 1;
+        /*
+        switch(projectId) {
+            case 0: 
+                projectId= "p1" ;
+                p1Counter = 1;
+                break;
+            case 1: 
+                projectId = "p2" ;
+                p2Counter = 1;
+                break;
+            case 2: 
+                projectId = "p3" ;
+                p3Counter = 1;
+                break;           
+        }
+        */
+
     }
-    else if(counter = 1) {
-        document.getElementById("p1").style.height = "5em";
-        counter = 0;
+    else if(p1Counter = 1) {
+        document.getElementById(projectId).style.height = "5em";
+        document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
+        p1Counter = 0;
     }
 }
 

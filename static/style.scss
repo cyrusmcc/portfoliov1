@@ -61,6 +61,7 @@ html, body {
 }
 
 #s1 {
+    grid-area: s1;
     height: 100%;
     display: flex;
     row-gap: 10px;
@@ -120,6 +121,7 @@ html, body {
 .s1Img {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
                 rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
 }
 
 #s1Img1 {
@@ -212,7 +214,6 @@ html, body {
 .project {
     background: $background;
     color: #cbf3f0;
-    height: 5em;
     margin: 10px 0 20px 0;
     border: thin solid $lightAccentTwo;
     border-radius: 3px;
@@ -220,6 +221,10 @@ html, body {
                 rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     overflow: hidden;
     cursor: pointer;
+}
+
+#p1, #p2, #p3 {
+    height: 5em;
 }
 
 .projectLegend {
@@ -234,6 +239,18 @@ html, body {
     font-weight: 100;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
                 rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#projectText1 {
+    mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+}
+
+#projectText2 {
+    mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+}
+
+#projectText3 {
+    mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
 }
 
 #s3C1 {

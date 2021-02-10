@@ -41,7 +41,7 @@
                     <img id="s1Accent" src="assets/gradientwaveorange.svg" alt="background complement shape"><!--
                     --><div id="s1AccentContent">
                         <div id="s1AccentImgs">
-                            <img class="s1Img" id="s1Img1" src="assets/github.svg" alt="github link">
+                            <img  href="https://github.com/cyrusmcc" class="s1Img" id="s1Img1" src="assets/github.svg" alt="github link">
                             <img class="s1Img" id="s1Img2" src="assets/linkedin.svg" alt="linkedin link">
                         </div>
                         <div id="s1Button">
@@ -58,7 +58,7 @@
 
         <div class="slide" id="s2">
 
-        <img  id="s2Accent" src="assets/wavefacedown.svg" alt="background complement shape">
+        <img id="s2Accent" src="assets/wavefacedown.svg" alt="background complement shape">
 
             <div class="content" id="s2C1">
 
@@ -129,21 +129,21 @@
 
                     <div id="s3C1Title">Projects</div>
 
-                    <fieldset class="project" id="p1" onclick="onClickProject()">
+                    <fieldset class="project" id="p1" onclick="onClickProject(this, projectText1)">
                         <legend class="projectLegend">Productivity Tracker</legend>
-                        <div class="projectText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, expedita doloremque labore magni esse, quia asperiores sapiente repudiandae magnam laboriosam consequuntur alias quisquam praesentium nemo nobis libero in assumenda. Harum?</div>
+                        <div class="projectText" id="projectText1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, expedita doloremque labore magni esse, quia asperiores sapiente repudiandae magnam laboriosam consequuntur alias quisquam praesentium nemo nobis libero in assumenda. Harum?</div>
                         <div class="projectButton" id="p1Button">+</div>
                     </fieldset>
 
-                    <fieldset class="project" id="p2">
+                    <fieldset class="project" id="p2" onclick="onClickProject(this, projectText2)">
                         <legend class="projectLegend">WIP</legend>
-                        <div class="projectText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
+                        <div class="projectText" id="projectText2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
                         <div class="projectButton" id="p2Button">+</div>
                     </fieldset>
 
-                    <fieldset class="project" id="p3">
+                    <fieldset class="project" id="p3" onclick="onClickProject(this, projectText3)">
                         <legend class="projectLegend">WIP</legend>
-                        <div class="projectText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
+                        <div class="projectText" id="projectText3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
                         <div class="projectButton" id="p3Button">+</div>
                     </fieldset>
 

@@ -37,6 +37,9 @@ html, body {
 }
 
 #s1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: s1;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +121,7 @@ html, body {
 .s1Img {
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
 }
 
 #s1Img1 {
@@ -233,7 +237,6 @@ html, body {
 .project {
   background: #171919;
   color: #cbf3f0;
-  height: 5em;
   margin: 10px 0 20px 0;
   border: thin solid #cbf3f0;
   border-radius: 3px;
@@ -241,6 +244,10 @@ html, body {
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   overflow: hidden;
   cursor: pointer;
+}
+
+#p1, #p2, #p3 {
+  height: 5em;
 }
 
 .projectLegend {
@@ -255,6 +262,27 @@ html, body {
   font-weight: 100;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#projectText1 {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), color-stop(54%, transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), color-stop(54%, transparent));
+          mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+}
+
+#projectText2 {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), color-stop(54%, transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), color-stop(54%, transparent));
+          mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+}
+
+#projectText3 {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), color-stop(54%, transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), color-stop(54%, transparent));
+          mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
 }
 
 #s3C1 {
