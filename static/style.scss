@@ -1,9 +1,13 @@
-$background:#171919;
-$text: #219915;
+$background: #171919;
+$lightAccentOne: #ffbf69;
+$darkAccentOne: #ff9f1c;
+$lightAccentTwo: #cbf3f0;
+$darkAccentTwo: #0081A7;
 
 $screen-md: 812px;
 $screen-lg: 1224px;
 
+/* MIXINS */
 @mixin screen-md {
     @media only screen and (min-width:
     $screen-md) {
@@ -25,7 +29,7 @@ $screen-lg: 1224px;
 html, body {
     font-family: 'Inconsolata', monospace;
     margin: 0;
-    color: $text;
+    color: $lightAccentOne;
     background-color: $background;
 }
 
@@ -34,16 +38,13 @@ html, body {
     display: grid;
     min-height: 100%;
     max-width: 100%;
-    height: 300vh;
+    height: 340vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 100vh 100vh;
+    grid-template-rows: 100vh 120vh 120vh;
     grid-template-areas: 
             "s1"
             "s2"
             "s3";
-
-    grid-gap: 10px;
-    margin: 0.85em 0.85em 0.85em 0.85em;
 }
 
 /* MEDIA QUERIES */
@@ -66,14 +67,75 @@ html, body {
     flex-direction: column;
     background-color: $background;
     background-clip: padding-box;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
 }
 
-#s1Title {
+#s1Accent {
+    position: absolute;
+    transform: scale(-1, 1);
+    right: 0;
+    z-index: 1;
+    height: auto;
+    width: 130%;
+}
+
+#s1Button {
+    font-size: 1.1em;
+    cursor: pointer;
+    padding:  0.5em 1.5em;
+    font-weight: bold;
+    border-radius: 0.7em;
+    color: $background;
+    background-color: $lightAccentOne;
+    filter: drop-shadow(-1.4px 4px 0.5px #171919);
+}
+
+#s1Button:hover {
+    background-color: $lightAccentTwo;
+}
+
+#s1AccentContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    height: 86%;
+    width: 100%;
+    background: $darkAccentOne;
+    bottom: 0;
+    z-index: 0;
+}
+
+#s1AccentImgs {
+    display: flex;
+    width: 10em;
+    justify-content: space-evenly;
+    }
+
+#s1AccentImgs .s1Img {
+    height: auto;
+    width: 18%;
+    justify-content: center;
+}
+
+.s1Img {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#s1Img1 {
+    border-radius: 50%;
+}
+
+#s1C2 {
     height: 20%;
+    z-index: 1;
     margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     grid-area: title;
     font-weight: 100;
@@ -84,21 +146,22 @@ html, body {
     flex-direction: column;
     text-align: center;
     font-weight: bold;
-    color: $text;
+    color: $lightAccentOne;
     border-radius: 2px;
 }
 
 #role {
-    background: $text;
+    background: $darkAccentOne;
     color: $background;
     font-weight: bold;
     padding: 5px;
-    border-top: thin solid $text;
     font-size: 0.6em;
     border-radius: 2px;
+    box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
+                0 6px 20px 0 RGB(0 0 0 / 19%);
 }
 
-#portraitCont {
+#s1C1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,15 +169,23 @@ html, body {
     width: 100%;
 }
 
+#s1C3 {
+    position: relative;
+    height: inherit;
+}
+
 #portrait {
     position: relative;
     background-color: $background;
-    border: solid thin $text;
+    border: solid thin $lightAccentOne;
     border-radius: 50%;
     height: 8em;
     width: 8em;
     overflow: hidden;
     user-select: none;
+
+    box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
+                0 6px 20px 0 RGB(0 0 0 / 19%);
 }
 
 #portraitImg {
@@ -125,58 +196,64 @@ html, body {
 
 }
 
-#s1C1 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    grid-area: s1C1;
-    font-weight: bold;
-    margin-left: 1em;
-}
-
-#s1C2 {
+#s2C2 {
     height: 35%;
-    margin: 0 2em;
+    z-index: 1;
     padding: 0 0.5em 0.5em;
     grid-area: s1C2;
-    color: $text;
-    border: thin solid $text;
+    color: $lightAccentOne;
+    border: thin solid $lightAccentOne;
     border-top: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    text-align: left;
     overflow: hidden;
     border-radius: 0 0 3px 3px;
     background: #151717;
-}
-
-#s1C3 {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    grid-area: s1C3;
-    margin: 0 1em;
-    text-align: start;
-    font-weight: bold;
-    display: none;
-
+    margin: 0 0.85em;
 }
 
 .project {
+    background: $background;
+    color: #cbf3f0;
     height: 5em;
-    margin: 10px 0 10px 0;
-    border: thin solid $text;
+    margin: 10px 0 20px 0;
+    border: thin solid $lightAccentTwo;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     overflow: hidden;
     cursor: pointer;
 }
 
 .projectLegend {
+    background: $background;
+    border-radius: 3px 3px 0 0;
+    padding: 2px 5px 0;
+    border: thin solid $lightAccentTwo;
+    border-bottom: 0;
+    font-weight: bold;
+    color: $lightAccentTwo;
     font-size: 1em;
     font-weight: 100;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #s3C1 {
-    position: absolute;
     height: inherit;
-    top: 0;
+    margin: 0 0.85em;
+}
+
+#s3C1Title {
+    font-weight: bold;
+    color: $darkAccentTwo;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 1.1em;
+    width: fit-content;
+    background-color: $background;
+    margin: 0.5em 0.5em 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #p1 {
@@ -198,12 +275,33 @@ html, body {
     grid-area: s2;
     text-align: center;
     height: 100%;
-    border-bottom: thin solid $text;
+    overflow: hidden;
+    color: $lightAccentOne;
 }
 
 #s3 {
     grid-area: s3;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    max-height: fit-content;
+}
+
+#s3Accent1 {
+    height: auto;
+    width: 100%;
+}
+
+#s3Accent2 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+}
+
+#s3AccentContent {
+    height: 80%;
+    background-color: #0081A7;
 }
 
 #s2C1 {
@@ -215,12 +313,14 @@ html, body {
     background-color:$background;
     overflow: hidden;
     height: 25em;
+    margin: 0 0.85em;
 }
 
 #s2Title {
     font-weight: bold;
     position: absolute;
     top: 0;
+    color: $darkAccentOne;
 }
 
 #skills {
@@ -250,8 +350,9 @@ html, body {
     display: none;
     position: absolute;
     bottom: 0;
-    border: thin solid $text;
+    border-bottom: thin solid $lightAccentOne;
     margin: 1em;
+    padding: 5px;
 }
 
 
@@ -340,15 +441,6 @@ html, body {
 
 #skills .cImgCont:nth-child(10) {
     transform: rotate(315deg) translate(7.5em) rotate(-315deg);
-}
-
-#s2C2 {
-    position: relative;
-    grid-area: s2C2;
-    background-color: $background;
-    height: 100%;
-    text-align: start;
-    margin-top: 5em;
 }
 
 #s2C2Title {

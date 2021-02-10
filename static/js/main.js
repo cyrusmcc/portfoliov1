@@ -5,7 +5,7 @@ function overBack() {
     document.getElementById("cImgMask").style.bottom = "2.2em";
     document.getElementById("cImgMask").style.left = "5.4em";
 
-    document.getElementById("skills").style.border = "solid thin #219915";
+    document.getElementById("skills").style.border = "solid thin #ff9f1c";
 
     document.getElementById("skillsMask").style.display = "block";
 
@@ -34,7 +34,7 @@ function overFront() {
     
     document.getElementById("s2Desc").style.display = "block";
 
-    document.getElementById("skills").style.border = "solid thin #219915";
+    document.getElementById("skills").style.border = "solid thin #ff9f1c";
 
     document.getElementById("cImgMask").style.bottom = "7em";
     document.getElementById("cImgMask").style.left = "-5.4em";
@@ -87,11 +87,11 @@ function onClickProject() {
     console.log(counter);
 
     if(counter == 0) {
-        document.getElementById("p1").style.height = "5em";
+        document.getElementById("p1").style.height = "auto";
         counter = 1;
     }
     else if(counter = 1) {
-        document.getElementById("p1").style.height = "auto";
+        document.getElementById("p1").style.height = "5em";
         counter = 0;
     }
 }
