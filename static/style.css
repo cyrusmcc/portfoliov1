@@ -48,18 +48,17 @@ html, body {
           flex-direction: column;
   background-color: #171919;
   background-clip: padding-box;
-  overflow: visible;
   position: relative;
 }
 
 #s1Accent {
-  position: absolute;
+  display: block;
+  margin: -5px 0;
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
-  right: 0;
   z-index: 1;
   height: auto;
-  width: 130%;
+  width: 100%;
 }
 
 #s1Button {
@@ -92,11 +91,9 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
   height: 86%;
   width: 100%;
   background: #ff9f1c;
-  bottom: 0;
   z-index: 0;
 }
 
@@ -189,7 +186,8 @@ html, body {
 
 #s1C3 {
   position: relative;
-  height: inherit;
+  height: 50%;
+  overflow: hidden;
 }
 
 #portrait {
@@ -305,8 +303,14 @@ html, body {
   grid-area: s2;
   text-align: center;
   height: 100%;
-  overflow: hidden;
   color: #ffbf69;
+}
+
+#s2Accent {
+  display: block;
+  overflow: visible;
+  margin: -5px 0;
+  z-index: 1;
 }
 
 #s3 {
@@ -328,15 +332,17 @@ html, body {
 }
 
 #s3Accent1 {
+  display: block;
   height: auto;
   width: 100%;
+  margin: -5px 0;
 }
 
 #s3Accent2 {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  position: absolute;
-  bottom: 0;
+  display: block;
+  margin: -5px 0;
 }
 
 #s3AccentContent {
