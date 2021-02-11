@@ -8,6 +8,7 @@ html, body {
   margin: 0;
   color: #ffbf69;
   background-color: #171919;
+  min-width: 300px;
 }
 
 .parent {
@@ -21,19 +22,6 @@ html, body {
   -ms-grid-rows: 100vh 120vh 120vh;
       grid-template-rows: 100vh 120vh 120vh;
       grid-template-areas: "s1" "s2" "s3";
-}
-
-/* MEDIA QUERIES */
-@media only screen and (min-width: 1224px) {
-  .parent {
-    font-size: 3vh;
-  }
-}
-
-@media only screen and (min-width: 812px) {
-  .parent {
-    font-size: 2.5vh;
-  }
 }
 
 #s1 {
@@ -80,7 +68,7 @@ html, body {
   background-color: #cbf3f0;
 }
 
-#s1AccentContent {
+#s1AccentContentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,10 +82,30 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 86%;
+  height: inherit;
   width: 100%;
   background: #ff9f1c;
   z-index: 0;
+}
+
+#s1AccentContent {
+  height: inherit;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  row-gap: 5em;
+  padding-top: 3em;
 }
 
 #s1AccentImgs {
@@ -129,7 +137,7 @@ html, body {
 }
 
 #s1C2 {
-  height: 20%;
+  height: 3em;
   z-index: 1;
   margin: 0;
   display: -webkit-box;
@@ -184,20 +192,20 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 30%;
+  height: 15em;
   width: 100%;
 }
 
 #s1C3 {
   position: relative;
-  height: 50%;
+  height: 27em;
   overflow: hidden;
 }
 
 #portrait {
   position: relative;
   background-color: #171919;
-  border: solid thin #ffbf69;
+  border: solid medium #ffbf69;
   border-radius: 50%;
   height: 8em;
   width: 8em;
@@ -554,5 +562,34 @@ html, body {
   height: -webkit-fill-available;
   height: -moz-available;
   height: stretch;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1115px) {
+  .parent {
+    font-size: 3vh;
+  }
+  #portrait {
+    height: 6em;
+    width: 6em;
+  }
+  #s1C1 {
+    height: 10em;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #s1C3 {
+    height: 32em;
+  }
+  #s1AccentContent {
+    row-gap: 2em;
+  }
+}
+
+@media only screen and (min-width: 610px) {
+  .parent {
+    font-size: 2.5vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
