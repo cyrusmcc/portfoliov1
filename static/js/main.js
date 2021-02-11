@@ -89,35 +89,70 @@ function onClickProject(project, projectText) {
     var projectId = project.id;
     var projectTextId = projectText.id;
 
-    if(p1Counter == 0) {
+    if(projectId == 'p1') {
 
+        if(p1Counter == 0) {
+        
         document.getElementById(projectId).style.height = "auto";
     
         document.getElementById(projectTextId).style.webkitMaskImage = "none";
    
-        p1Counter = 1;
-        /*
-        switch(projectId) {
-            case 0: 
-                projectId= "p1" ;
-                p1Counter = 1;
-                break;
-            case 1: 
-                projectId = "p2" ;
-                p2Counter = 1;
-                break;
-            case 2: 
-                projectId = "p3" ;
-                p3Counter = 1;
-                break;           
-        }
-        */
+        document.getElementById("s3Accent2").style.display = "none";
 
+        p1Counter = 1;
+       
+        } else if(p1Counter == 1){
+            
+            document.getElementById(projectId).style.height = "5em";
+            
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
+           
+            document.getElementById("s3Accent2").style.display = "block";
+
+
+            p1Counter = 0;
+        }
     }
-    else if(p1Counter = 1) {
-        document.getElementById(projectId).style.height = "5em";
-        document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
-        p1Counter = 0;
+
+    if(projectId == 'p2') {
+
+        if(p2Counter == 0) {
+       
+        document.getElementById(projectId).style.height = "auto";
+    
+        document.getElementById(projectTextId).style.webkitMaskImage = "none";
+   
+        p2Counter = 1;
+       
+        } else if(p2Counter == 1){
+           
+            document.getElementById(projectId).style.height = "5em";
+           
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
+           
+            p2Counter = 0;
+        }
     }
+
+    if(projectId == 'p3') {
+
+        if(p3Counter == 0) {
+        
+        document.getElementById(projectId).style.height = "auto";
+    
+        document.getElementById(projectTextId).style.webkitMaskImage = "none";
+   
+        p3Counter = 1;
+       
+        } else if(p3Counter == 1){
+           
+            document.getElementById(projectId).style.height = "5em";
+           
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
+           
+            p3Counter = 0;
+        }
+    }
+
 }
 

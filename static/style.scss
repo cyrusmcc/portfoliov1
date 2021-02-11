@@ -32,6 +32,7 @@ html, body {
     color: $lightAccentOne;
     background-color: $background;
     min-width: 300px;
+    max-width: 100%;
 }
 
 
@@ -221,6 +222,8 @@ html, body {
                 rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 #p1, #p2, #p3 {
@@ -274,6 +277,12 @@ html, body {
 #p1 {
     overflow: hidden;
     position: relative;
+}
+
+#p1Img1 {
+    height: 25em;
+    width: auto;
+    margin-top: 1em;
 }
 
 #p1Button {
@@ -344,6 +353,7 @@ html, body {
     position: absolute;
     top: 0;
     color: $darkAccentOne;
+
 }
 
 #skills {

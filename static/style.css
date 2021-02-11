@@ -9,6 +9,7 @@ html, body {
   color: #ffbf69;
   background-color: #171919;
   min-width: 300px;
+  max-width: 100%;
 }
 
 .parent {
@@ -252,6 +253,13 @@ html, body {
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   overflow: hidden;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #p1, #p2, #p3 {
@@ -316,6 +324,12 @@ html, body {
 #p1 {
   overflow: hidden;
   position: relative;
+}
+
+#p1Img1 {
+  height: 25em;
+  width: auto;
+  margin-top: 1em;
 }
 
 #p1Button {
