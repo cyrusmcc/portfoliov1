@@ -68,7 +68,7 @@ html, body {
 #portrait {
   position: relative;
   background-color: #E8DDCB;
-  border: solid 2px #033649;
+  border: solid medium #033649;
   border-radius: 50%;
   height: 8em;
   width: 8em;
@@ -287,12 +287,15 @@ html, body {
   padding: 0 0.5em 0.5em;
   grid-area: s1C2;
   color: #033649;
-  border: 2px solid #033649;
+  border: medium solid #033649;
   border-top: 0;
   overflow: hidden;
   border-radius: 0 0 3px 3px;
   background: #E8DDCB;
-  margin: 0 1.5em;
+  width: 85%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-align: left;
 }
 
@@ -312,7 +315,7 @@ html, body {
   width: 15em;
   border-radius: 50%;
   background: #E8DDCB;
-  border: 2px solid rgba(128, 128, 128, 0.5);
+  border: medium solid rgba(128, 128, 128, 0.5);
 }
 
 #skillsMask {
@@ -322,7 +325,7 @@ html, body {
   width: inherit;
   border-radius: 50%;
   background: none;
-  border: 2px solid grey;
+  border: medium solid grey;
   opacity: 0.5;
 }
 
@@ -330,7 +333,7 @@ html, body {
   display: none;
   position: absolute;
   bottom: 0;
-  border-bottom: 2px solid #033649;
+  border-bottom: medium solid #033649;
   margin: 1em;
   padding: 5px;
 }
@@ -453,11 +456,19 @@ html, body {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
+  margin-top: 3em;
 }
 
 #s3C1 {
   height: inherit;
   margin: 0 0.85em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #s3C1Title {
@@ -470,7 +481,7 @@ html, body {
   width: -moz-fit-content;
   width: fit-content;
   background-color: #033649;
-  margin: 0.5em 0.5em 1em;
+  margin: 0.5em 1em 1em;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -479,7 +490,7 @@ html, body {
   background: #033649;
   color: #E8DDCB;
   margin: 10px 0 20px 0;
-  border: 2px solid #E8DDCB;
+  border: medium solid #E8DDCB;
   border-radius: 3px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -492,7 +503,7 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 5em;
+  height: 15em;
 }
 
 .projectImg {
@@ -504,8 +515,9 @@ html, body {
           justify-content: center;
   margin: 1em 0 1em;
   height: auto;
-  width: inherit;
-  border: 2px solid #E8DDCB;
+  width: 100%;
+  border: medium solid #E8DDCB;
+  border-radius: 3px;
 }
 
 .projectFooter {
@@ -536,7 +548,7 @@ html, body {
       -ms-grid-row-align: center;
       align-self: center;
   text-decoration: none;
-  border: 2px solid #E8DDCB;
+  border: medium solid #E8DDCB;
   color: #E8DDCB;
   border-radius: 5px;
   padding: 3px;
@@ -549,7 +561,7 @@ html, body {
   background: #033649;
   border-radius: 3px 3px 0 0;
   padding: 2px 5px 0;
-  border: 2px solid #E8DDCB;
+  border: medium solid #E8DDCB;
   border-bottom: 0;
   font-weight: bold;
   color: #E8DDCB;
@@ -559,10 +571,10 @@ html, body {
 
 .projectText {
   margin-top: 0.2em;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, black), color-stop(33%, transparent));
-  -webkit-mask-image: linear-gradient(to bottom, black 15%, transparent 33%);
-          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, black), color-stop(33%, transparent));
-          mask-image: linear-gradient(to bottom, black 15%, transparent 33%);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(48%, black), color-stop(96%, transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(48%, black), color-stop(96%, transparent));
+          mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
 }
 
 #p1 {
@@ -620,6 +632,7 @@ html, body {
   .parent {
     font-size: 3vh;
   }
+  /* SLIDE 1 - lg */
   #portrait {
     height: 6em;
     width: 6em;
@@ -635,6 +648,30 @@ html, body {
   }
   #s1AccentContent {
     row-gap: 2em;
+  }
+  /* SLIDE 2 - lg */
+  #s2Title {
+    font-size: 1.5em;
+  }
+  #s2C2 {
+    width: 55%;
+  }
+  /* SLIDE 3 - lg */
+  #s3C1 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .project {
+    width: 25%;
+  }
+  #s3C1Title {
+    font-size: 1.5em;
+    margin-left: 3em;
   }
 }
 

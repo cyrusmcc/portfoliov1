@@ -89,23 +89,25 @@ function onClickProject(project, projectText) {
     var projectId = project.id;
     var projectTextId = projectText.id;
 
+
+
     if(projectId == 'p1') {
 
         if(p1Counter == 0) {
         
-        document.getElementById(projectId).style.height = "auto";
+            document.getElementById(projectId).style.height = "auto";
     
-        document.getElementById(projectTextId).style.webkitMaskImage = "none";
-   
-        document.getElementById("s3Accent2").style.display = "none";
+            document.getElementById(projectTextId).style.webkitMaskImage = "none";
+            
+            document.getElementById("s3Accent2").style.display = "none";
 
         p1Counter = 1;
        
         } else if(p1Counter == 1){
             
-            document.getElementById(projectId).style.height = "5em";
+            document.getElementById(projectId).style.height = "15em";
             
-            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
            
             document.getElementById("s3Accent2").style.display = "block";
 
@@ -118,17 +120,17 @@ function onClickProject(project, projectText) {
 
         if(p2Counter == 0) {
        
-        document.getElementById(projectId).style.height = "auto";
+            document.getElementById(projectId).style.height = "auto";
     
-        document.getElementById(projectTextId).style.webkitMaskImage = "none";
+            document.getElementById(projectTextId).style.webkitMaskImage = "none";
    
         p2Counter = 1;
        
         } else if(p2Counter == 1){
            
-            document.getElementById(projectId).style.height = "5em";
+            document.getElementById(projectId).style.height = "15em";
            
-            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
            
             p2Counter = 0;
         }
@@ -138,17 +140,17 @@ function onClickProject(project, projectText) {
 
         if(p3Counter == 0) {
         
-        document.getElementById(projectId).style.height = "auto";
+            document.getElementById(projectId).style.height = "auto";
     
-        document.getElementById(projectTextId).style.webkitMaskImage = "none";
+            document.getElementById(projectTextId).style.webkitMaskImage = "none";
    
         p3Counter = 1;
        
         } else if(p3Counter == 1){
            
-            document.getElementById(projectId).style.height = "5em";
+            document.getElementById(projectId).style.height = "15em";
            
-            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 20%, transparent 54%)";
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
            
             p3Counter = 0;
         }

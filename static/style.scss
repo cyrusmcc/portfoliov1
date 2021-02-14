@@ -81,7 +81,7 @@ html, body {
 #portrait {
     position: relative;
     background-color: $background;
-    border: solid 2px $darkAccent;
+    border: solid medium $darkAccent;
     border-radius: 50%;
     height: 8em;
     width: 8em;
@@ -248,12 +248,13 @@ html, body {
     padding: 0 0.5em 0.5em;
     grid-area: s1C2;
     color: $darkAccent;
-    border: 2px solid $darkAccent;
+    border: medium solid $darkAccent;
     border-top: 0;
     overflow: hidden;
     border-radius: 0 0 3px 3px;
     background: $background;
-    margin: 0 1.5em;
+    width: 85%;
+    align-self: center;
     text-align: left;
 }
 
@@ -267,7 +268,7 @@ html, body {
     width: 15em;
     border-radius: 50%;
     background: $background;
-    border: 2px solid rgba($color: grey, $alpha: 0.5);
+    border: medium solid rgba($color: grey, $alpha: 0.5);
 }
 
 #skillsMask {
@@ -277,7 +278,7 @@ html, body {
     width: inherit;
     border-radius: 50%; 
     background: none;
-    border: 2px solid grey;
+    border: medium solid grey;
     opacity: 0.5;
 }
 
@@ -285,7 +286,7 @@ html, body {
     display: none;
     position: absolute;
     bottom: 0;
-    border-bottom: 2px solid $darkAccent;
+    border-bottom: medium solid $darkAccent;
     margin: 1em;
     padding: 5px;
 }
@@ -386,11 +387,14 @@ html, body {
     flex-direction: column;
     height: 85%;
     max-height: fit-content;
+    margin-top: 3em;
 }
 
 #s3C1 {
     height: inherit;
     margin: 0 0.85em;
+    display: flex;
+    flex-direction: column;
 }
 
 #s3C1Title {
@@ -401,7 +405,7 @@ html, body {
     font-size: 1.1em;
     width: fit-content;
     background-color: $darkAccent;
-    margin: 0.5em 0.5em 1em;
+    margin: 0.5em 1em 1em;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -410,7 +414,7 @@ html, body {
     background: $darkAccent;
     color: $background;
     margin: 10px 0 20px 0;
-    border: 2px solid $background;
+    border: medium solid $background;
     border-radius: 3px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
                 rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -418,7 +422,7 @@ html, body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 5em;
+    height: 15em;
 }
 
 .projectImg {
@@ -426,8 +430,9 @@ html, body {
     justify-content: center;
     margin: 1em 0 1em;
     height: auto;
-    width: inherit;
-    border: 2px solid $background;
+    width: 100%;
+    border: medium solid $background;
+    border-radius: 3px;
 }
 
 .projectFooter {
@@ -451,7 +456,7 @@ html, body {
 .projectLink {
     align-self: center;
     text-decoration: none;
-    border: 2px solid $background;
+    border: medium solid $background;
     color: $background;
     border-radius: 5px;
     padding: 3px;
@@ -464,7 +469,7 @@ html, body {
     background: $darkAccent;
     border-radius: 3px 3px 0 0;
     padding: 2px 5px 0;
-    border: 2px solid $background;
+    border: medium solid $background;
     border-bottom: 0;
     font-weight: bold;
     color: $background;
@@ -475,7 +480,7 @@ html, body {
 
 .projectText {
     margin-top: 0.2em;
-    mask-image: linear-gradient(to bottom, black 15%, transparent 33%);
+    mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
 }
 
 #p1 {
@@ -530,6 +535,8 @@ html, body {
         font-size: 3vh;
     }
 
+    /* SLIDE 1 - lg */
+
     #portrait {
         height: 6em;
         width: 6em;
@@ -546,6 +553,31 @@ html, body {
 
     #s1AccentContent {
         row-gap: 2em;
+    }
+    
+    /* SLIDE 2 - lg */
+    
+    #s2Title {
+        font-size: 1.5em;
+    }
+    
+    #s2C2 {
+        width: 55%;
+    }
+    /* SLIDE 3 - lg */
+
+    #s3C1 {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .project {
+        width: 25%;
+    }
+
+    #s3C1Title {
+        font-size: 1.5em;
+        margin-left: 3em;
     }
 
 }
