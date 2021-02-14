@@ -85,9 +85,10 @@ function out() {
 
 }
 
-function onClickProject(project, projectText) {
+function onClickProject(project, projectText, projectImg) {
     var projectId = project.id;
     var projectTextId = projectText.id;
+    var projectImg = projectImg.id;
 
 
 
@@ -98,6 +99,8 @@ function onClickProject(project, projectText) {
             document.getElementById(projectId).style.height = "auto";
     
             document.getElementById(projectTextId).style.webkitMaskImage = "none";
+
+            document.getElementById(projectImg).style.opacity = "1";
             
             document.getElementById("s3Accent2").style.display = "none";
 
@@ -109,6 +112,8 @@ function onClickProject(project, projectText) {
             
             document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
            
+            document.getElementById(projectImg).style.opacity = "0.5";
+
             document.getElementById("s3Accent2").style.display = "block";
 
 
@@ -121,6 +126,8 @@ function onClickProject(project, projectText) {
         if(p2Counter == 0) {
        
             document.getElementById(projectId).style.height = "auto";
+
+            document.getElementById(projectImg).style.opacity = "1";
     
             document.getElementById(projectTextId).style.webkitMaskImage = "none";
    
@@ -129,6 +136,9 @@ function onClickProject(project, projectText) {
         } else if(p2Counter == 1){
            
             document.getElementById(projectId).style.height = "15em";
+
+            document.getElementById(projectImg).style.opacity = "0.5";
+
            
             document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
            
@@ -141,6 +151,8 @@ function onClickProject(project, projectText) {
         if(p3Counter == 0) {
         
             document.getElementById(projectId).style.height = "auto";
+
+            document.getElementById(projectImg).style.opacity = "1";
     
             document.getElementById(projectTextId).style.webkitMaskImage = "none";
    
@@ -149,6 +161,8 @@ function onClickProject(project, projectText) {
         } else if(p3Counter == 1){
            
             document.getElementById(projectId).style.height = "15em";
+
+            document.getElementById(projectImg).style.opacity = "0.5em";
            
             document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
            

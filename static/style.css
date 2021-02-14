@@ -519,6 +519,10 @@ html, body {
   border-radius: 3px;
 }
 
+.projectImg > img {
+  opacity: 0.5;
+}
+
 .projectFooter {
   display: -webkit-box;
   display: -ms-flexbox;

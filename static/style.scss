@@ -434,6 +434,10 @@ html, body {
     border-radius: 3px;
 }
 
+.projectImg > img {
+    opacity: 0.5;
+}
+
 .projectFooter {
     display: flex;
     flex-direction: column;
