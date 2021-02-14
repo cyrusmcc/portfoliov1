@@ -8,7 +8,7 @@ function overBack() {
     document.getElementById("cImgMask").style.bottom = "2.2em";
     document.getElementById("cImgMask").style.left = "5.4em";
 
-    document.getElementById("skills").style.border = "solid thin #ff9f1c";
+    document.getElementById("skills").style.border = "solid 2px #033649";
 
     document.getElementById("skillsMask").style.display = "block";
 
@@ -37,7 +37,7 @@ function overFront() {
     
     document.getElementById("s2Desc").style.display = "block";
 
-    document.getElementById("skills").style.border = "solid thin #ff9f1c";
+    document.getElementById("skills").style.border = "solid 2px #033649";
 
     document.getElementById("cImgMask").style.bottom = "7em";
     document.getElementById("cImgMask").style.left = "-5.4em";
@@ -64,7 +64,7 @@ function out() {
     
     document.getElementById("s2Desc").style.display = "none";
 
-    document.getElementById("skills").style.border = "thin solid rgba(128, 128, 128, 0.5)";
+    document.getElementById("skills").style.border = "2px solid rgba(128, 128, 128, 0.5)";
 
     document.getElementById("cImg1").style.opacity = "0.5";
     document.getElementById("cImg2").style.opacity = "0.5";

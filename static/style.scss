@@ -1,8 +1,16 @@
-$background: #171919;
-$lightAccentOne: #ffbf69;
-$darkAccentOne: #ff9f1c;
-$lightAccentTwo: #cbf3f0;
-$darkAccentTwo: #0081A7;
+
+$background: #E8DDCB;
+$darkAccent: #033649;
+$lightAccent: #025f60;
+$darkShade: #031634;
+
+/*$background: #F6F4F5;
+$darkBackground: #171919;
+$darkAccent: #ffbf69;
+$lightAccent: #ffa224;
+$darkAccent: #cbf3f0;
+$darkShade: #0081A7;
+*/
 
 $screen-md: 610px;
 $screen-lg: 1115px;
@@ -29,7 +37,7 @@ $screen-lg: 1115px;
 html, body {
     font-family: 'Inconsolata', monospace;
     margin: 0;
-    color: $lightAccentOne;
+    color: $darkAccent;
     background-color: $background;
     min-width: 300px;
     max-width: 100%;
@@ -50,6 +58,7 @@ html, body {
 }
 
 
+/* SLIDE 1 */ 
 #s1 {
     grid-area: s1;
     height: 100%;
@@ -61,72 +70,34 @@ html, body {
     position: relative;
 }
 
-#s1Accent {
-    display: block;
-    margin: -5px 0;
-    transform: scale(-1, 1);
-    z-index: 1;
-    height: auto;
-    width: 100%;
-}
-
-#s1Button {
-    font-size: 1.1em;
-    cursor: pointer;
-    padding:  0.5em 1.5em;
-    font-weight: bold;
-    border-radius: 0.7em;
-    color: $background;
-    background-color: $lightAccentOne;
-    filter: drop-shadow(-1.4px 4px 0.5px #171919);
-}
-
-#s1Button:hover {
-    background-color: $lightAccentTwo;
-}
-
-#s1AccentContentContainer {
+#s1C1 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    height: inherit;
-    width: 100%;
-    background: $darkAccentOne;
-    z-index: 0;
-}
-
-#s1AccentContent {
-    height: inherit;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    row-gap: 5em;
-    padding-top: 3em;
-}
-
-#s1AccentImgs {
-    display: flex;
-    width: 10em;
-    justify-content: space-evenly;
-    }
-
-#s1AccentImgs .s1Img {
-    height: auto;
-    width: 18%;
     justify-content: center;
+    height: 15em;
+    width: 100%;
 }
 
-.s1Img {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    cursor: pointer;
-}
-
-#s1Img1 {
+#portrait {
+    position: relative;
+    background-color: $background;
+    border: solid 2px $darkAccent;
     border-radius: 50%;
+    height: 8em;
+    width: 8em;
+    overflow: hidden;
+    user-select: none;
+
+    box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
+                0 6px 20px 0 RGB(0 0 0 / 19%);
+}
+
+#portraitImg {
+    position: absolute;
+    right: 0em;
+    bottom: -0.5em;
+    height: 140%;
+
 }
 
 #s1C2 {
@@ -146,12 +117,12 @@ html, body {
     flex-direction: column;
     text-align: center;
     font-weight: bold;
-    color: $lightAccentOne;
+    color: $darkAccent;
     border-radius: 2px;
 }
 
 #role {
-    background: $darkAccentOne;
+    background: $lightAccent;
     color: $background;
     font-weight: bold;
     padding: 5px;
@@ -161,179 +132,87 @@ html, body {
                 0 6px 20px 0 RGB(0 0 0 / 19%);
 }
 
-#s1C1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 15em;
-    width: 100%;
-}
-
 #s1C3 {
     position: relative;
     height: 27em;
     overflow: hidden;
 }
 
-#portrait {
-    position: relative;
-    background-color: $background;
-    border: solid medium $lightAccentOne;
-    border-radius: 50%;
-    height: 8em;
-    width: 8em;
-    overflow: hidden;
-    user-select: none;
-
-    box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
-                0 6px 20px 0 RGB(0 0 0 / 19%);
-}
-
-#portraitImg {
-    position: absolute;
-    right: 0em;
-    bottom: -0.5em;
-    height: 140%;
-
-}
-
-#s2C2 {
-    height: 35%;
+#s1Accent {
+    display: block;
+    margin: -5px 0;
     z-index: 1;
-    padding: 0 0.5em 0.5em;
-    grid-area: s1C2;
-    color: $lightAccentOne;
-    border: thin solid $lightAccentOne;
-    border-top: 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    text-align: left;
-    overflow: hidden;
-    border-radius: 0 0 3px 3px;
-    background: #151717;
-    margin: 0 0.85em;
+    height: auto;
+    width: 100%;
 }
 
-.project {
-    background: $background;
-    color: #cbf3f0;
-    margin: 10px 0 20px 0;
-    border: thin solid $lightAccentTwo;
-    border-radius: 3px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    overflow: hidden;
+#s1Button {
+    font-size: 1.1em;
     cursor: pointer;
+    padding:  0.5em 1.5em;
+    font-weight: bold;
+    border-radius: 0.7em;
+    color: $background;
+    background-color: $darkAccent;
+    filter: drop-shadow(-1.4px 4px 0.5px $background);
+}
+
+#s1Button:hover {
+    background-color: $darkAccent;
+}
+
+#s1AccentContentContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+    background: $lightAccent;
+    z-index: 0;
 }
 
-#p1, #p2, #p3 {
-    height: 5em;
+#s1AccentContent {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 5em;
+    padding-top: 3em;
 }
 
-.projectLegend {
-    background: $background;
-    border-radius: 3px 3px 0 0;
-    padding: 2px 5px 0;
-    border: thin solid $lightAccentTwo;
-    border-bottom: 0;
-    font-weight: bold;
-    color: $lightAccentTwo;
-    font-size: 1em;
-    font-weight: 100;
+#s1AccentImgs {
+    display: flex;
+    width: 16em;
+    justify-content: space-evenly;
+    }
+
+#s1AccentImgs .s1Img {
+    height: auto;
+    width: 12%;
+    justify-content: center;
+}
+
+.s1Img {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
                 rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
 }
 
-#projectText1 {
-    mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
+#s1Img1 {
+    border-radius: 50%;
 }
 
-#projectText2 {
-    mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
-}
-
-#projectText3 {
-    mask-image: linear-gradient(to bottom, black 20%, transparent 54%);
-}
-
-#s3C1 {
-    height: inherit;
-    margin: 0 0.85em;
-}
-
-#s3C1Title {
-    font-weight: bold;
-    color: $darkAccentTwo;
-    border-radius: 3px;
-    padding: 5px;
-    font-size: 1.1em;
-    width: fit-content;
-    background-color: $background;
-    margin: 0.5em 0.5em 1em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-#p1 {
-    overflow: hidden;
-    position: relative;
-}
-
-#p1Img1 {
-    height: 25em;
-    width: auto;
-    margin-top: 1em;
-}
-
-#p1Button {
-    font-size: 1.5em;
-    font-weight: bold;
-    position: absolute;
-    bottom: -11%;
-    right: 5%;
-}
-
+/* SLIDE 2 */
 #s2 {
     display: flex;
     flex-direction: column;
     grid-area: s2;
     text-align: center;
     height: 100%;
-    color: $lightAccentOne;
-}
-
-#s2Accent {
-    display: block;
-    overflow: visible;
-    margin: -5px 0;
-    z-index: 1;
-}
-
-#s3 {
-    grid-area: s3;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 85%;
-    max-height: fit-content;
-}
-
-#s3Accent1 {
-    display: block;
-    height: auto;
-    width: 100%;
-    margin: -5px 0;
-}
-
-#s3Accent2 {
-    transform: rotate(180deg);
-    display: block;
-    margin: -5px 0;
-}
-
-#s3AccentContent {
-    height: 80%;
-    background-color: #0081A7;
+    color: $darkAccent;
 }
 
 #s2C1 {
@@ -352,10 +231,33 @@ html, body {
     font-weight: bold;
     position: absolute;
     top: 0;
-    color: $darkAccentOne;
+    color: $lightAccent;
 
 }
 
+#s2Accent {
+    display: block;
+    overflow: visible;
+    margin: -5px 0;
+    z-index: 1;
+}
+
+#s2C2 {
+    height: 35%;
+    z-index: 1;
+    padding: 0 0.5em 0.5em;
+    grid-area: s1C2;
+    color: $darkAccent;
+    border: 2px solid $darkAccent;
+    border-top: 0;
+    overflow: hidden;
+    border-radius: 0 0 3px 3px;
+    background: $background;
+    margin: 0 1.5em;
+    text-align: left;
+}
+
+/* SLIDE 2 - skill wheel */
 #skills {
     display: flex;
     align-items: center;
@@ -365,7 +267,7 @@ html, body {
     width: 15em;
     border-radius: 50%;
     background: $background;
-    border: thin solid rgba($color: grey, $alpha: 0.5);
+    border: 2px solid rgba($color: grey, $alpha: 0.5);
 }
 
 #skillsMask {
@@ -375,7 +277,7 @@ html, body {
     width: inherit;
     border-radius: 50%; 
     background: none;
-    border: thin solid grey;
+    border: 2px solid grey;
     opacity: 0.5;
 }
 
@@ -383,7 +285,7 @@ html, body {
     display: none;
     position: absolute;
     bottom: 0;
-    border-bottom: thin solid $lightAccentOne;
+    border-bottom: 2px solid $darkAccent;
     margin: 1em;
     padding: 5px;
 }
@@ -476,11 +378,145 @@ html, body {
     transform: rotate(315deg) translate(7.5em) rotate(-315deg);
 }
 
-#s2C2Title {
-    margin-bottom: 3em;
-    font-weight: bold;
-    text-align: center;
+/* SLIDE 3 */
+#s3 {
+    grid-area: s3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    max-height: fit-content;
 }
+
+#s3C1 {
+    height: inherit;
+    margin: 0 0.85em;
+}
+
+#s3C1Title {
+    font-weight: bold;
+    color: $background;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 1.1em;
+    width: fit-content;
+    background-color: $darkAccent;
+    margin: 0.5em 0.5em 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.project {
+    background: $darkAccent;
+    color: $background;
+    margin: 10px 0 20px 0;
+    border: 2px solid $background;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 5em;
+}
+
+.projectImg {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 1em;
+    height: auto;
+    width: inherit;
+    border: 2px solid $background;
+}
+
+.projectFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectFooterTitle {
+    margin-left: 1em;
+}
+
+.projectList {
+    margin: 0.5em 0 0.5em;
+    padding-left: 1.5em;
+}
+
+.projectList > li{
+    margin: 0.5em 0 0.5em;
+}
+
+.projectLink {
+    align-self: center;
+    text-decoration: none;
+    border: 2px solid $background;
+    color: $background;
+    border-radius: 5px;
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.projectLegend {
+    background: $darkAccent;
+    border-radius: 3px 3px 0 0;
+    padding: 2px 5px 0;
+    border: 2px solid $background;
+    border-bottom: 0;
+    font-weight: bold;
+    color: $background;
+    font-size: 1em;
+    font-weight: 100;
+
+}
+
+.projectText {
+    margin-top: 0.2em;
+    mask-image: linear-gradient(to bottom, black 15%, transparent 33%);
+}
+
+#p1 {
+    overflow: hidden;
+    position: relative;
+}
+
+#p1Img1 {
+    height: auto;
+    width: 85%;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#p1Button {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    bottom: -11%;
+    right: 5%;
+}
+
+#s3Accent1 {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: -5px 0;
+}
+
+#s3Accent2 {
+    transform: rotate(180deg);
+    display: block;
+    margin: -5px 0;
+}
+
+#s3AccentContent {
+    height: fit-content;
+    background-color: $darkShade;
+}
+
 
 #s2C3 {
     grid-area: s2C3;
