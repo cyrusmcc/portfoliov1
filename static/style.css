@@ -480,14 +480,13 @@ html, body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #033649;
   margin: 0.5em 1em 1em;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .project {
-  background: #033649;
+  background: #025f60;
   color: #E8DDCB;
   margin: 10px 0 20px 0;
   border: medium solid #E8DDCB;
@@ -558,7 +557,7 @@ html, body {
 }
 
 .projectLegend {
-  background: #033649;
+  background: #025f60;
   border-radius: 3px 3px 0 0;
   padding: 2px 5px 0;
   border: medium solid #E8DDCB;
