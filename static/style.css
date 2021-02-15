@@ -293,6 +293,13 @@ html, body {
 }
 
 #s2C2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 35%;
   z-index: 1;
   padding: 0.5em;
@@ -304,11 +311,20 @@ html, body {
   background: #f9f3e9;
   width: 85%;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   text-align: left;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#s2C2Title {
+  border-bottom: thin solid #031634;
+  padding-bottom: 0.2em;
+  font-weight: bold;
+}
+
+#s2C2Text {
+  padding-top: 0.25em;
 }
 
 /* SLIDE 2 - skill wheel */
@@ -644,7 +660,11 @@ html, body {
 }
 
 @media only screen and (min-width: 610px) {
+  html, body {
+    min-height: 600px;
+  }
   .parent {
+    min-height: 600px;
     font-size: 3vh;
   }
   #s1AccentContent {
