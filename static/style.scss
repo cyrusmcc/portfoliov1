@@ -1,4 +1,4 @@
-$background: #f9f3e9;
+$background: #fbf7ef;
 $darkAccent: #033649;
 $lightAccent: #025f60;
 $darkShade: #031634;
@@ -145,16 +145,9 @@ html, body {
     overflow: hidden;
 }
 
-#s1Accent {
-    display: block;
-    margin: -5px 0;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-}
 
 #s1Button {
-    font-size: 1.5em;
+    font-size: 1.2em;
     cursor: pointer;
     padding:  0.5em 1.5em;
     font-weight: bold;
@@ -175,7 +168,7 @@ html, body {
     align-items: center;
     height: 100%;
     width: 100%;
-    background: $lightAccent;
+    background: $background;
     z-index: 0;
 }
 
@@ -214,6 +207,7 @@ html, body {
 
 /* SLIDE 2 */
 #s2 {
+    position: relative;
     display: flex;
     flex-direction: column;
     grid-area: s2;
@@ -229,9 +223,8 @@ html, body {
     align-items: center;
     justify-content: center;
     grid-area: s2C1;
-    background-color: $darkShade;
     overflow: hidden;
-    height: 25em;
+    height: 40em;
     margin: 0 0.85em;
 }
 
@@ -244,6 +237,8 @@ html, body {
 }
 
 #s2Accent {
+    width: 100%;
+    transform: rotateX(180deg);
     display: block;
     overflow: visible;
     margin: -5px 0;
@@ -256,6 +251,7 @@ html, body {
     height: 35%;
     z-index: 1;
     padding: 0.5em;
+    margin-bottom: 3em;
     grid-area: s1C2;
     color: $darkShade;
     border-top: 0;
@@ -265,8 +261,8 @@ html, body {
     width: 85%;
     align-self: center;
     text-align: left;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgb(38 38 51 / 25%) 0px 13px 27px -5px, 
+                rgb(0 0 0 / 30%) -9px 10px 16px -8px;
 }
 
 #s2C2Title {
@@ -276,7 +272,17 @@ html, body {
 }
 
 #s2C2Text {
+    font-size: 2.5vh;
     padding-top: 0.25em;
+}
+
+#s2Accent2 {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    margin: -5px 0;
 }
 
 /* SLIDE 2 - skill wheel */
@@ -301,6 +307,21 @@ html, body {
     background: none;
     border: medium solid grey;
     opacity: 0.5;
+}
+
+#blobCont {
+    position: absolute;
+    max-width: 100%;
+    bottom: -2em;
+    right: 0px;
+    left: 0px;
+}
+
+
+#blob {
+    height: auto;
+    width: 100%;
+
 }
 
 #s2Desc {
@@ -408,7 +429,6 @@ html, body {
     display: flex;
     flex-direction: column;
     max-height: fit-content;
-    margin-top: 3em;
 }
 
 #s3C1 {
@@ -438,8 +458,8 @@ html, body {
     margin: 10px 0.85em 50px;
     border: none;
     border-radius: 4px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgb(30 30 59 / 25%) -7px 6px 10px 1px, 
+                rgb(0 0 0 / 30%) 0px 8px 16px -8px;
     overflow: hidden;
     cursor: pointer;
     display: flex;
@@ -529,19 +549,6 @@ html, body {
     right: 5%;
 }
 
-#s3Accent1 {
-    display: block;
-    height: auto;
-    width: 100%;
-    margin: -5px 0;
-}
-
-#s3Accent2 {
-    transform: rotate(180deg);
-    display: block;
-    margin: -5px 0;
-}
-
 #s3AccentContent {
     height: fill-available;
     background-color: $background;
@@ -568,6 +575,13 @@ html, body {
     #s1AccentContent {
         padding-top: 0;
     }
+
+    #blobCont {
+        right: 0;
+        left: 0;
+        bottom: -11em;
+    }
+
 }
 
 /* MEDIA QUERIES */
@@ -613,11 +627,18 @@ html, body {
     }
     
     #s2Title {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     
     #s2C2 {
         width: 55%;
+        margin-bottom: 3em;
+    }
+
+    #blobCont {
+        right: 0;
+        left: 0;
+        bottom: -40em;
     }
 
 
@@ -637,7 +658,7 @@ html, body {
     }
 
     #s3C1Title {
-        font-size: 1.5em;
+        font-size: 1.2em;
         margin-left: 3em;
     }
 

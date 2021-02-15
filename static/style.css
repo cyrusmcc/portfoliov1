@@ -46,7 +46,7 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #f9f3e9;
+  background-color: #fbf7ef;
   background-clip: padding-box;
   position: relative;
 }
@@ -73,7 +73,7 @@ html, body {
 
 #portrait {
   position: relative;
-  background-color: #f9f3e9;
+  background-color: #fbf7ef;
   border: solid medium #033649;
   border-radius: 50%;
   height: 8em;
@@ -132,7 +132,7 @@ html, body {
 
 #role {
   background: #025f60;
-  color: #f9f3e9;
+  color: #fbf7ef;
   font-weight: bold;
   padding: 5px;
   font-size: 0.6em;
@@ -150,24 +150,16 @@ html, body {
   overflow: hidden;
 }
 
-#s1Accent {
-  display: block;
-  margin: -5px 0;
-  z-index: 1;
-  height: auto;
-  width: 100%;
-}
-
 #s1Button {
-  font-size: 1.5em;
+  font-size: 1.2em;
   cursor: pointer;
   padding: 0.5em 1.5em;
   font-weight: bold;
   border-radius: 0.7em;
-  color: #f9f3e9;
+  color: #fbf7ef;
   background-color: #033649;
-  -webkit-filter: drop-shadow(-1.4px 4px 0.5px #f9f3e9);
-          filter: drop-shadow(-1.4px 4px 0.5px #f9f3e9);
+  -webkit-filter: drop-shadow(-1.4px 4px 0.5px #fbf7ef);
+          filter: drop-shadow(-1.4px 4px 0.5px #fbf7ef);
 }
 
 #s1Button:hover {
@@ -190,7 +182,7 @@ html, body {
           align-items: center;
   height: 100%;
   width: 100%;
-  background: #025f60;
+  background: #fbf7ef;
   z-index: 0;
 }
 
@@ -244,6 +236,7 @@ html, body {
 
 /* SLIDE 2 */
 #s2 {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,7 +250,7 @@ html, body {
   text-align: center;
   height: 100%;
   background: #031634;
-  color: #f9f3e9;
+  color: #fbf7ef;
 }
 
 #s2C1 {
@@ -272,9 +265,8 @@ html, body {
       -ms-flex-pack: center;
           justify-content: center;
   grid-area: s2C1;
-  background-color: #031634;
   overflow: hidden;
-  height: 25em;
+  height: 40em;
   margin: 0 0.85em;
 }
 
@@ -282,10 +274,13 @@ html, body {
   font-weight: bold;
   position: absolute;
   top: 0;
-  color: #f9f3e9;
+  color: #fbf7ef;
 }
 
 #s2Accent {
+  width: 100%;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
   display: block;
   overflow: visible;
   margin: -5px 0;
@@ -303,12 +298,13 @@ html, body {
   height: 35%;
   z-index: 1;
   padding: 0.5em;
+  margin-bottom: 3em;
   grid-area: s1C2;
   color: #031634;
   border-top: 0;
   overflow: hidden;
   border-radius: 4px;
-  background: #f9f3e9;
+  background: #fbf7ef;
   width: 85%;
   -ms-flex-item-align: center;
       align-self: center;
@@ -324,7 +320,17 @@ html, body {
 }
 
 #s2C2Text {
+  font-size: 2.5vh;
   padding-top: 0.25em;
+}
+
+#s2Accent2 {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  margin: -5px 0;
 }
 
 /* SLIDE 2 - skill wheel */
@@ -357,11 +363,24 @@ html, body {
   opacity: 0.5;
 }
 
+#blobCont {
+  position: absolute;
+  max-width: 100%;
+  bottom: -4em;
+  right: 0px;
+  left: 0px;
+}
+
+#blob {
+  height: auto;
+  width: 100%;
+}
+
 #s2Desc {
   display: none;
   position: absolute;
   bottom: 0;
-  border-bottom: medium solid #f9f3e9;
+  border-bottom: medium solid #fbf7ef;
   margin: 1em;
   padding: 5px;
 }
@@ -484,13 +503,12 @@ html, body {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  margin-top: 3em;
 }
 
 #s3C1 {
   height: initial;
   max-height: inherit;
-  background-color: #f9f3e9;
+  background-color: #fbf7ef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,7 +520,7 @@ html, body {
 
 #s3C1Title {
   font-weight: bold;
-  color: #f9f3e9;
+  color: #fbf7ef;
   background: #033649;
   border-radius: 3px;
   padding: 5px;
@@ -517,7 +535,7 @@ html, body {
 
 .project {
   background: #033649;
-  color: #f9f3e9;
+  color: #fbf7ef;
   margin: 10px 0.85em 50px;
   border: none;
   border-radius: 4px;
@@ -550,7 +568,7 @@ html, body {
 
 .projectImg > img {
   opacity: 0.5;
-  border: medium solid #f9f3e9;
+  border: medium solid #fbf7ef;
 }
 
 .projectFooter {
@@ -581,8 +599,8 @@ html, body {
       -ms-grid-row-align: center;
       align-self: center;
   text-decoration: none;
-  border: medium solid #f9f3e9;
-  color: #f9f3e9;
+  border: medium solid #fbf7ef;
+  color: #fbf7ef;
   border-radius: 5px;
   padding: 3px;
   width: 100%;
@@ -596,7 +614,7 @@ html, body {
   padding: 2px 5px 0;
   border-bottom: 0;
   font-weight: bold;
-  color: #f9f3e9;
+  color: #fbf7ef;
   font-size: 1em;
   font-weight: 100;
 }
@@ -630,25 +648,11 @@ html, body {
   right: 5%;
 }
 
-#s3Accent1 {
-  display: block;
-  height: auto;
-  width: 100%;
-  margin: -5px 0;
-}
-
-#s3Accent2 {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  display: block;
-  margin: -5px 0;
-}
-
 #s3AccentContent {
   height: -webkit-fill-available;
   height: -moz-available;
   height: fill-available;
-  background-color: #f9f3e9;
+  background-color: #fbf7ef;
 }
 
 #s2C3 {
@@ -669,6 +673,11 @@ html, body {
   }
   #s1AccentContent {
     padding-top: 0;
+  }
+  #blobCont {
+    right: 0;
+    left: 0;
+    bottom: -11em;
   }
 }
 
@@ -704,10 +713,16 @@ html, body {
     font-size: 2.8vh;
   }
   #s2Title {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   #s2C2 {
     width: 55%;
+    margin-bottom: 3em;
+  }
+  #blobCont {
+    right: 0;
+    left: 0;
+    bottom: -40em;
   }
   /* SLIDE 3 - lg */
   #s3 {
@@ -726,7 +741,7 @@ html, body {
     width: 25%;
   }
   #s3C1Title {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-left: 3em;
   }
 }

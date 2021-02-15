@@ -1,10 +1,10 @@
-<!--?xml version="1.0" standalone="no"?-->
-              <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                    <defs> 
-                        <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                            <stop id="stop1" stop-color="rgba(33, 153, 21, 1)" offset="0%"></stop>
-                            <stop id="stop2" stop-color="rgba(33, 153, 21, 1)" offset="100%"></stop>
-                        </linearGradient>
-                    </defs>
-                <path fill="none" d="M17.5,-29.9C21.4,-24.7,22.4,-17.7,22.7,-11.9C23,-6.1,22.6,-1.4,22.2,3.4C21.8,8.2,21.5,13.3,20.1,20.6C18.7,28,16.3,37.6,11.3,39.3C6.4,41.1,-1.1,35.1,-9.4,32.5C-17.6,29.8,-26.7,30.4,-30.4,26.2C-34.1,22.1,-32.4,13.3,-30.3,6.3C-28.3,-0.6,-25.8,-5.6,-25,-13.1C-24.2,-20.5,-25,-30.4,-21.1,-35.6C-17.2,-40.7,-8.6,-41.2,-0.9,-39.8C6.8,-38.4,13.6,-35,17.5,-29.9Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="1" style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
-              </svg>
+<svg width="555" height="555" viewBox="0 0 555 555" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.78143 28.6604C33.6847 -13.4013 123.336 0.0226055 201.367 11.6567C279.397 23.2908 345.805 34.9249 415.534 76.0917C484.433 118.153 554.993 189.748 554.993 263.132C555.823 335.622 486.094 409.006 417.195 459.122C348.296 510.133 280.227 538.771 201.367 550.405C123.336 561.144 34.5148 555.775 9.61156 504.764C-16.1218 453.753 22.0632 357.995 22.0632 262.237C22.0632 166.48 -16.9519 69.8272 8.78143 28.6604Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="555" y1="555" x2="-2.42598e-05" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="#031634"/>
+<stop offset="0.489583" stop-color="#03384A"/>
+<stop offset="0.755208" stop-color="#034853"/>
+</linearGradient>
+</defs>
+</svg>
