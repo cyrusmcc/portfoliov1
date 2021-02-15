@@ -5,10 +5,10 @@ var p3Counter = 0;
 
 function overBack() {
 
-    document.getElementById("cImgMask").style.bottom = "2.2em";
+    document.getElementById("cImgMask").style.bottom = "0.2em";
     document.getElementById("cImgMask").style.left = "5.4em";
 
-    document.getElementById("skills").style.border = "solid 2px #033649";
+    document.getElementById("skills").style.border = "solid 2px #f9f3e9";
 
     document.getElementById("skillsMask").style.display = "block";
 
@@ -18,14 +18,14 @@ function overBack() {
 
     document.getElementById("s2Desc").innerText = "Java, Spring, MySQL, Hibernate";
 
-    setTimeout('document.getElementById("cImg4").style.opacity = "1";', 100);
-    setTimeout('document.getElementById("cImg5").style.opacity = "1";', 150);
-    setTimeout('document.getElementById("cImg6").style.opacity = "1";', 200);
-    setTimeout('document.getElementById("cImg7").style.opacity = "1";', 250);
-    setTimeout('document.getElementById("cImg4").style.filter = "grayscale(0)";', 100);
-    setTimeout('document.getElementById("cImg5").style.filter = "grayscale(0)";', 150);
-    setTimeout('document.getElementById("cImg6").style.filter = "grayscale(0)";', 200);
-    setTimeout('document.getElementById("cImg7").style.filter = "grayscale(0)";', 250);
+    setTimeout('document.getElementById("cImg4").style.opacity = "1";', 50);
+    setTimeout('document.getElementById("cImg5").style.opacity = "1";', 100);
+    setTimeout('document.getElementById("cImg6").style.opacity = "1";', 150);
+    setTimeout('document.getElementById("cImg7").style.opacity = "1";', 200);
+    setTimeout('document.getElementById("cImg4").style.filter = "grayscale(0)";', 50);
+    setTimeout('document.getElementById("cImg5").style.filter = "grayscale(0)";', 100);
+    setTimeout('document.getElementById("cImg6").style.filter = "grayscale(0)";', 150);
+    setTimeout('document.getElementById("cImg7").style.filter = "grayscale(0)";', 200);
 
 }
 
@@ -37,22 +37,22 @@ function overFront() {
     
     document.getElementById("s2Desc").style.display = "block";
 
-    document.getElementById("skills").style.border = "solid 2px #033649";
+    document.getElementById("skills").style.border = "solid 2px #f9f3e9";
 
-    document.getElementById("cImgMask").style.bottom = "7em";
+    document.getElementById("cImgMask").style.bottom = "5em";
     document.getElementById("cImgMask").style.left = "-5.4em";
 
     document.getElementById("s2Desc").innerText = "HTML, CSS, SASS, JavaScript";
 
 
-    setTimeout('document.getElementById("cImg8").style.opacity = "1";', 100);
-    setTimeout('document.getElementById("cImg1").style.opacity = "1";', 150);
-    setTimeout('document.getElementById("cImg2").style.opacity = "1";', 200);
-    setTimeout('document.getElementById("cImg3").style.opacity = "1";', 250);
-    setTimeout('document.getElementById("cImg8").style.filter = "grayscale(0)";', 100);
-    setTimeout('document.getElementById("cImg1").style.filter = "grayscale(0)";', 150);
-    setTimeout('document.getElementById("cImg2").style.filter = "grayscale(0)";', 200);
-    setTimeout('document.getElementById("cImg3").style.filter = "grayscale(0)";', 250);
+    setTimeout('document.getElementById("cImg8").style.opacity = "1";', 50);
+    setTimeout('document.getElementById("cImg1").style.opacity = "1";', 100);
+    setTimeout('document.getElementById("cImg2").style.opacity = "1";', 150);
+    setTimeout('document.getElementById("cImg3").style.opacity = "1";', 200);
+    setTimeout('document.getElementById("cImg8").style.filter = "grayscale(0)";', 50);
+    setTimeout('document.getElementById("cImg1").style.filter = "grayscale(0)";', 100);
+    setTimeout('document.getElementById("cImg2").style.filter = "grayscale(0)";', 150);
+    setTimeout('document.getElementById("cImg3").style.filter = "grayscale(0)";', 200);
 
 }
 

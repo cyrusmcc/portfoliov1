@@ -1,4 +1,4 @@
-$background: #E8DDCB;
+$background: #f9f3e9;
 $darkAccent: #033649;
 $lightAccent: #025f60;
 $darkShade: #031634;
@@ -38,7 +38,7 @@ html, body {
     font-family: 'Inconsolata', monospace;
     margin: 0;
     color: $darkAccent;
-    background-color: $background;
+    background-color: $darkShade;
     min-width: 300px;
     max-width: 100%;
 }
@@ -48,9 +48,9 @@ html, body {
     display: grid;
     min-height: 100%;
     max-width: 100%;
-    height: 300vh;
+    height: 315vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 120vh 80vh;
+    grid-template-rows: 100vh 120vh 95vh;
     grid-template-areas: 
             "s1"
             "s2"
@@ -131,7 +131,7 @@ html, body {
     font-weight: bold;
     padding: 5px;
     font-size: 0.6em;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
                 0 6px 20px 0 RGB(0 0 0 / 19%);
 }
@@ -219,7 +219,8 @@ html, body {
     grid-area: s2;
     text-align: center;
     height: 100%;
-    color: $darkAccent;
+    background: $darkShade;
+    color: $background;
 }
 
 #s2C1 {
@@ -228,7 +229,7 @@ html, body {
     align-items: center;
     justify-content: center;
     grid-area: s2C1;
-    background-color:$background;
+    background-color: $darkShade;
     overflow: hidden;
     height: 25em;
     margin: 0 0.85em;
@@ -238,7 +239,7 @@ html, body {
     font-weight: bold;
     position: absolute;
     top: 0;
-    color: $lightAccent;
+    color: $background;
 
 }
 
@@ -254,11 +255,11 @@ html, body {
     z-index: 1;
     padding: 0.5em;
     grid-area: s1C2;
-    color: $background;
+    color: $darkShade;
     border-top: 0;
     overflow: hidden;
-    border-radius: 3px;
-    background: $darkAccent;
+    border-radius: 4px;
+    background: $background;
     width: 85%;
     align-self: center;
     text-align: left;
@@ -272,10 +273,10 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 15em;
-    width: 15em;
+    height: 14em;
+    width: 14em;
     border-radius: 50%;
-    background: $background;
+    background: $darkShade;
     border: medium solid rgba($color: grey, $alpha: 0.5);
 }
 
@@ -294,7 +295,7 @@ html, body {
     display: none;
     position: absolute;
     bottom: 0;
-    border-bottom: medium solid $darkAccent;
+    border-bottom: medium solid $background;
     margin: 1em;
     padding: 5px;
 }
@@ -319,7 +320,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $background;
+    background-color: $darkShade;
     border-radius: 50%;
     height: 2em;
     width: 2em;
@@ -340,7 +341,7 @@ html, body {
 #cImgMask {
     display: none;
     position: absolute;
-    background-color:$background;
+    background-color: $darkShade;
     width: inherit;
     height: 7em;
     bottom: 2.2em;
@@ -354,41 +355,42 @@ html, body {
 }
 
 #skills .cImgCont:nth-child(3) {
-    transform: rotate(0deg) translate(7.5em);
+    transform: rotate(0deg) translate(7em);
 }
 
 #skills .cImgCont:nth-child(4) {
-    transform: rotate(45deg) translate(7.5em) rotate(-45deg);
+    transform: rotate(45deg) translate(7em) rotate(-45deg);
 }
 
 #skills .cImgCont:nth-child(5) {
     height: 1.7em;
-    transform: rotate(90deg) translate(7.5em) rotate(-90deg);
+    transform: rotate(90deg) translate(7em) rotate(-90deg);
 
 }
 
 #skills .cImgCont:nth-child(6) {
-    transform: rotate(135deg) translate(7.5em) rotate(-135deg);
+    transform: rotate(135deg) translate(7em) rotate(-135deg);
 }
 
 #skills .cImgCont:nth-child(7) {
-    transform: rotate(180deg) translate(7.5em) rotate(-180deg);
+    transform: rotate(180deg) translate(7em) rotate(-180deg);
 }
 
 #skills .cImgCont:nth-child(8) {
-    transform: rotate(225deg) translate(7.5em) rotate(-225deg);
+    transform: rotate(225deg) translate(7em) rotate(-225deg);
 }
 
 #skills .cImgCont:nth-child(9) {
-    transform: rotate(270deg) translate(7.5em) rotate(-270deg);
+    transform: rotate(270deg) translate(7em) rotate(-270deg);
 }
 
 #skills .cImgCont:nth-child(10) {
-    transform: rotate(315deg) translate(7.5em) rotate(-315deg);
+    transform: rotate(315deg) translate(7em) rotate(-315deg);
 }
 
 /* SLIDE 3 */
 #s3 {
+    background: $darkShade;
     grid-area: s3;
     position: relative;
     display: flex;
@@ -400,7 +402,7 @@ html, body {
 #s3C1 {
     height: initial;
     max-height: inherit;
-    background-color: $darkShade;
+    background-color: $background;
     display: flex;
     flex-direction: column;
 }
@@ -408,6 +410,7 @@ html, body {
 #s3C1Title {
     font-weight: bold;
     color: $background;
+    background: $darkAccent;
     border-radius: 3px;
     padding: 5px;
     font-size: 1.1em;
@@ -418,11 +421,11 @@ html, body {
 }
 
 .project {
-    background: $lightAccent;
+    background: $darkAccent;
     color: $background;
-    margin: 10px 0.85em 20px;
-    border: medium solid $background;
-    border-radius: 3px;
+    margin: 10px 0.85em 50px;
+    border: none;
+    border-radius: 4px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
                 rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     overflow: hidden;
@@ -438,12 +441,12 @@ html, body {
     margin: 1em 0 1em;
     height: auto;
     width: 100%;
-    border: medium solid $background;
     border-radius: 3px;
 }
 
 .projectImg > img {
     opacity: 0.5;
+    border: medium solid $background;
 }
 
 .projectFooter {
@@ -477,10 +480,9 @@ html, body {
 }
 
 .projectLegend {
-    background: $lightAccent;
+    background: $darkAccent;
     border-radius: 3px 3px 0 0;
     padding: 2px 5px 0;
-    border: medium solid $background;
     border-bottom: 0;
     font-weight: bold;
     color: $background;
@@ -530,7 +532,7 @@ html, body {
 
 #s3AccentContent {
     height: fill-available;
-    background-color: $darkShade;
+    background-color: $background;
 }
 
 
@@ -538,6 +540,16 @@ html, body {
     grid-area: s2C3;
     background-color: rosybrown;
     height: stretch;
+}
+
+@include screen-md() {
+    .parent {
+        font-size: 3vh;
+    }
+
+    #s1AccentContent {
+        padding-top: 0;
+    }
 }
 
 /* MEDIA QUERIES */
@@ -568,10 +580,18 @@ html, body {
         font-size: 2.5vh;
     }
 
+    
+    #s1AccentContent {
+        padding-top: 3em;
+    }
 
 
     
     /* SLIDE 2 - lg */
+
+    #s2 {
+        font-size: 2.8vh;
+    }
     
     #s2Title {
         font-size: 1.5em;
@@ -580,7 +600,13 @@ html, body {
     #s2C2 {
         width: 55%;
     }
+
+
     /* SLIDE 3 - lg */
+
+    #s3 {
+        margin-top: 0;
+    }
 
     #s3C1 {
         flex-direction: row;
@@ -596,10 +622,4 @@ html, body {
         margin-left: 3em;
     }
 
-}
-
-@include screen-md() {
-    .parent {
-        font-size: 3vh;
-    }
 }
