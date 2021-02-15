@@ -24,11 +24,11 @@ html, body {
   display: grid;
   min-height: 100%;
   max-width: 100%;
-  height: 340vh;
+  height: 300vh;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100vh 120vh 120vh;
-      grid-template-rows: 100vh 120vh 120vh;
+  -ms-grid-rows: 100vh 120vh 80vh;
+      grid-template-rows: 100vh 120vh 80vh;
       grid-template-areas: "s1" "s2" "s3";
 }
 
@@ -61,7 +61,13 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 15em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  height: 50%;
   width: 100%;
 }
 
@@ -83,6 +89,7 @@ html, body {
 
 #portraitImg {
   position: absolute;
+  -webkit-user-drag: none;
   right: 0em;
   bottom: -0.5em;
   height: 140%;
@@ -135,8 +142,11 @@ html, body {
 }
 
 #s1C3 {
-  position: relative;
-  height: 27em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
   overflow: hidden;
 }
 
@@ -149,7 +159,7 @@ html, body {
 }
 
 #s1Button {
-  font-size: 1.1em;
+  font-size: 1.5em;
   cursor: pointer;
   padding: 0.5em 1.5em;
   font-weight: bold;
@@ -178,7 +188,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: inherit;
+  height: 100%;
   width: 100%;
   background: #025f60;
   z-index: 0;
@@ -200,7 +210,7 @@ html, body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  row-gap: 5em;
+  row-gap: 4em;
   padding-top: 3em;
 }
 
@@ -284,19 +294,20 @@ html, body {
 #s2C2 {
   height: 35%;
   z-index: 1;
-  padding: 0 0.5em 0.5em;
+  padding: 0.5em;
   grid-area: s1C2;
-  color: #033649;
-  border: medium solid #033649;
+  color: #E8DDCB;
   border-top: 0;
   overflow: hidden;
-  border-radius: 0 0 3px 3px;
-  background: #E8DDCB;
+  border-radius: 3px;
+  background: #033649;
   width: 85%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   text-align: left;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 /* SLIDE 2 - skill wheel */
@@ -452,7 +463,6 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 85%;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -460,8 +470,9 @@ html, body {
 }
 
 #s3C1 {
-  height: inherit;
-  margin: 0 0.85em;
+  height: initial;
+  max-height: inherit;
+  background-color: #031634;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,7 +499,7 @@ html, body {
 .project {
   background: #025f60;
   color: #E8DDCB;
-  margin: 10px 0 20px 0;
+  margin: 10px 0.85em 20px;
   border: medium solid #E8DDCB;
   border-radius: 3px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -616,9 +627,9 @@ html, body {
 }
 
 #s3AccentContent {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
   background-color: #031634;
 }
 
@@ -639,18 +650,20 @@ html, body {
   #portrait {
     height: 6em;
     width: 6em;
+    cursor: none;
   }
   #s1C1 {
-    height: 10em;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    height: 40%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #s1Accent {
+    margin: -80px 0;
   }
   #s1C3 {
-    height: 32em;
-  }
-  #s1AccentContent {
-    row-gap: 2em;
+    height: 60%;
+    font-size: 2.5vh;
   }
   /* SLIDE 2 - lg */
   #s2Title {
@@ -680,7 +693,7 @@ html, body {
 
 @media only screen and (min-width: 610px) {
   .parent {
-    font-size: 2.5vh;
+    font-size: 3vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

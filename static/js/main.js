@@ -90,8 +90,6 @@ function onClickProject(project, projectText, projectImg) {
     var projectTextId = projectText.id;
     var projectImg = projectImg.id;
 
-
-
     if(projectId == 'p1') {
 
         if(p1Counter == 0) {
@@ -102,8 +100,6 @@ function onClickProject(project, projectText, projectImg) {
 
             document.getElementById(projectImg).style.opacity = "1";
             
-            document.getElementById("s3Accent2").style.display = "none";
-
         p1Counter = 1;
        
         } else if(p1Counter == 1){
@@ -113,9 +109,6 @@ function onClickProject(project, projectText, projectImg) {
             document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
            
             document.getElementById(projectImg).style.opacity = "0.5";
-
-            document.getElementById("s3Accent2").style.display = "block";
-
 
             p1Counter = 0;
         }
