@@ -14,180 +14,68 @@
 <body>
 
     <div class="parent">
-    
+
         <div class="slide" id="s1">
 
-            <div class="content" id="s1C1">
-                <div id="portrait">
-                    <img src="assets/portrait.png" alt="self portait" id="portraitImg">
+            <div class="content" id="s1Content">
+
+                <div class="imgCont" id="s1ImgCont1">
+                    <img id="portrait" src="assets/portrait.png" alt="self portait">
                 </div>
-            
-            
-                <h1 class="content" id="s1C2">
+
+                <div id="nameRole">
 
                     <div id="name">
                         <span id="firstName">Cyrus</span>
                         <span id="lastName">McCormick</span>
                     </div>
-    
+                    
                     <div id="role">
                         Back End Web Dev
                     </div>
-    
-                </h1>
-            
-            </div>
-        
-            <div class="content" id="s1C3">
-                    <div id="s1AccentContentContainer">
-                        <div id="s1AccentContent">
-                        <div id="s1AccentImgs">
-                            <img  href="https://github.com/cyrusmcc" class="s1Img" id="s1Img1" src="assets/github.svg" alt="github link">
-                            <img class="s1Img" id="s1Img2" src="assets/linkedin.svg" alt="linkedin link">
-                            <img class="s1Img" id="s1Img3" src="assets/email.svg" alt="email link">
 
-                        </div>
-                        <div id="s1Button">
-                            Resume
-                        </div>
-                    </div>
-                    <div class="s1Img">
-
-                    </div>
                 </div>
+
+                <div id="media">
+
+                    <div class="imgCont" id="s1ImgCont2">
+
+                        <a><img class="mediaImg" id="mediaImg1" src="assets/github.svg" alt="github link"></a>
+                        <a><img class="mediaImg" id="mediaImg2" src="assets/linkedin.svg" alt="linkedin link"></a>
+                        <a><img class="mediaImg" id="mediaImg3" src="assets/email.svg" alt="email link"></a>
+
+                    </div>
+
+                    <a class="button" id="resumeButton" href="">Resume</a>
+
+                </div>
+
             </div>
 
+            </div>
 
         </div>
+
 
         <div class="slide" id="s2">
-                
-            <div id="blobCont">
 
-                <img src="assets/blob.svg" id="blob">
-           
-            </div>
+            <div class="content" id="s2Content"></div>
 
-            <img id="s2Accent" src="assets/wavefacedown.svg" alt="background complement shape">
 
-            <div class="content" id="s2C1">
-
-                <div id="skills">
-
-                    <div class="mask" id="cImgMask"></div>
-
-                    <div class="mask" id="skillsMask"></div>
-
-                    <div class="cImgCont" id="cImgCont1">
-                        <img class="cImg" id="cImg1" src="assets/css.svg" alt="css logo" id="cssImg">
-                    </div>
-
-                    <div class="cImgCont" id="cImgCont2">
-                        <img class="cImg" id="cImg2" src="assets/sass.svg" alt="sass logo" id="sassImg">
-                    </div>
-
-                    <div class="cImgCont" id="cImgCont3">
-                        <img class="cImg" id="cImg3" src="assets/js.svg" alt="javascript logo" id="jsImg">
-                    </div>
-
-                    <div class="cImgCont" id="cImgCont4">
-                        <img class="cImg" id="cImg4" src="assets/hibernate.svg" alt="hibernate logo" id="hibernateImg">
-                    </div>
-
-                    <div class="cImgCont" id="cImgCont5">
-                        <img class="cImg" id="cImg5" src="assets/mysql.svg" alt="mysql logo" id="mysqlImg">
-                    </div>
-
-                    <div class="cImgCont" id="cImgCont6">
-                        <img class="cImg" id="cImg6" src="assets/spring.svg" alt="spring framework logo" id="springImg">
-                    </div>
-
-                    <div class="cImgCont" id="cImgCont7">
-                        <img class="cImg" id="cImg7" src="assets/java.svg" alt="java logo" id="javaImg">
-                    </div>
-
-                    <div class="cImgCont" id="cImgCont8">
-                        <img class="cImg" id="cImg8" src="assets/html.svg" alt="html logo" id="htmlImg">
-                    </div>
-
-                </div>
-
-                <div class="s2Title" id="s2Title">Skills</div>
-
-                <div class="s2ButtonCont">
-                    <div onmouseover="overBack()" onmouseout="out()" class="s2Button">back end</div>
-                    <div onmouseover="overFront()" onmouseout="out()" class="s2Button">front end</div>
-                </div>
-
-                <div class="desc" id="s2Desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, voluptatibusW</div>
-
-            </div>   
-            
-            <div class="content" id="s2C2">
-                <span id="s2C2Title">About me</span>
-                <span id="s2C2Text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum, ullam, natus numquam voluptatibus
-                    vel ducimus consequatur dolorum modi animi necessitatibus consectetur quis quaerat assumenda? Debitis delectus
-                    libero perspiciatis. Similique maiores facere recusandae soluta et deleniti fugiat non illum quasi cumque.
-                    Itaque, quidem! Dolorem officiis excepturi eos animi exercitationem vero!
-                </span>
-            </div>
-
-            <img id="s2Accent2" src="assets/gradientwaveblue.svg" alt="background complement shape">
-        
         </div>
+
 
         <div class="slide" id="s3">
 
-            <div id="s3AccentContent">
+            <div class="content" id="s3Content"></div>
 
-                <div id="s3C1Title">Projects</div>
 
-                <div class="content" id="s3C1">
+        </div> 
 
-                    <fieldset class="project" id="p1" onclick="onClickProject(this, projectText1, p1Img1)">
-                        <legend class="projectLegend">Productivity Tracker</legend>
-                        <div class="projectText" id="projectText1"> <span>I needed a way to keep track of my daily tasks but I was unsatisfied with the various productivity tools online. 
-                                                                The new year was approaching and instead of buying a new planner or switching to a new program, I decided to build an application   
-                                                                that allowed me to keep track of my daily productivity levels without micromanaging my day,so I built <i>produceDaily</i>. </span>
-                                                
-                         </div>
-                         
-                         <div class="projectImg">
-                         <img id="p1Img1" src="assets/productivityimg.png" alt="image of productivity project">
-                        </div>
 
-                        <div class="projectFooter">
-                            <div class="projectFooterTitle">Tech</div>
-                            <ul class="projectList">
-                                <li>Backend: Java, Spring Boot, Spring Data JPA, Spring Security, MySQL</li>
-                                <li>Frontend: HTML, SASS, JavaScript, Thymeleaf</li>
-                            </ul>
-                            <a class="projectLink" href="https://github.com/cyrusmcc/productivity-app">
-                                Github Repository</a>
-                        </div>
-
-                    </fieldset>
-
-                    <fieldset class="project" id="p2" onclick="onClickProject(this, projectText2)">
-                        <legend class="projectLegend">WIP</legend>
-                        <div class="projectText" id="projectText2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
-                        <div class="projectButton" id="p2Button">+</div>
-                    </fieldset>
-
-                    <fieldset class="project" id="p3" onclick="onClickProject(this, projectText3)">
-                        <legend class="projectLegend">WIP</legend>
-                        <div class="projectText" id="projectText3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
-                        <div class="projectButton" id="p3Button">+</div>
-                    </fieldset>
-
-                </div>
-            </div>
-
-        </div>
 
     </div>
-
+    
     <script src="static/js/main.js"></script>
 
 </body>

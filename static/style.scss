@@ -1,16 +1,7 @@
-$background: #fbf7ef;
+$lightshade: #fbf7ef;
+$darkShade: #031634;
 $darkAccent: #033649;
 $lightAccent: #025f60;
-$darkShade: #031634;
-
-
-/*$background: #F6F4F5;
-$darkBackground: #171919;
-$darkAccent: #ffbf69;
-$lightAccent: #ffa224;
-$darkAccent: #cbf3f0;
-$darkShade: #0081A7;
-*/
 
 $screen-md: 610px;
 $screen-lg: 1115px;
@@ -37,629 +28,164 @@ $screen-lg: 1115px;
 html, body {
     font-family: 'Inconsolata', monospace;
     margin: 0;
-    color: $darkAccent;
-    background-color: $darkShade;
     min-width: 300px;
+    min-height: 300px;
+
     max-width: 100%;
 }
 
 
 .parent {
     display: grid;
-    min-height: 100%;
-    max-width: 100%;
-    height: 315vh;
+    height: 280vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 120vh 95vh;
+    grid-template-rows: 100vh 100vh 80vh;
     grid-template-areas: 
             "s1"
             "s2"
             "s3";
 }
 
-
-/* SLIDE 1 */ 
-#s1 {
-    grid-area: s1;
-    height: 100%;
-    display: flex;
-    row-gap: 10px;
-    flex-direction: column;
-    background-color: $background;
-    background-clip: padding-box;
-    position: relative;
+.content{
+    width: 100%;
 }
 
-#s1C1 {
+/* S1 - Slide 1 */
+#s1 {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightshade;
+    padding: 0.85vh;
+
+}
+
+#s1Content {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    height: 50%;
-    width: 100%;
+    height: 80vh;
+
+}
+
+#s1Content > div {
+    margin-bottom: 2vh;
+}
+
+#s1ImgCont1 {
+    display: flex;
+    align-items: center;
+    border: medium solid $darkAccent;
+    border-radius: 50%;
+    height: 15vh;
+    width: 15vh;
+    overflow: hidden;
 }
 
 #portrait {
-    position: relative;
-    background-color: $background;
-    border: solid medium $darkAccent;
-    border-radius: 50%;
-    height: 8em;
-    width: 8em;
-    overflow: hidden;
-    user-select: none;
-
-    box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
-                0 6px 20px 0 RGB(0 0 0 / 19%);
+    height: auto;
+    width: 15vh;
 }
 
-#portraitImg {
-    position: absolute;
-    -webkit-user-drag: none;
-    right: 0em;
-    bottom: -0.5em;
-    height: 140%;
-
+#nameRole {
+    text-align: center;
+    font-size: 3.5vh;
+    font-weight: bold;
 }
 
-#s1C2 {
-    height: 3em;
-    z-index: 1;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    grid-area: title;
-    font-weight: 100;
-}
 
 #name {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-weight: bold;
     color: $darkAccent;
-    border-radius: 2px;
+    margin-bottom: 1vh;
 }
 
 #role {
-    background: $lightAccent;
-    color: $background;
-    font-weight: bold;
-    padding: 5px;
-    font-size: 0.6em;
+    background-color: $lightAccent;
+    color: $lightshade;
+    padding: 0.3em;
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
-                0 6px 20px 0 RGB(0 0 0 / 19%);
+    0 6px 20px 0 RGB(0 0 0 / 19%);
+    margin-bottom: 10vh;
 }
 
-#s1C3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    overflow: hidden;
-}
-
-
-#s1Button {
-    font-size: 1.2em;
-    cursor: pointer;
-    padding:  0.5em 1.5em;
-    font-weight: bold;
-    border-radius: 0.7em;
-    color: $background;
-    background-color: $darkAccent;
-    filter: drop-shadow(-1.4px 4px 0.5px $background);
-}
-
-#s1Button:hover {
-    background-color: $darkAccent;
-}
-
-#s1AccentContentContainer {
+#media {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+#media * {
+    margin-bottom: 2vh;
+}
+
+#s1ImgCont2 {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background: $background;
-    z-index: 0;
+    width: 40vh;
 }
 
-#s1AccentContent {
-    height: inherit;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    row-gap: 4em;
-    padding-top: 3em;
-}
-
-#s1AccentImgs {
-    display: flex;
-    width: 16em;
-    justify-content: space-evenly;
-    }
-
-#s1AccentImgs .s1Img {
+.mediaImg {
     height: auto;
-    width: 12%;
-    justify-content: center;
+    width: 5vh;
 }
 
-.s1Img {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    cursor: pointer;
-}
-
-#s1Img1 {
-    border-radius: 50%;
-}
-
-/* SLIDE 2 */
-#s2 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    grid-area: s2;
-    text-align: center;
-    height: 100%;
-    background: $darkShade;
-    color: $background;
-}
-
-#s2C1 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: s2C1;
-    overflow: hidden;
-    height: 40em;
-    margin: 0 0.85em;
-}
-
-#s2Title {
+#resumeButton {
+    font-size: 3.5vh;
     font-weight: bold;
-    position: absolute;
-    top: 0;
-    color: $background;
-
-}
-
-#s2Accent {
-    width: 100%;
-    transform: rotateX(180deg);
-    display: block;
-    overflow: visible;
-    margin: -5px 0;
-    z-index: 1;
-}
-
-#s2C2 {
-    display: flex;
-    flex-direction: column;
-    height: 35%;
-    z-index: 1;
-    padding: 0.5em;
-    margin-bottom: 3em;
-    grid-area: s1C2;
-    color: $darkShade;
-    border-top: 0;
-    overflow: hidden;
-    border-radius: 4px;
-    background: $background;
-    width: 85%;
-    align-self: center;
-    text-align: left;
-    box-shadow: rgb(38 38 51 / 25%) 0px 13px 27px -5px, 
-                rgb(0 0 0 / 30%) -9px 10px 16px -8px;
-}
-
-#s2C2Title {
-    border-bottom: thin solid $darkShade;
-    padding-bottom: 0.2em;
-    font-weight: bold;
-}
-
-#s2C2Text {
-    font-size: 2.5vh;
-    padding-top: 0.25em;
-}
-
-#s2Accent2 {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    margin: -5px 0;
-}
-
-/* SLIDE 2 - skill wheel */
-#skills {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 14em;
-    width: 14em;
-    border-radius: 50%;
-    background: $darkShade;
-    border: medium solid rgba($color: grey, $alpha: 0.5);
-}
-
-#skillsMask {
-    display: none;
-    position: absolute;
-    height: inherit;
-    width: inherit;
-    border-radius: 50%; 
-    background: none;
-    border: medium solid grey;
-    opacity: 0.5;
-}
-
-#blobCont {
-    position: absolute;
-    max-width: 100%;
-    bottom: -2em;
-    right: 0px;
-    left: 0px;
-}
-
-
-#blob {
-    height: auto;
-    width: 100%;
-
-}
-
-#s2Desc {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    border-bottom: medium solid $background;
-    margin: 1em;
-    padding: 5px;
-}
-
-
-.s2Button {
-    margin: 1.5em;
-    opacity: 0.5;
-}
-
-.s2Button:hover {
-    opacity: 1;
-}
-
-.s2ButtonCont {
-    position: absolute;
-}
-
-/* SKILL LOGOS */
-
-.cImgCont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $darkShade;
-    border-radius: 50%;
-    height: 2em;
-    width: 2em;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -1em;
-    margin-top: -1em;
-}
-
-.cImg {
-    opacity: 0.5;
-    height: 1.5em;
-    width: 1.5em;
-    filter: grayscale(1);
-}
-
-#cImgMask {
-    display: none;
-    position: absolute;
-    background-color: $darkShade;
-    width: inherit;
-    height: 7em;
-    bottom: 2.2em;
-    left: 5.4em;
-    transform: rotate(115deg);
-}
-
-#cImg3 {
-    height: 1.12em;
-    width: 1.12em;
-}
-
-#skills .cImgCont:nth-child(3) {
-    transform: rotate(0deg) translate(7em);
-}
-
-#skills .cImgCont:nth-child(4) {
-    transform: rotate(45deg) translate(7em) rotate(-45deg);
-}
-
-#skills .cImgCont:nth-child(5) {
-    height: 1.7em;
-    transform: rotate(90deg) translate(7em) rotate(-90deg);
-
-}
-
-#skills .cImgCont:nth-child(6) {
-    transform: rotate(135deg) translate(7em) rotate(-135deg);
-}
-
-#skills .cImgCont:nth-child(7) {
-    transform: rotate(180deg) translate(7em) rotate(-180deg);
-}
-
-#skills .cImgCont:nth-child(8) {
-    transform: rotate(225deg) translate(7em) rotate(-225deg);
-}
-
-#skills .cImgCont:nth-child(9) {
-    transform: rotate(270deg) translate(7em) rotate(-270deg);
-}
-
-#skills .cImgCont:nth-child(10) {
-    transform: rotate(315deg) translate(7em) rotate(-315deg);
-}
-
-/* SLIDE 3 */
-#s3 {
-    background: $darkShade;
-    grid-area: s3;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-height: fit-content;
-}
-
-#s3C1 {
-    height: initial;
-    max-height: inherit;
-    background-color: $background;
-    display: flex;
-    flex-direction: column;
-}
-
-#s3C1Title {
-    font-weight: bold;
-    color: $background;
-    background: $darkAccent;
-    border-radius: 3px;
-    padding: 5px;
-    font-size: 1.1em;
-    width: fit-content;
-    margin: 0.5em 1em 1em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-.project {
-    background: $darkAccent;
-    color: $background;
-    margin: 10px 0.85em 50px;
-    border: none;
-    border-radius: 4px;
-    box-shadow: rgb(30 30 59 / 25%) -7px 6px 10px 1px, 
-                rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 15em;
-}
-
-.projectImg {
-    display: flex;
-    justify-content: center;
-    margin: 1em 0 1em;
-    height: auto;
-    width: 100%;
-    border-radius: 3px;
-}
-
-.projectImg > img {
-    opacity: 0.5;
-    border: medium solid $background;
-}
-
-.projectFooter {
-    display: flex;
-    flex-direction: column;
-}
-
-.projectFooterTitle {
-    margin-left: 1em;
-}
-
-.projectList {
-    margin: 0.5em 0 0.5em;
-    padding-left: 1.5em;
-}
-
-.projectList > li{
-    margin: 0.5em 0 0.5em;
-}
-
-.projectLink {
-    align-self: center;
     text-decoration: none;
-    border: medium solid $background;
-    color: $background;
-    border-radius: 5px;
-    padding: 3px;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-}
-
-.projectLegend {
-    background: $darkAccent;
-    border-radius: 3px 3px 0 0;
-    padding: 2px 5px 0;
-    border-bottom: 0;
-    font-weight: bold;
-    color: $background;
-    font-size: 1em;
-    font-weight: 100;
+    color: $darkShade;
+    padding: 10px;
+    border: medium solid $darkShade;
+    border-radius: 30px;
 
 }
 
-.projectText {
-    margin-top: 0.2em;
-    mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
+#resumeButton:hover {
+    color: $lightAccent;
+    border: medium solid $lightAccent;
 }
 
-#p1 {
-    overflow: hidden;
-    position: relative;
+#resumeButton::a
+
+
+
+
+
+
+
+/* S2 - Slide 2 */
+#s2 {
+
 }
 
-#p1Img1 {
-    height: auto;
-    width: 85%;
-    border-radius: 3px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
+#s2Content {
 
-#p1Button {
-    font-size: 1.5em;
-    font-weight: bold;
-    position: absolute;
-    bottom: -11%;
-    right: 5%;
-}
-
-#s3AccentContent {
-    height: fill-available;
-    background-color: $background;
 }
 
 
-#s2C3 {
-    grid-area: s2C3;
-    background-color: rosybrown;
-    height: stretch;
+/* S3 - Slide 3 */
+#s3{
+
 }
+
+#s3Content {
+
+}
+
+
+
 
 @include screen-md() {
 
-    html, body {
-        min-height: 600px;
-    }
-
-    .parent {
-        min-height: 600px;
-        font-size: 3vh;
-    }
-
-    #s1AccentContent {
-        padding-top: 0;
-    }
-
-    #blobCont {
-        right: 0;
-        left: 0;
-        bottom: -11em;
-    }
 
 }
 
 /* MEDIA QUERIES */
 @include screen-lg() {
 
-    .parent {
-        font-size: 3vh;
-    }
-
-    /* SLIDE 1 - lg */
-
-    #portrait {
-        height: 6em;
-        width: 6em;
-        cursor: none;
-    }
-
-    #s1C1 {
-        height: 40%;
-        justify-content: flex-end;
-    }
-
-    #s1Accent {
-        margin: -80px 0;
-    }
-
-    #s1C3 {
-        height: 60%;
-        font-size: 2.5vh;
-    }
-
-    
-    #s1AccentContent {
-        padding-top: 3em;
-    }
-
-
-    
-    /* SLIDE 2 - lg */
-
-    #s2 {
-        font-size: 2.8vh;
-    }
-    
-    #s2Title {
-        font-size: 1.2em;
-    }
-    
-    #s2C2 {
-        width: 55%;
-        margin-bottom: 3em;
-    }
-
-    #blobCont {
-        right: 0;
-        left: 0;
-        bottom: -40em;
-    }
-
-
-    /* SLIDE 3 - lg */
-
-    #s3 {
-        margin-top: 0;
-    }
-
-    #s3C1 {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .project {
-        width: 25%;
-    }
-
-    #s3C1Title {
-        font-size: 1.2em;
-        margin-left: 3em;
-    }
 
 }
