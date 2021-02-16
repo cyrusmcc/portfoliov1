@@ -141,7 +141,50 @@
 
         <div class="slide" id="s3">
 
-            <div class="content" id="s3Content"></div>
+            <div class="content" id="s3Content">
+
+                <div class="title" id="s3Title">Projects</div>
+
+                <div id="projectCont">
+
+                    <fieldset class="project" id="p1" onclick="onClickProject(this, projectText1, p1Img1)">
+                        <legend class="projectLegend">Productivity Tracker</legend>
+                        <div class="projectText" id="projectText1"> <span>I needed a way to keep track of my daily tasks but I was unsatisfied with the various productivity tools online. 
+                                                                The new year was approaching and instead of buying a new planner or switching to a new program, I decided to build an application   
+                                                                that allowed me to keep track of my daily productivity levels without micromanaging my day,so I built <i>produceDaily</i>. </span>               
+                         </div>
+                         
+                         <div class="projectImg">
+                         <img id="p1Img1" src="assets/productivityimg.png" alt="image of productivity project">
+                        </div>
+
+                        <div class="projectFooter">
+                            <div class="projectFooterTitle">Tech</div>
+                            <ul class="projectList">
+                                <li>Backend: Java, Spring Boot, Spring Data JPA, Spring Security, MySQL</li>
+                                <li>Frontend: HTML, SASS, JavaScript, Thymeleaf</li>
+                            </ul>
+                            <a class="projectLink" href="https://github.com/cyrusmcc/productivity-app">
+                                Github Repository</a>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="project" id="p2" onclick="onClickProject(this, projectText2)">
+                        <legend class="projectLegend">WIP</legend>
+                        <div class="projectText" id="projectText2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
+                        <div class="projectButton" id="p2Button">+</div>
+                    </fieldset>
+
+                    <fieldset class="project" id="p3" onclick="onClickProject(this, projectText3)">
+                        <legend class="projectLegend">WIP</legend>
+                        <div class="projectText" id="projectText3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
+                        <div class="projectButton" id="p3Button">+</div>
+                    </fieldset>
+
+                </div>
+
+            </div>
 
 
         </div> 

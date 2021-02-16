@@ -6,10 +6,10 @@ $lightAccent: #025f60;
 $screen-md: 610px;
 $screen-lg: 1115px;
 
-$pHeight: 320vh;
+$pHeight: 405vh;
 $s1H: 100vh;
 $s2H: 140vh;
-$s3H: 80vh;
+$s3H: 165vh;
 
 /* MIXINS */
 @mixin screen-md {
@@ -86,14 +86,18 @@ html, body {
     align-items: center;
     border: medium solid $darkAccent;
     border-radius: 50%;
-    height: 15vh;
-    width: 15vh;
+    height: 18vh;
+    width: 18vh;
     overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: none;
+    user-select: none;
 }
 
 #portrait {
     height: auto;
-    width: 15vh;
+    width: 18vh;
 }
 
 #nameRole {
@@ -136,9 +140,19 @@ html, body {
     width: 40vh;
 }
 
+#s1ImgCont2 > a > img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+}
+
 .mediaImg {
     height: auto;
     width: 5vh;
+}
+
+#mediaImg1 {
+    border-radius: 50%;
 }
 
 #resumeButton {
@@ -168,7 +182,7 @@ html, body {
 
 #s2Accent1 {
     position: absolute;
-    top: -1vh;
+    top: -2vh;
     height: auto;
     width: 100%;
     transform: rotateX(180deg);
@@ -208,7 +222,8 @@ html, body {
     width: 40vh;
     border-radius: 50%;
     background: $darkShade;
-    border: medium solid rgba($color: grey, $alpha: 0.5);
+    border: medium solid $lightshade
+    //border: medium solid rgba($color: grey, $alpha: 0.5);
 }
 
 #skillsMask {
@@ -239,10 +254,10 @@ html, body {
 }
 
 .skillImg {
-    opacity: 0.5;
     height: 3.5vh;
     width: 3.5vh;
-    filter: grayscale(1);
+    //opacity: 0.5;
+    //filter: grayscale(1);
 }
 
 #skillImgMask {
@@ -254,11 +269,6 @@ html, body {
     bottom: 4.6vh;
     left: 5.4em;
     transform: rotate(115deg);
-}
-
-#skillImg3 {
-    height: 1.12em;
-    width: 1.12em;
 }
 
 #skillWheel .skillImgCont:nth-child(3) {
@@ -353,7 +363,7 @@ html, body {
     height: auto;
     width: 100%;
     position: absolute;
-    bottom: -1vh;
+    bottom: -2vh;
 }
 
 #waveFaceUpWhite {
@@ -364,24 +374,185 @@ html, body {
 /* S3 - Slide 3 */
 #s3{
     background-color: $lightshade;
-    height: $s3H;
+    height: fit-content;
     width: 100%;
+    margin-bottom: 5vh;
+
 }
 
 #s3Content {
+    max-height: fit-content;
+    width: 100%;
+}
+
+#s3Title {
+    font-weight: bold;
+    color: $lightshade;
+    background: $darkAccent;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 1.1em;
+    width: fit-content;
+    margin: 0.5em 1em 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#projectCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projectCont > .project {
+    margin-bottom: 5vh;
+}
+
+.project {
+    background: $darkAccent;
+    color: $lightshade;
+    width: 80vw;
+    border: none;
+    border-radius: 4px;
+    box-shadow: RGB(30 30 59 / 25%) -7px 6px 10px 1px, 
+                RGB(0 0 0 / 30%) 0px 8px 16px -8px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 45vh;
+}
+
+.projectImg {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 1em;
+    height: auto;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.projectImg > img {
+    opacity: 0.5;
+    border: medium solid $lightshade;
+}
+
+.projectFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectFooterTitle {
+    margin-left: 1em;
+}
+
+.projectList {
+    margin: 0.5em 0 0.5em;
+    padding-left: 1.5em;
+}
+
+.projectList > li{
+    margin: 0.5em 0 0.5em;
+}
+
+.projectLink {
+    align-self: center;
+    text-decoration: none;
+    border: medium solid $lightshade;
+    color: $lightshade;
+    border-radius: 5px;
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.projectLegend {
+    background: $darkAccent;
+    border-radius: 3px 3px 0 0;
+    padding: 2px 5px 0;
+    border-bottom: 0;
+    font-weight: bold;
+    color: $lightshade;
+    font-weight: 100;
 
 }
 
-
-
-
-@include screen-md() {
-
-
+.projectText {
+    margin-top: 0.2em;
+    mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
 }
+
+#p1 {
+    overflow: hidden;
+    position: relative;
+}
+
+#p1Img1 {
+    height: auto;
+    width: 85%;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#p1Button {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    bottom: -11%;
+    right: 5%;
+}
+
 
 /* MEDIA QUERIES */
+@include screen-md() {
+
+    /* s1 - slide 1 */
+
+    /* s2 - slide 2 */
+       
+    #s2Accent2 {
+        height: 85vw;
+        bottom: 7vh;
+        left: 1vh;
+    }
+
+
+    /* s3 - slide 3 */
+
+  
+
+    .project {
+        font-size: 3vh;
+    }
+
+}
+
 @include screen-lg() {
 
 
+
+    /* s1 - slide 1 */
+
+    /* s2 - slide 2 */
+
+    /* s3 - slide 3 */
+    #s3 {
+        margin-top: 0;
+    }
+
+    #projectCont {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .project {
+        font-size: 2.3vh;
+        width: 28%;
+    }
+
+    #s3Title {
+        font-size: 4vh;
+    }
 }
