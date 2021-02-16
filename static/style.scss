@@ -129,7 +129,7 @@ html, body {
 }
 
 #media * {
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 #s1ImgCont2 {
@@ -160,9 +160,11 @@ html, body {
     font-weight: bold;
     text-decoration: none;
     color: $darkShade;
-    padding: 10px;
+    padding: 6px;
     border: medium solid $darkShade;
-    border-radius: 30px;
+    border-radius: 21px;
+    text-align: center;
+    width: 27vh;
 
 }
 
@@ -178,11 +180,12 @@ html, body {
     height: $s2H;
     background-color: $darkShade;
     position: relative;
+    overflow: hidden;
 }
 
 #s2Accent1 {
     position: absolute;
-    top: -2vh;
+    top: -1vh;
     height: auto;
     width: 100%;
     transform: rotateX(180deg);
@@ -195,8 +198,8 @@ html, body {
 
 #s2Content {
     @include flexCenter();
-    justify-content: flex-start;
-    height: 115vh;
+    justify-content: space-between;
+    height: 125vh;
     width: 100%;
     overflow: hidden;
 
@@ -218,8 +221,8 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 40vh;
-    width: 40vh;
+    height: 38vh;
+    width: 38vh;
     border-radius: 50%;
     background: $darkShade;
     border: medium solid $lightshade
@@ -244,12 +247,12 @@ html, body {
     align-items: center;
     background-color: $darkShade;
     border-radius: 50%;
-    height: 4.6vh;
-    width: 4.6vh;
+    height: 5vh;
+    width: 5vh;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -2.5vh;
+    margin-left: -2.3vh;
     margin-top: -2.5vh;
 }
 
@@ -272,37 +275,36 @@ html, body {
 }
 
 #skillWheel .skillImgCont:nth-child(3) {
-    transform: rotate(0deg) translate(20vh);
+    transform: rotate(0deg) translate(19vh);
 }
 
 #skillWheel .skillImgCont:nth-child(4) {
-    transform: rotate(45deg) translate(20vh) rotate(-45deg);
+    transform: rotate(45deg) translate(19vh) rotate(-45deg);
 }
 
 #skillWheel .skillImgCont:nth-child(5) {
-    height: 1.7em;
-    transform: rotate(90deg) translate(20vh) rotate(-90deg);
+    transform: rotate(90deg) translate(19vh) rotate(-90deg);
 
 }
 
 #skillWheel .skillImgCont:nth-child(6) {
-    transform: rotate(135deg) translate(20vh) rotate(-135deg);
+    transform: rotate(135deg) translate(19vh) rotate(-135deg);
 }
 
 #skillWheel .skillImgCont:nth-child(7) {
-    transform: rotate(180deg) translate(20vh) rotate(-180deg);
+    transform: rotate(180deg) translate(19vh) rotate(-180deg);
 }
 
 #skillWheel .skillImgCont:nth-child(8) {
-    transform: rotate(225deg) translate(20vh) rotate(-225deg);
+    transform: rotate(225deg) translate(19vh) rotate(-225deg);
 }
 
 #skillWheel .skillImgCont:nth-child(9) {
-    transform: rotate(270deg) translate(20vh) rotate(-270deg);
+    transform: rotate(270deg) translate(19vh) rotate(-270deg);
 }
 
 #skillWheel .skillImgCont:nth-child(10) {
-    transform: rotate(315deg) translate(20vh) rotate(-315deg);
+    transform: rotate(315deg) translate(19vh) rotate(-315deg);
 }
 
 #skillDesc {
@@ -346,12 +348,13 @@ html, body {
 #s2Accent2 {
     overflow: hidden;
     z-index: 0;
+    opacity: 0.5;
     position: absolute;
-    height: 110vw;
+    height: 26em;
     width: auto;
-    bottom: 10vh;
+    bottom: -2em;
     right: 0;
-    left: 0vh;
+    left: 0em;
 }
 
 #gradientBlob {
@@ -363,7 +366,7 @@ html, body {
     height: auto;
     width: 100%;
     position: absolute;
-    bottom: -2vh;
+    bottom: -1vh;
 }
 
 #waveFaceUpWhite {
@@ -511,11 +514,9 @@ html, body {
     /* s1 - slide 1 */
 
     /* s2 - slide 2 */
-       
     #s2Accent2 {
-        height: 85vw;
-        bottom: 7vh;
-        left: 1vh;
+        bottom: -5em;
+        left: 0em;
     }
 
 
@@ -532,10 +533,53 @@ html, body {
 @include screen-lg() {
 
 
+    .parent {
+        grid-template-rows: 100vh 180vh 165vh;
+    }
 
     /* s1 - slide 1 */
 
     /* s2 - slide 2 */
+    
+    #s2 {
+        height: 180vh;
+    }
+
+    #s2Content {
+        height: 140vh;
+        font-size: 4vh;
+        justify-content: space-between;
+    }
+    /*
+    #s2Title {
+        font-size: 4vh;
+
+    }
+    */
+
+    #s2Accent1 {
+        top: 0;
+        margin: -20px 0;
+    }
+
+    
+    #s2Accent2 {
+        bottom: -2em;
+        left: 5em;
+    }
+    
+
+    #s2Accent3 { 
+        bottom: 0;
+        margin: -20px 0;
+    }
+
+    
+    #aboutMe {
+        width: 60vw;
+    }
+    
+
 
     /* s3 - slide 3 */
     #s3 {
@@ -555,4 +599,5 @@ html, body {
     #s3Title {
         font-size: 4vh;
     }
+    
 }
