@@ -17,8 +17,8 @@ html, body {
   height: 280vh;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100vh 100vh 80vh;
-      grid-template-rows: 100vh 100vh 80vh;
+  -ms-grid-rows: 100vh 140vh 80vh;
+      grid-template-rows: 100vh 140vh 80vh;
       grid-template-areas: "s1" "s2" "s3";
 }
 
@@ -28,6 +28,8 @@ html, body {
 
 /* S1 - Slide 1 */
 #s1 {
+  height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +40,6 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fbf7ef;
-  padding: 0.85vh;
 }
 
 #s1Content {
@@ -49,12 +50,12 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 80vh;
 }
 
@@ -156,6 +157,266 @@ html, body {
   border: medium solid #025f60;
 }
 
+/* S2 - Slide 2 */
+#s2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 140vh;
+  background-color: #031634;
+  position: relative;
+}
+
+#s2Accent1 {
+  position: absolute;
+  top: -1vh;
+  height: auto;
+  width: 100%;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+#waveDown {
+  width: inherit;
+  height: inherit;
+}
+
+#s2Content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 115vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#s2Content > div {
+  margin-bottom: 5vh;
+}
+
+#s2Title {
+  color: #fbf7ef;
+  font-weight: bold;
+}
+
+/* Skill wheel */
+#skillWheel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 40vh;
+  width: 40vh;
+  border-radius: 50%;
+  background: #031634;
+  border: medium solid rgba(128, 128, 128, 0.5);
+}
+
+#skillsMask {
+  display: none;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  background: none;
+  border: medium solid grey;
+  opacity: 0.5;
+}
+
+.skillImgCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #031634;
+  border-radius: 50%;
+  height: 4.6vh;
+  width: 4.6vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2.5vh;
+  margin-top: -2.5vh;
+}
+
+.skillImg {
+  opacity: 0.5;
+  height: 3.5vh;
+  width: 3.5vh;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+#skillImgMask {
+  display: none;
+  position: absolute;
+  background-color: #031634;
+  width: inherit;
+  height: 4.6vh;
+  bottom: 4.6vh;
+  left: 5.4em;
+  -webkit-transform: rotate(115deg);
+          transform: rotate(115deg);
+}
+
+#skillImg3 {
+  height: 1.12em;
+  width: 1.12em;
+}
+
+#skillWheel .skillImgCont:nth-child(3) {
+  -webkit-transform: rotate(0deg) translate(20vh);
+          transform: rotate(0deg) translate(20vh);
+}
+
+#skillWheel .skillImgCont:nth-child(4) {
+  -webkit-transform: rotate(45deg) translate(20vh) rotate(-45deg);
+          transform: rotate(45deg) translate(20vh) rotate(-45deg);
+}
+
+#skillWheel .skillImgCont:nth-child(5) {
+  height: 1.7em;
+  -webkit-transform: rotate(90deg) translate(20vh) rotate(-90deg);
+          transform: rotate(90deg) translate(20vh) rotate(-90deg);
+}
+
+#skillWheel .skillImgCont:nth-child(6) {
+  -webkit-transform: rotate(135deg) translate(20vh) rotate(-135deg);
+          transform: rotate(135deg) translate(20vh) rotate(-135deg);
+}
+
+#skillWheel .skillImgCont:nth-child(7) {
+  -webkit-transform: rotate(180deg) translate(20vh) rotate(-180deg);
+          transform: rotate(180deg) translate(20vh) rotate(-180deg);
+}
+
+#skillWheel .skillImgCont:nth-child(8) {
+  -webkit-transform: rotate(225deg) translate(20vh) rotate(-225deg);
+          transform: rotate(225deg) translate(20vh) rotate(-225deg);
+}
+
+#skillWheel .skillImgCont:nth-child(9) {
+  -webkit-transform: rotate(270deg) translate(20vh) rotate(-270deg);
+          transform: rotate(270deg) translate(20vh) rotate(-270deg);
+}
+
+#skillWheel .skillImgCont:nth-child(10) {
+  -webkit-transform: rotate(315deg) translate(20vh) rotate(-315deg);
+          transform: rotate(315deg) translate(20vh) rotate(-315deg);
+}
+
+#skillDesc {
+  z-index: 1;
+  font-size: 3vh;
+  width: 80vw;
+  color: #fbf7ef;
+  border-bottom: medium solid #fbf7ef;
+}
+
+/* About Me */
+#aboutMe {
+  z-index: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 35vh;
+  width: 80vw;
+  padding: 0.5em;
+  color: #031634;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fbf7ef;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: left;
+  -webkit-box-shadow: RGB(38 38 51/25%) 0px 13px 27px -5px, RGB(0 0 0/30%) -9px 10px 16px -8px;
+          box-shadow: RGB(38 38 51/25%) 0px 13px 27px -5px, RGB(0 0 0/30%) -9px 10px 16px -8px;
+}
+
+#aboutMeTitle {
+  border-bottom: thin solid #031634;
+  padding-bottom: 0.2em;
+  font-weight: bold;
+}
+
+#aboutMeDesc {
+  font-size: 2.5vh;
+  padding-top: 0.25em;
+}
+
+#s2Accent2 {
+  overflow: hidden;
+  z-index: 0;
+  position: absolute;
+  height: 110vw;
+  width: auto;
+  bottom: 10vh;
+  right: 0;
+  left: 0vh;
+}
+
+#gradientBlob {
+  height: inherit;
+  width: inherit;
+}
+
+#s2Accent3 {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: -1vh;
+}
+
+#waveFaceUpWhite {
+  height: inherit;
+  width: inherit;
+}
+
 /* S3 - Slide 3 */
+#s3 {
+  background-color: #fbf7ef;
+  height: 80vh;
+  width: 100%;
+}
+
 /* MEDIA QUERIES */
 /*# sourceMappingURL=style.css.map */
