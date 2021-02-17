@@ -1,19 +1,15 @@
-$background: #fbf7ef;
+$lightshade: #fbf7ef;
+$darkShade: #031634;
 $darkAccent: #033649;
 $lightAccent: #025f60;
-$darkShade: #031634;
-
-
-/*$background: #F6F4F5;
-$darkBackground: #171919;
-$darkAccent: #ffbf69;
-$lightAccent: #ffa224;
-$darkAccent: #cbf3f0;
-$darkShade: #0081A7;
-*/
 
 $screen-md: 610px;
 $screen-lg: 1115px;
+
+$pHeight: 405vh;
+$s1H: 100vh;
+$s2H: 120vh;
+$s3H: 165vh;
 
 /* MIXINS */
 @mixin screen-md {
@@ -30,6 +26,13 @@ $screen-lg: 1115px;
     }
 }
 
+@mixin flexCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 :root {
     font-size: 5vw;
 }
@@ -37,265 +40,164 @@ $screen-lg: 1115px;
 html, body {
     font-family: 'Inconsolata', monospace;
     margin: 0;
-    color: $darkAccent;
-    background-color: $darkShade;
     min-width: 300px;
+    min-height: 300px;
     max-width: 100%;
 }
 
 
 .parent {
     display: grid;
-    min-height: 100%;
-    max-width: 100%;
-    height: 315vh;
+    height: 280vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 120vh 95vh;
+    grid-template-rows: $s1H $s2H $s3H;
     grid-template-areas: 
             "s1"
             "s2"
             "s3";
 }
 
-
-/* SLIDE 1 */ 
-#s1 {
-    grid-area: s1;
-    height: 100%;
-    display: flex;
-    row-gap: 10px;
-    flex-direction: column;
-    background-color: $background;
-    background-clip: padding-box;
-    position: relative;
+.content{
+    width: 100%;
 }
 
-#s1C1 {
+/* S1 - Slide 1 */
+#s1 {
+    height: $s1H;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightshade;
+}
+
+#s1Content {
+    @include flexCenter();
+    height: 80vh;
+
+}
+
+#s1Content > div {
+    margin-bottom: 2vh;
+}
+
+#s1ImgCont1 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    height: 50%;
-    width: 100%;
+    border: medium solid $darkAccent;
+    border-radius: 50%;
+    height: 18vh;
+    width: 18vh;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: none;
+    user-select: none;
 }
 
 #portrait {
-    position: relative;
-    background-color: $background;
-    border: solid medium $darkAccent;
-    border-radius: 50%;
-    height: 8em;
-    width: 8em;
-    overflow: hidden;
-    user-select: none;
-
-    box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
-                0 6px 20px 0 RGB(0 0 0 / 19%);
+    height: auto;
+    width: 18vh;
 }
 
-#portraitImg {
-    position: absolute;
-    -webkit-user-drag: none;
-    right: 0em;
-    bottom: -0.5em;
-    height: 140%;
-
+#nameRole {
+    text-align: center;
+    font-size: 3.5vh;
+    font-weight: bold;
 }
 
-#s1C2 {
-    height: 3em;
-    z-index: 1;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    grid-area: title;
-    font-weight: 100;
-}
 
 #name {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-weight: bold;
     color: $darkAccent;
-    border-radius: 2px;
+    margin-bottom: 1vh;
 }
 
 #role {
-    background: $lightAccent;
-    color: $background;
-    font-weight: bold;
-    padding: 5px;
-    font-size: 0.6em;
+    background-color: $lightAccent;
+    color: $lightshade;
+    padding: 0.3em;
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
-                0 6px 20px 0 RGB(0 0 0 / 19%);
-}
-
-#s1C3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    overflow: hidden;
+    0 6px 20px 0 RGB(0 0 0 / 19%);
+    margin-bottom: 3vh;
 }
 
 
-#s1Button {
-    font-size: 1.2em;
-    cursor: pointer;
-    padding:  0.5em 1.5em;
-    font-weight: bold;
-    border-radius: 0.7em;
-    color: $background;
-    background-color: $darkAccent;
-    filter: drop-shadow(-1.4px 4px 0.5px $background);
-}
-
-#s1Button:hover {
-    background-color: $darkAccent;
-}
-
-#s1AccentContentContainer {
+#s1LinkCont {
+    font-size: 2.5vh;
+    max-height: fit-content;
+    max-width: fit-content;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background: $background;
-    z-index: 0;
-}
-
-#s1AccentContent {
-    height: inherit;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    row-gap: 4em;
-    padding-top: 3em;
-}
-
-#s1AccentImgs {
-    display: flex;
-    width: 16em;
-    justify-content: space-evenly;
-    }
-
-#s1AccentImgs .s1Img {
-    height: auto;
-    width: 12%;
-    justify-content: center;
-}
-
-.s1Img {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    cursor: pointer;
-}
-
-#s1Img1 {
-    border-radius: 50%;
-}
-
-/* SLIDE 2 */
-#s2 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    grid-area: s2;
     text-align: center;
-    height: 100%;
-    background: $darkShade;
-    color: $background;
+    flex-direction: column;
+    width: 40vh;
+    border-bottom: thin solid $darkShade;
 }
 
-#s2C1 {
+#s1LinkCont * {
+    text-decoration: none;
+    color: #031634;
+    font-weight: bold;
+    margin-bottom: 3vh;
+    cursor: pointer;
+}
+
+#s1LinkCont *:hover {
+    color: #025f60;
+}
+
+
+
+
+/* S2 - Slide 2 */
+#s2 {
+    @include flexCenter();
+    height: $s2H;
+    background-color: $darkShade;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: s2C1;
     overflow: hidden;
-    height: 40em;
-    margin: 0 0.85em;
+}
+
+#s2Accent1 {
+    position: absolute;
+    top: -1vh;
+    height: auto;
+    width: 100%;
+    transform: rotateX(180deg);
+}
+
+#waveDown {
+    width: inherit;
+    height: inherit;
+}
+
+#s2Content {
+    @include flexCenter();
+    justify-content: space-between;
+    height: 103vh;
+    width: 100%;
+    overflow: hidden;
+
 }
 
 #s2Title {
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    color: $background;
-
-}
-
-#s2Accent {
-    width: 100%;
-    transform: rotateX(180deg);
-    display: block;
-    overflow: visible;
-    margin: -5px 0;
-    z-index: 1;
-}
-
-#s2C2 {
-    display: flex;
-    flex-direction: column;
-    height: 35%;
-    z-index: 1;
-    padding: 0.5em;
-    margin-bottom: 3em;
-    grid-area: s1C2;
-    color: $darkShade;
-    border-top: 0;
-    overflow: hidden;
-    border-radius: 4px;
-    background: $background;
-    width: 85%;
-    align-self: center;
-    text-align: left;
-    box-shadow: rgb(38 38 51 / 25%) 0px 13px 27px -5px, 
-                rgb(0 0 0 / 30%) -9px 10px 16px -8px;
-}
-
-#s2C2Title {
-    border-bottom: thin solid $darkShade;
-    padding-bottom: 0.2em;
+    color: $lightshade;
     font-weight: bold;
 }
 
-#s2C2Text {
-    font-size: 2.5vh;
-    padding-top: 0.25em;
-}
+/* Skill wheel */
 
-#s2Accent2 {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    margin: -5px 0;
-}
-
-/* SLIDE 2 - skill wheel */
-#skills {
+#skillWheel {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 14em;
-    width: 14em;
+    height: 38vh;
+    width: 38vh;
     border-radius: 50%;
     background: $darkShade;
-    border: medium solid rgba($color: grey, $alpha: 0.5);
+    border: medium solid $lightshade
+    //border: medium solid rgba($color: grey, $alpha: 0.5);
 }
 
 #skillsMask {
@@ -309,139 +211,149 @@ html, body {
     opacity: 0.5;
 }
 
-#blobCont {
-    position: absolute;
-    max-width: 100%;
-    bottom: -2em;
-    right: 0px;
-    left: 0px;
-}
 
-
-#blob {
-    height: auto;
-    width: 100%;
-
-}
-
-#s2Desc {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    border-bottom: medium solid $background;
-    margin: 1em;
-    padding: 5px;
-}
-
-
-.s2Button {
-    margin: 1.5em;
-    opacity: 0.5;
-}
-
-.s2Button:hover {
-    opacity: 1;
-}
-
-.s2ButtonCont {
-    position: absolute;
-}
-
-/* SKILL LOGOS */
-
-.cImgCont {
+.skillImgCont {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $darkShade;
     border-radius: 50%;
-    height: 2em;
-    width: 2em;
+    height: 5vh;
+    width: 5vh;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -1em;
-    margin-top: -1em;
+    margin-left: -2.3vh;
+    margin-top: -2.5vh;
 }
 
-.cImg {
-    opacity: 0.5;
-    height: 1.5em;
-    width: 1.5em;
-    filter: grayscale(1);
+.skillImg {
+    height: 3.5vh;
+    width: 3.5vh;
+    //opacity: 0.5;
+    //filter: grayscale(1);
 }
 
-#cImgMask {
+#skillImgMask {
     display: none;
     position: absolute;
     background-color: $darkShade;
     width: inherit;
-    height: 7em;
-    bottom: 2.2em;
+    height: 4.6vh;
+    bottom: 4.6vh;
     left: 5.4em;
     transform: rotate(115deg);
 }
 
-#cImg3 {
-    height: 1.12em;
-    width: 1.12em;
+#skillWheel .skillImgCont:nth-child(3) {
+    transform: rotate(0deg) translate(19vh);
 }
 
-#skills .cImgCont:nth-child(3) {
-    transform: rotate(0deg) translate(7em);
+#skillWheel .skillImgCont:nth-child(4) {
+    transform: rotate(45deg) translate(19vh) rotate(-45deg);
 }
 
-#skills .cImgCont:nth-child(4) {
-    transform: rotate(45deg) translate(7em) rotate(-45deg);
-}
-
-#skills .cImgCont:nth-child(5) {
-    height: 1.7em;
-    transform: rotate(90deg) translate(7em) rotate(-90deg);
+#skillWheel .skillImgCont:nth-child(5) {
+    transform: rotate(90deg) translate(19vh) rotate(-90deg);
 
 }
 
-#skills .cImgCont:nth-child(6) {
-    transform: rotate(135deg) translate(7em) rotate(-135deg);
+#skillWheel .skillImgCont:nth-child(6) {
+    transform: rotate(135deg) translate(19vh) rotate(-135deg);
 }
 
-#skills .cImgCont:nth-child(7) {
-    transform: rotate(180deg) translate(7em) rotate(-180deg);
+#skillWheel .skillImgCont:nth-child(7) {
+    transform: rotate(180deg) translate(19vh) rotate(-180deg);
 }
 
-#skills .cImgCont:nth-child(8) {
-    transform: rotate(225deg) translate(7em) rotate(-225deg);
+#skillWheel .skillImgCont:nth-child(8) {
+    transform: rotate(225deg) translate(19vh) rotate(-225deg);
 }
 
-#skills .cImgCont:nth-child(9) {
-    transform: rotate(270deg) translate(7em) rotate(-270deg);
+#skillWheel .skillImgCont:nth-child(9) {
+    transform: rotate(270deg) translate(19vh) rotate(-270deg);
 }
 
-#skills .cImgCont:nth-child(10) {
-    transform: rotate(315deg) translate(7em) rotate(-315deg);
+#skillWheel .skillImgCont:nth-child(10) {
+    transform: rotate(315deg) translate(19vh) rotate(-315deg);
 }
 
-/* SLIDE 3 */
-#s3 {
-    background: $darkShade;
-    grid-area: s3;
+/* About Me */
+#aboutMe {
+    z-index: 1;
     position: relative;
     display: flex;
     flex-direction: column;
-    max-height: fit-content;
+    height: 35vh;
+    width: 80vw;
+    padding: 0.5em;
+    color: $darkShade;
+    overflow: hidden;
+    border-radius: 4px;
+    background: $lightshade;
+    align-self: center;
+    text-align: left;
+    box-shadow: RGB(38 38 51 / 25%) 0px 13px 27px -5px, 
+                RGB(0 0 0 / 30%) -9px 10px 16px -8px;
 }
 
-#s3C1 {
-    height: initial;
-    max-height: inherit;
-    background-color: $background;
-    display: flex;
-    flex-direction: column;
-}
-
-#s3C1Title {
+#aboutMeTitle {
+    border-bottom: thin solid $darkShade;
+    padding-bottom: 0.2em;
     font-weight: bold;
-    color: $background;
+}
+
+#aboutMeDesc {
+    font-size: 2.5vh;
+    padding-top: 0.25em;
+}
+
+#s2Accent2 {
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0.5;
+    position: absolute;
+    height: 26em;
+    width: auto;
+    bottom: -6em;
+    right: 0;
+    left: 0em;
+}
+
+#gradientBlob {
+    height: inherit;
+    width: inherit;
+}
+
+#s2Accent3 {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: -1vh;
+}
+
+#waveFaceUpWhite {
+    height: inherit;
+    width: inherit;
+}
+
+/* S3 - Slide 3 */
+#s3{
+    background-color: $lightshade;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 5vh;
+
+}
+
+#s3Content {
+    max-height: fit-content;
+    width: 100%;
+}
+
+#s3Title {
+    font-weight: bold;
+    color: $lightshade;
     background: $darkAccent;
     border-radius: 3px;
     padding: 5px;
@@ -452,19 +364,29 @@ html, body {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+#projectCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projectCont > .project {
+    margin-bottom: 5vh;
+}
+
 .project {
     background: $darkAccent;
-    color: $background;
-    margin: 10px 0.85em 50px;
+    color: $lightshade;
+    width: 80vw;
     border: none;
     border-radius: 4px;
-    box-shadow: rgb(30 30 59 / 25%) -7px 6px 10px 1px, 
-                rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    box-shadow: RGB(30 30 59 / 25%) -7px 6px 10px 1px, 
+                RGB(0 0 0 / 30%) 0px 8px 16px -8px;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 15em;
+    height: 45vh;
 }
 
 .projectImg {
@@ -478,7 +400,7 @@ html, body {
 
 .projectImg > img {
     opacity: 0.5;
-    border: medium solid $background;
+    border: medium solid $lightshade;
 }
 
 .projectFooter {
@@ -502,13 +424,12 @@ html, body {
 .projectLink {
     align-self: center;
     text-decoration: none;
-    border: medium solid $background;
-    color: $background;
+    border: medium solid $lightshade;
+    color: $lightshade;
     border-radius: 5px;
-    padding: 3px;
-    width: 100%;
+    padding: 5px;
+    width: 90%;
     text-align: center;
-    font-weight: bold;
 }
 
 .projectLegend {
@@ -517,8 +438,7 @@ html, body {
     padding: 2px 5px 0;
     border-bottom: 0;
     font-weight: bold;
-    color: $background;
-    font-size: 1em;
+    color: $lightshade;
     font-weight: 100;
 
 }
@@ -549,117 +469,101 @@ html, body {
     right: 5%;
 }
 
-#s3AccentContent {
-    height: fill-available;
-    background-color: $background;
-}
-
-
-#s2C3 {
-    grid-area: s2C3;
-    background-color: rosybrown;
-    height: stretch;
-}
-
-@include screen-md() {
-
-    html, body {
-        min-height: 600px;
-    }
-
-    .parent {
-        min-height: 600px;
-        font-size: 3vh;
-    }
-
-    #s1AccentContent {
-        padding-top: 0;
-    }
-
-    #blobCont {
-        right: 0;
-        left: 0;
-        bottom: -11em;
-    }
-
-}
 
 /* MEDIA QUERIES */
-@include screen-lg() {
+@include screen-md() {
 
-    .parent {
+    /* s1 - slide 1 */
+
+    /* s2 - slide 2 */
+    #s2Accent2 {
+        bottom: -5em;
+        left: 0em;
+    }
+
+
+    /* s3 - slide 3 */
+
+  
+
+    .project {
         font-size: 3vh;
     }
 
-    /* SLIDE 1 - lg */
+}
 
-    #portrait {
-        height: 6em;
-        width: 6em;
-        cursor: none;
+@include screen-lg() {
+
+
+    .parent {
+        grid-template-rows: 100vh 180vh 165vh;
     }
 
-    #s1C1 {
-        height: 40%;
-        justify-content: flex-end;
-    }
+    /* s1 - slide 1 */
 
-    #s1Accent {
-        margin: -80px 0;
-    }
-
-    #s1C3 {
-        height: 60%;
-        font-size: 2.5vh;
-    }
-
+    /* s2 - slide 2 */
     
-    #s1AccentContent {
-        padding-top: 3em;
-    }
-
-
-    
-    /* SLIDE 2 - lg */
-
     #s2 {
-        font-size: 2.8vh;
+        height: 120vh;
     }
-    
+
+    #s2Content {
+        height: 90vh;
+        font-size: 3.4vh;
+        justify-content: space-between;
+    }
+    /*
     #s2Title {
-        font-size: 1.2em;
+        font-size: 4vh;
+
+    }
+    */
+
+    #s2Accent1 {
+        top: 0;
+        margin: -20px 0;
+    }
+
+    
+    #s2Accent2 {
+        bottom: -2em;
+        left: 5em;
     }
     
-    #s2C2 {
-        width: 55%;
-        margin-bottom: 3em;
+
+    #s2Accent3 { 
+        bottom: 0;
+        margin: -20px 0;
     }
 
-    #blobCont {
-        right: 0;
-        left: 0;
-        bottom: -40em;
+    
+    #aboutMe {
+        height: 30vh;
+        width: 50vw;
+        padding: 0.3em;
     }
+    
 
 
-    /* SLIDE 3 - lg */
-
+    /* s3 - slide 3 */
     #s3 {
         margin-top: 0;
     }
 
-    #s3C1 {
+    #projectCont {
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: flex-start;
+
     }
 
     .project {
-        width: 25%;
+        font-size: 2.3vh;
+        width: 28%;
     }
 
-    #s3C1Title {
-        font-size: 1.2em;
-        margin-left: 3em;
+    #s3Title {
+        font-size: 4vh;
     }
-
+    
 }
