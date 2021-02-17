@@ -8,7 +8,7 @@ $screen-lg: 1115px;
 
 $pHeight: 405vh;
 $s1H: 100vh;
-$s2H: 140vh;
+$s2H: 120vh;
 $s3H: 165vh;
 
 /* MIXINS */
@@ -119,59 +119,34 @@ html, body {
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 RGB(0 0 0 / 20%),
     0 6px 20px 0 RGB(0 0 0 / 19%);
-    margin-bottom: 10vh;
+    margin-bottom: 3vh;
 }
 
-#media {
+
+#s1LinkCont {
+    font-size: 2.5vh;
+    max-height: fit-content;
+    max-width: fit-content;
     display: flex;
+    text-align: center;
     flex-direction: column;
-    align-items: center;
-}
-
-#media * {
-    margin-bottom: 1vh;
-}
-
-#s1ImgCont2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     width: 40vh;
+    border-bottom: thin solid $darkShade;
 }
 
-#s1ImgCont2 > a > img{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+#s1LinkCont * {
+    text-decoration: none;
+    color: #031634;
+    font-weight: bold;
+    margin-bottom: 3vh;
     cursor: pointer;
 }
 
-.mediaImg {
-    height: auto;
-    width: 5vh;
+#s1LinkCont *:hover {
+    color: #025f60;
 }
 
-#mediaImg1 {
-    border-radius: 50%;
-}
 
-#resumeButton {
-    font-size: 3.5vh;
-    font-weight: bold;
-    text-decoration: none;
-    color: $darkShade;
-    padding: 6px;
-    border: medium solid $darkShade;
-    border-radius: 21px;
-    text-align: center;
-    width: 27vh;
-
-}
-
-#resumeButton:hover {
-    color: $lightAccent;
-    border: medium solid $lightAccent;
-}
 
 
 /* S2 - Slide 2 */
@@ -199,14 +174,10 @@ html, body {
 #s2Content {
     @include flexCenter();
     justify-content: space-between;
-    height: 125vh;
+    height: 103vh;
     width: 100%;
     overflow: hidden;
 
-}
-
-#s2Content > div {
-    margin-bottom: 5vh;
 }
 
 #s2Title {
@@ -307,14 +278,6 @@ html, body {
     transform: rotate(315deg) translate(19vh) rotate(-315deg);
 }
 
-#skillDesc {
-    z-index: 1;
-    font-size: 3vh;
-    width: 80vw;
-    color: $lightshade;
-    border-bottom: medium solid $lightshade;
-}
-
 /* About Me */
 #aboutMe {
     z-index: 1;
@@ -352,7 +315,7 @@ html, body {
     position: absolute;
     height: 26em;
     width: auto;
-    bottom: -2em;
+    bottom: -6em;
     right: 0;
     left: 0em;
 }
@@ -464,10 +427,9 @@ html, body {
     border: medium solid $lightshade;
     color: $lightshade;
     border-radius: 5px;
-    padding: 3px;
-    width: 100%;
+    padding: 5px;
+    width: 90%;
     text-align: center;
-    font-weight: bold;
 }
 
 .projectLegend {
@@ -542,12 +504,12 @@ html, body {
     /* s2 - slide 2 */
     
     #s2 {
-        height: 180vh;
+        height: 120vh;
     }
 
     #s2Content {
-        height: 140vh;
-        font-size: 4vh;
+        height: 90vh;
+        font-size: 3.4vh;
         justify-content: space-between;
     }
     /*
@@ -576,7 +538,9 @@ html, body {
 
     
     #aboutMe {
-        width: 60vw;
+        height: 30vh;
+        width: 50vw;
+        padding: 0.3em;
     }
     
 
@@ -589,6 +553,8 @@ html, body {
     #projectCont {
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: flex-start;
+
     }
 
     .project {

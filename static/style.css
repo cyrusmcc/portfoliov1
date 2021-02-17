@@ -17,8 +17,8 @@ html, body {
   height: 280vh;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100vh 140vh 165vh;
-      grid-template-rows: 100vh 140vh 165vh;
+  -ms-grid-rows: 100vh 120vh 165vh;
+      grid-template-rows: 100vh 120vh 165vh;
       grid-template-areas: "s1" "s2" "s3";
 }
 
@@ -107,73 +107,39 @@ html, body {
   border-radius: 4px;
   -webkit-box-shadow: 0 4px 8px 0 RGB(0 0 0/20%), 0 6px 20px 0 RGB(0 0 0/19%);
           box-shadow: 0 4px 8px 0 RGB(0 0 0/20%), 0 6px 20px 0 RGB(0 0 0/19%);
-  margin-bottom: 10vh;
+  margin-bottom: 3vh;
 }
 
-#media {
+#s1LinkCont {
+  font-size: 2.5vh;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#media * {
-  margin-bottom: 1vh;
-}
-
-#s1ImgCont2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 40vh;
+  border-bottom: thin solid #031634;
 }
 
-#s1ImgCont2 > a > img {
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+#s1LinkCont * {
+  text-decoration: none;
+  color: #031634;
+  font-weight: bold;
+  margin-bottom: 3vh;
   cursor: pointer;
 }
 
-.mediaImg {
-  height: auto;
-  width: 5vh;
-}
-
-#mediaImg1 {
-  border-radius: 50%;
-}
-
-#resumeButton {
-  font-size: 3.5vh;
-  font-weight: bold;
-  text-decoration: none;
-  color: #031634;
-  padding: 6px;
-  border: medium solid #031634;
-  border-radius: 21px;
-  text-align: center;
-  width: 27vh;
-}
-
-#resumeButton:hover {
+#s1LinkCont *:hover {
   color: #025f60;
-  border: medium solid #025f60;
 }
 
 /* S2 - Slide 2 */
@@ -191,7 +157,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 140vh;
+  height: 120vh;
   background-color: #031634;
   position: relative;
   overflow: hidden;
@@ -228,13 +194,9 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 125vh;
+  height: 103vh;
   width: 100%;
   overflow: hidden;
-}
-
-#s2Content > div {
-  margin-bottom: 5vh;
 }
 
 #s2Title {
@@ -350,14 +312,6 @@ html, body {
           transform: rotate(315deg) translate(19vh) rotate(-315deg);
 }
 
-#skillDesc {
-  z-index: 1;
-  font-size: 3vh;
-  width: 80vw;
-  color: #fbf7ef;
-  border-bottom: medium solid #fbf7ef;
-}
-
 /* About Me */
 #aboutMe {
   z-index: 1;
@@ -401,7 +355,7 @@ html, body {
   position: absolute;
   height: 26em;
   width: auto;
-  bottom: -2em;
+  bottom: -6em;
   right: 0;
   left: 0em;
 }
@@ -541,10 +495,9 @@ html, body {
   border: medium solid #fbf7ef;
   color: #fbf7ef;
   border-radius: 5px;
-  padding: 3px;
-  width: 100%;
+  padding: 5px;
+  width: 90%;
   text-align: center;
-  font-weight: bold;
 }
 
 .projectLegend {
@@ -608,11 +561,11 @@ html, body {
   /* s1 - slide 1 */
   /* s2 - slide 2 */
   #s2 {
-    height: 180vh;
+    height: 120vh;
   }
   #s2Content {
-    height: 140vh;
-    font-size: 4vh;
+    height: 90vh;
+    font-size: 3.4vh;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -636,7 +589,9 @@ html, body {
     margin: -20px 0;
   }
   #aboutMe {
-    width: 60vw;
+    height: 30vh;
+    width: 50vw;
+    padding: 0.3em;
   }
   /* s3 - slide 3 */
   #s3 {
@@ -650,6 +605,9 @@ html, body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .project {
     font-size: 2.3vh;
