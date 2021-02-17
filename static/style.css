@@ -555,8 +555,8 @@ html, body {
 
 @media only screen and (min-width: 1115px) {
   .parent {
-    -ms-grid-rows: 100vh 180vh 165vh;
-        grid-template-rows: 100vh 180vh 165vh;
+    -ms-grid-rows: 100vh 120vh 165vh;
+        grid-template-rows: 100vh 120vh 165vh;
   }
   /* s1 - slide 1 */
   /* s2 - slide 2 */
@@ -581,8 +581,8 @@ html, body {
     margin: -20px 0;
   }
   #s2Accent2 {
-    bottom: -2em;
-    left: 5em;
+    bottom: -10em;
+    left: 10em;
   }
   #s2Accent3 {
     bottom: 0;
