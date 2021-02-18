@@ -111,7 +111,8 @@ html, body {
 }
 
 #s1LinkCont {
-  font-size: 2.5vh;
+  margin: 0;
+  font-size: 2.8vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -127,7 +128,6 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40vh;
-  border-bottom: thin solid #031634;
 }
 
 #s1LinkCont * {
@@ -396,8 +396,7 @@ html, body {
 
 #s3Title {
   font-weight: bold;
-  color: #fbf7ef;
-  background: #033649;
+  color: #033649;
   border-radius: 3px;
   padding: 5px;
   font-size: 1.1em;
@@ -405,8 +404,6 @@ html, body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0.5em 1em 1em;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #projectCont {
@@ -544,7 +541,7 @@ html, body {
   /* s1 - slide 1 */
   /* s2 - slide 2 */
   #s2Accent2 {
-    bottom: -5em;
+    bottom: -13em;
     left: 0em;
   }
   /* s3 - slide 3 */
@@ -581,8 +578,9 @@ html, body {
     margin: -20px 0;
   }
   #s2Accent2 {
-    bottom: -10em;
-    left: 10em;
+    height: 63em;
+    bottom: -48em;
+    left: 5em;
   }
   #s2Accent3 {
     bottom: 0;

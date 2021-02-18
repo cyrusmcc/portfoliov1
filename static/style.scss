@@ -124,14 +124,14 @@ html, body {
 
 
 #s1LinkCont {
-    font-size: 2.5vh;
+    margin: 0;
+    font-size: 2.8vh;
     max-height: fit-content;
     max-width: fit-content;
     display: flex;
     text-align: center;
     flex-direction: column;
     width: 40vh;
-    border-bottom: thin solid $darkShade;
 }
 
 #s1LinkCont * {
@@ -353,15 +353,12 @@ html, body {
 
 #s3Title {
     font-weight: bold;
-    color: $lightshade;
-    background: $darkAccent;
+    color: $darkAccent;
     border-radius: 3px;
     padding: 5px;
     font-size: 1.1em;
     width: fit-content;
     margin: 0.5em 1em 1em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #projectCont {
@@ -477,7 +474,7 @@ html, body {
 
     /* s2 - slide 2 */
     #s2Accent2 {
-        bottom: -5em;
+        bottom: -13em;
         left: 0em;
     }
 
@@ -526,8 +523,9 @@ html, body {
 
     
     #s2Accent2 {
-        bottom: -10em;
-        left: 10em;
+        height: 63em;
+        bottom: -48em;
+        left: 5em;
     }
     
 
