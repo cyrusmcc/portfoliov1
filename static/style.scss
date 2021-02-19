@@ -200,6 +200,32 @@ html, body {
     //border: medium solid rgba($color: grey, $alpha: 0.5);
 }
 
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes reverseRotation {
+    from {
+        transform: rotate(359deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+  }
+
+  .rotateImg {
+    animation: rotation 20s linear infinite;
+}
+
+ .skillImg {
+    animation: reverseRotation 20s linear infinite;
+}
+
 #skillsMask {
     display: none;
     position: absolute;
