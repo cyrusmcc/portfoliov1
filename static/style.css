@@ -387,6 +387,10 @@ html, body {
   opacity: 0.3;
 }
 
+#menuNav1 {
+  opacity: 1;
+}
+
 #menuNav3 {
   border-right: none;
 }

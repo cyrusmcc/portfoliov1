@@ -29,13 +29,20 @@ function overBack() {
 
     document.getElementById("menuNav2").style.borderRight = "solid thin #031634";
 
-
     document.getElementById("menuNav3").style.opacity = "0.3";
 
     document.getElementById("menuNav3").style.borderLeft = borderLeft = "none";;
 
+    document.getElementById("skillImg8").style.opacity = "0.5";
+    document.getElementById("skillImg1").style.opacity = "0.5";
+    document.getElementById("skillImg2").style.opacity = "0.5";
+    document.getElementById("skillImg3").style.opacity = "0.5";
 
-
+    document.getElementById("skillImg8").style.filter = "grayscale(1)";
+    document.getElementById("skillImg1").style.filter = "grayscale(1)";
+    document.getElementById("skillImg2").style.filter = "grayscale(1)";
+    document.getElementById("skillImg3").style.filter = "grayscale(1)";
+    
     setTimeout('document.getElementById("skillImg4").style.opacity = "1";', 100);
     setTimeout('document.getElementById("skillImg5").style.opacity = "1";', 150);
     setTimeout('document.getElementById("skillImg6").style.opacity = "1";', 200);
@@ -48,6 +55,17 @@ function overBack() {
 }
 
 function overFront() {
+
+    
+    document.getElementById("skillImg4").style.opacity = "0.5";
+    document.getElementById("skillImg5").style.opacity = "0.5";
+    document.getElementById("skillImg6").style.opacity = "0.5";
+    document.getElementById("skillImg7").style.opacity = "0.5";
+
+    document.getElementById("skillImg4").style.filter = "grayscale(1)";
+    document.getElementById("skillImg5").style.filter = "grayscale(1)";
+    document.getElementById("skillImg6").style.filter = "grayscale(1)";
+    document.getElementById("skillImg7").style.filter = "grayscale(1)";
 
     document.getElementById("skillsMask").style.display = "block";
 
@@ -74,7 +92,6 @@ function overFront() {
 
     document.getElementById("menuNav3").style.borderLeft = "solid thin #031634";
 
-
     setTimeout('document.getElementById("skillImg8").style.opacity = "1";', 100);
     setTimeout('document.getElementById("skillImg1").style.opacity = "1";', 150);
     setTimeout('document.getElementById("skillImg2").style.opacity = "1";', 200);
@@ -87,6 +104,26 @@ function overFront() {
 }
 
 function overAboutMe() {
+
+    document.getElementById("skillImg1").style.opacity = "1";
+    document.getElementById("skillImg2").style.opacity = "1";
+    document.getElementById("skillImg3").style.opacity = "1";
+    document.getElementById("skillImg4").style.opacity = "1";
+    document.getElementById("skillImg5").style.opacity = "1";
+    document.getElementById("skillImg6").style.opacity = "1";
+    document.getElementById("skillImg7").style.opacity = "1";
+    document.getElementById("skillImg8").style.opacity = "1";
+
+    document.getElementById("skillImg1").style.filter = "grayscale(0)";
+    document.getElementById("skillImg2").style.filter = "grayscale(0)";
+    document.getElementById("skillImg3").style.filter = "grayscale(0)";
+    document.getElementById("skillImg4").style.filter = "grayscale(0)";
+    document.getElementById("skillImg5").style.filter = "grayscale(0)";
+    document.getElementById("skillImg6").style.filter = "grayscale(0)";
+    document.getElementById("skillImg7").style.filter = "grayscale(0)";
+    document.getElementById("skillImg8").style.filter = "grayscale(0)";
+
+
 
     document.getElementById("skillsMask").style.display = "none";
 
