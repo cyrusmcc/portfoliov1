@@ -70,7 +70,6 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: medium solid #033649;
   border-radius: 50%;
   height: 18vh;
   width: 18vh;
@@ -165,7 +164,7 @@ html, body {
 
 #s2Accent1 {
   position: absolute;
-  top: -1vh;
+  top: -0.7vh;
   height: auto;
   width: 100%;
   -webkit-transform: rotateX(180deg);
@@ -223,60 +222,6 @@ html, body {
   border: medium solid #fbf7ef;
 }
 
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@-webkit-keyframes reverseRotation {
-  from {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes reverseRotation {
-  from {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-.rotateImg {
-  -webkit-animation: rotation 20s linear infinite;
-          animation: rotation 20s linear infinite;
-}
-
-.skillImg {
-  -webkit-animation: reverseRotation 20s linear infinite;
-          animation: reverseRotation 20s linear infinite;
-}
-
 #skillsMask {
   display: none;
   position: absolute;
@@ -309,6 +254,18 @@ html, body {
   margin-top: -2.5vh;
 }
 
+#skillImgCont7 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#skillImgCont2 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .skillImg {
   height: 3.5vh;
   width: 3.5vh;
@@ -319,7 +276,7 @@ html, body {
   position: absolute;
   background-color: #031634;
   width: inherit;
-  height: 4.6vh;
+  height: 15.6vh;
   bottom: 4.6vh;
   left: 5.4em;
   -webkit-transform: rotate(115deg);
@@ -367,6 +324,20 @@ html, body {
 }
 
 /* About Me */
+#s2Footer {
+  height: 35vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 #aboutMe {
   z-index: 1;
   position: relative;
@@ -377,39 +348,79 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 35vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 20vh;
+  max-height: 35vh;
   width: 80vw;
-  padding: 0.5em;
   color: #031634;
   overflow: hidden;
   border-radius: 4px;
   background: #fbf7ef;
-  -ms-flex-item-align: center;
-      align-self: center;
   text-align: left;
   -webkit-box-shadow: RGB(38 38 51/25%) 0px 13px 27px -5px, RGB(0 0 0/30%) -9px 10px 16px -8px;
           box-shadow: RGB(38 38 51/25%) 0px 13px 27px -5px, RGB(0 0 0/30%) -9px 10px 16px -8px;
 }
 
-#aboutMeTitle {
-  border-bottom: thin solid #031634;
-  padding-bottom: 0.2em;
+#aboutMeMenu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 4.6vw;
+  background-color: #fbf7ef;
+  z-index: 1;
+  border-radius: 4px 4px 0 0;
   font-weight: bold;
 }
 
-#aboutMeDesc {
+.menuNav {
+  padding: 0.2em;
+  text-align: center;
+  width: 100%;
+  border: solid thin #031634;
+  border-left: none;
+  border-top: 0;
+  opacity: 0.3;
+}
+
+#menuNav3 {
+  border-right: none;
+}
+
+.menuNav:hover {
+  opacity: 1;
+}
+
+.footerDesc {
   font-size: 2.5vh;
-  padding-top: 0.25em;
+  padding: 0.5em;
+}
+
+#aboutMeDesc {
+  display: block;
+}
+
+#backEndDesc {
+  display: none;
+}
+
+#frontEndDesc {
+  display: none;
 }
 
 #s2Accent2 {
+  font-size: 3.4vh;
   overflow: hidden;
   z-index: 0;
   opacity: 0.5;
   position: absolute;
-  height: 26em;
+  height: 41em;
   width: auto;
-  bottom: -6em;
+  bottom: -27em;
   right: 0;
   left: 0em;
 }
@@ -594,9 +605,17 @@ html, body {
 @media only screen and (min-width: 610px) {
   /* s1 - slide 1 */
   /* s2 - slide 2 */
+  #s2Accent1 {
+    top: 0;
+    margin: -13px 0;
+  }
   #s2Accent2 {
-    bottom: -13em;
+    height: 63em;
+    bottom: -47em;
     left: 0em;
+  }
+  #aboutMeMenu {
+    font-size: 2.5vh;
   }
   /* s3 - slide 3 */
   .project {
@@ -621,12 +640,6 @@ html, body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  /*
-    #s2Title {
-        font-size: 4vh;
-
-    }
-    */
   #s2Accent1 {
     top: 0;
     margin: -20px 0;
@@ -643,7 +656,6 @@ html, body {
   #aboutMe {
     height: 30vh;
     width: 50vw;
-    padding: 0.3em;
   }
   /* s3 - slide 3 */
   #s3 {

@@ -38,9 +38,9 @@
 
                     <div class="linkCont" id="s1LinkCont">
 
-                        <a class="link" id="githubLink">github.com/cyrusmcc</a>
-                        <a class="link" id="linkedInLink">linkedin.com/in/cyrusmcc</a>
-                        <a class="link" id="emailLink">cyrusmcc@hotmail.com</a>
+                        <a href="https://github.com/cyrusmcc" target="_blank" class="link" id="githubLink">github.com/cyrusmcc</a>
+                        <a href="https://www.linkedin.com/in/cyrusmcc/" target="_blank" class="link" id="linkedInLink">linkedin.com/in/cyrusmcc</a>
+                        <a href="mailto:cyrusmcc@hotmail.com" class="link" target="_blank" id="emailLink">cyrusmcc@hotmail.com</a>
                         <a class="link" id="resume" href="">resume</a>
 
                     </div>
@@ -61,7 +61,7 @@
 
                 <div class="title" id="s2Title">Skills</div>
 
-                <div class="rotateImg" id="skillWheel">
+                <div id="skillWheel">
 
                     <div class="mask" id="skillImgMask"></div>
 
@@ -102,14 +102,34 @@
                 </div>
 
                 <div id="s2Footer">
+
+
                     <div id="aboutMe">
-                    <span id="aboutMeTitle">About me</span>
-                    <span class="text" id="aboutMeDesc">
+
+                    <div id="aboutMeMenu">
+                        <div class="menuNav" id="menuNav1" onmouseover="overAb()">
+                             <span class="navText">About me</span></div>
+                        <div class="menuNav" id="menuNav2" onmouseover="overBack()">
+                             <span class="navText">Back End</span></div>
+                        <div class="menuNav" id="menuNav3" onmouseover="overFront()">
+                             <span class="navText">Front End</span> </div>
+                    </div>
+
+                    <span class="footerDesc" id="aboutMeDesc">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum, ullam, natus numquam voluptatibus
                         vel ducimus consequatur dolorum modi animi necessitatibus consectetur quis quaerat assumenda? Debitis delectus
                         libero perspiciatis. Similique maiores facere recusandae soluta et deleniti fugiat non illum quasi cumque.
                         Itaque, quidem! Dolorem officiis excepturi eos animi exercitationem vero!
                     </span>
+
+                    <span class="footerDesc" id="backEndDesc">
+                        Java, Spring Framework, MySQL, Hibernate
+                    </span>
+
+                    <span class="footerDesc" id="frontEndDesc">
+                        JavaScript, CSS, HTML, SASS
+                    </span>
+
                 </div>
 
                     <div class="accent" id="s2Accent2">

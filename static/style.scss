@@ -84,7 +84,6 @@ html, body {
 #s1ImgCont1 {
     display: flex;
     align-items: center;
-    border: medium solid $darkAccent;
     border-radius: 50%;
     height: 18vh;
     width: 18vh;
@@ -160,7 +159,7 @@ html, body {
 
 #s2Accent1 {
     position: absolute;
-    top: -1vh;
+    top: -0.7vh;
     height: auto;
     width: 100%;
     transform: rotateX(180deg);
@@ -196,35 +195,9 @@ html, body {
     width: 38vh;
     border-radius: 50%;
     background: $darkShade;
-    border: medium solid $lightshade
-    //border: medium solid rgba($color: grey, $alpha: 0.5);
+    border: medium solid $lightshade;
 }
 
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-
-  @keyframes reverseRotation {
-    from {
-        transform: rotate(359deg);
-      }
-      to {
-        transform: rotate(0deg);
-      }
-  }
-
-  .rotateImg {
-    animation: rotation 20s linear infinite;
-}
-
- .skillImg {
-    animation: reverseRotation 20s linear infinite;
-}
 
 #skillsMask {
     display: none;
@@ -253,11 +226,17 @@ html, body {
     margin-top: -2.5vh;
 }
 
+#skillImgCont7 {
+    align-items: flex-start;
+}
+
+#skillImgCont2 {
+    justify-content: flex-end;
+}
+
 .skillImg {
     height: 3.5vh;
     width: 3.5vh;
-    //opacity: 0.5;
-    //filter: grayscale(1);
 }
 
 #skillImgMask {
@@ -265,7 +244,7 @@ html, body {
     position: absolute;
     background-color: $darkShade;
     width: inherit;
-    height: 4.6vh;
+    height: 15.6vh;
     bottom: 4.6vh;
     left: 5.4em;
     transform: rotate(115deg);
@@ -305,43 +284,88 @@ html, body {
 }
 
 /* About Me */
+#s2Footer {
+    height: 35vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 #aboutMe {
     z-index: 1;
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 35vh;
+    height: fit-content;
+    min-height: 20vh;
+    max-height: 35vh;
     width: 80vw;
-    padding: 0.5em;
     color: $darkShade;
     overflow: hidden;
     border-radius: 4px;
     background: $lightshade;
-    align-self: center;
     text-align: left;
     box-shadow: RGB(38 38 51 / 25%) 0px 13px 27px -5px, 
                 RGB(0 0 0 / 30%) -9px 10px 16px -8px;
 }
 
-#aboutMeTitle {
-    border-bottom: thin solid $darkShade;
-    padding-bottom: 0.2em;
+#aboutMeMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 4.6vw;
+    background-color: #fbf7ef;
+    z-index: 1;
+    border-radius: 4px 4px 0 0;
     font-weight: bold;
 }
 
-#aboutMeDesc {
+.menuNav {
+    padding: 0.2em;
+    text-align: center;
+    width: 100%;
+    border: solid thin $darkShade;
+    border-left: none;
+    border-top: 0;
+    opacity: 0.3;
+}
+
+#menuNav3 {
+    border-right: none;
+}
+
+.menuNav:hover {
+    opacity: 1;
+}
+
+
+.footerDesc {
     font-size: 2.5vh;
-    padding-top: 0.25em;
+    padding: 0.5em;
+}
+
+#aboutMeDesc {
+    display: block;
+}
+
+#backEndDesc {
+    display: none;
+}
+
+#frontEndDesc {
+    display: none;
 }
 
 #s2Accent2 {
+    font-size: 3.4vh;
     overflow: hidden;
     z-index: 0;
     opacity: 0.5;
     position: absolute;
-    height: 26em;
+    height: 41em;
     width: auto;
-    bottom: -6em;
+    bottom: -27em;
     right: 0;
     left: 0em;
 }
@@ -499,15 +523,22 @@ html, body {
     /* s1 - slide 1 */
 
     /* s2 - slide 2 */
-    #s2Accent2 {
-        bottom: -13em;
-        left: 0em;
+    #s2Accent1 {
+        top: 0;
+        margin: -13px 0;
     }
 
+    #s2Accent2 {
+        height: 63em;
+        bottom: -47em;
+        left: 0em;
+    }
+        
+    #aboutMeMenu {
+        font-size: 2.5vh;
+    }
 
     /* s3 - slide 3 */
-
-  
 
     .project {
         font-size: 3vh;
@@ -525,7 +556,6 @@ html, body {
     /* s1 - slide 1 */
 
     /* s2 - slide 2 */
-    
     #s2 {
         height: 120vh;
     }
@@ -535,12 +565,6 @@ html, body {
         font-size: 3.4vh;
         justify-content: space-between;
     }
-    /*
-    #s2Title {
-        font-size: 4vh;
-
-    }
-    */
 
     #s2Accent1 {
         top: 0;
@@ -559,15 +583,11 @@ html, body {
         bottom: 0;
         margin: -20px 0;
     }
-
     
     #aboutMe {
         height: 30vh;
         width: 50vw;
-        padding: 0.3em;
     }
-    
-
 
     /* s3 - slide 3 */
     #s3 {

@@ -2,6 +2,116 @@ var p1Counter = 0;
 var p2Counter = 0;
 var p3Counter = 0;
 
+function overBack() {
+
+    document.getElementById("skillImgMask").style.bottom = "5vh";
+    document.getElementById("skillImgMask").style.left = "14vh";
+
+    document.getElementById("skillsMask").style.border = "medium solid #fbf7ef";
+
+    document.getElementById("skillsMask").style.display = "block";
+
+    document.getElementById("skillImgMask").style.display = "block";
+
+    document.getElementById("aboutMeDesc").style.display = "none";
+
+    document.getElementById("frontEndDesc").style.display = "none";
+
+    document.getElementById("backEndDesc").style.display = "block";
+
+    document.getElementById("menuNav1").style.opacity = "0.3";
+
+    document.getElementById("menuNav1").style.borderRight = "none";
+
+    document.getElementById("menuNav2").style.opacity = "1";
+
+    document.getElementById("menuNav2").style.borderLeft = "solid thin #031634";
+
+    document.getElementById("menuNav2").style.borderRight = "solid thin #031634";
+
+
+    document.getElementById("menuNav3").style.opacity = "0.3";
+
+    document.getElementById("menuNav3").style.borderLeft = borderLeft = "none";;
+
+
+
+    setTimeout('document.getElementById("skillImg4").style.opacity = "1";', 100);
+    setTimeout('document.getElementById("skillImg5").style.opacity = "1";', 150);
+    setTimeout('document.getElementById("skillImg6").style.opacity = "1";', 200);
+    setTimeout('document.getElementById("skillImg7").style.opacity = "1";', 250);
+    setTimeout('document.getElementById("skillImg4").style.filter = "grayscale(0)";', 100);
+    setTimeout('document.getElementById("skillImg5").style.filter = "grayscale(0)";', 150);
+    setTimeout('document.getElementById("skillImg6").style.filter = "grayscale(0)";', 200);
+    setTimeout('document.getElementById("skillImg7").style.filter = "grayscale(0)";', 250);
+
+}
+
+function overFront() {
+
+    document.getElementById("skillsMask").style.display = "block";
+
+    document.getElementById("skillImgMask").style.display = "block";
+    
+    document.getElementById("skillsMask").style.border = "medium solid #fbf7ef";
+
+    document.getElementById("skillImgMask").style.bottom = "17vh";
+    document.getElementById("skillImgMask").style.left = "-13.7vh";
+
+    document.getElementById("aboutMeDesc").style.display = "none";
+
+    document.getElementById("backEndDesc").style.display = "none";
+
+    document.getElementById("menuNav2").style.borderRight = "none";
+
+    document.getElementById("frontEndDesc").style.display = "block";
+
+    document.getElementById("menuNav1").style.opacity = "0.3";
+
+    document.getElementById("menuNav2").style.opacity = "0.3";
+
+    document.getElementById("menuNav3").style.opacity = "1";
+
+    document.getElementById("menuNav3").style.borderLeft = "solid thin #031634";
+
+
+    setTimeout('document.getElementById("skillImg8").style.opacity = "1";', 100);
+    setTimeout('document.getElementById("skillImg1").style.opacity = "1";', 150);
+    setTimeout('document.getElementById("skillImg2").style.opacity = "1";', 200);
+    setTimeout('document.getElementById("skillImg3").style.opacity = "1";', 250);
+    setTimeout('document.getElementById("skillImg8").style.filter = "grayscale(0)";', 100);
+    setTimeout('document.getElementById("skillImg1").style.filter = "grayscale(0)";', 150);
+    setTimeout('document.getElementById("skillImg2").style.filter = "grayscale(0)";', 200);
+    setTimeout('document.getElementById("skillImg3").style.filter = "grayscale(0)";', 250);
+
+}
+
+function overAboutMe() {
+
+    document.getElementById("skillsMask").style.display = "none";
+
+    document.getElementById("skillImgMask").style.display = "none";
+    
+    document.getElementById("skillWheel").style.border = "medium solid #fbf7ef";
+
+    document.getElementById("aboutMeDesc").style.display = "block";
+
+    document.getElementById("backEndDesc").style.display = "none";
+
+    document.getElementById("frontEndDesc").style.display = "none";
+
+    document.getElementById("menuNav1").style.opacity = "1";
+
+    document.getElementById("menuNav1").style.borderRight = "solid thin #031634";
+
+    document.getElementById("menuNav2").style.opacity = "0.3";
+
+    document.getElementById("menuNav2").style.borderLeft = "none";
+
+    document.getElementById("menuNav3").style.opacity = "0.3";
+
+}
+
 function onClickProject(project, projectText, projectImg) {
     var projectId = project.id;
     var projectTextId = projectText.id;
