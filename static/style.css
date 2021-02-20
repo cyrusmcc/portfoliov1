@@ -164,9 +164,9 @@ html, body {
 
 #s2Accent1 {
   position: absolute;
-  top: -0.7vh;
+  top: -1vh;
   height: auto;
-  width: 100%;
+  width: 102%;
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
 }
@@ -432,7 +432,7 @@ html, body {
 
 #s2Accent3 {
   height: auto;
-  width: 100%;
+  width: 103%;
   position: absolute;
   bottom: -1vh;
 }
