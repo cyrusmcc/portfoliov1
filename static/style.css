@@ -28,6 +28,7 @@ html, body {
 
 /* S1 - Slide 1 */
 #s1 {
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -81,11 +82,13 @@ html, body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-user-drag: none;
 }
 
 #portrait {
   height: auto;
   width: 18vh;
+  -webkit-user-drag: none;
 }
 
 #nameRole {
@@ -174,6 +177,8 @@ html, body {
 #waveDown {
   width: inherit;
   height: inherit;
+  margin-top: -5px 0;
+  -webkit-user-drag: none;
 }
 
 #s2Content {
@@ -199,8 +204,10 @@ html, body {
 }
 
 #s2Title {
+  font-size: 4vh;
   color: #fbf7ef;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 2vh;
 }
 
 /* Skill wheel */
@@ -364,6 +371,7 @@ html, body {
 }
 
 #aboutMeMenu {
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -417,6 +425,7 @@ html, body {
 }
 
 #s2Accent2 {
+  -webkit-user-drag: none;
   font-size: 3.4vh;
   overflow: hidden;
   z-index: 0;
@@ -432,9 +441,11 @@ html, body {
 #gradientBlob {
   height: inherit;
   width: inherit;
+  -webkit-user-drag: none;
 }
 
 #s2Accent3 {
+  -webkit-user-drag: none;
   height: auto;
   width: 100%;
   position: absolute;
@@ -442,8 +453,10 @@ html, body {
 }
 
 #waveFaceUpWhite {
+  margin: -5px 0;
   height: inherit;
   width: inherit;
+  -webkit-user-drag: none;
 }
 
 /* S3 - Slide 3 */
@@ -464,11 +477,12 @@ html, body {
 }
 
 #s3Title {
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: #033649;
   border-radius: 3px;
   padding: 5px;
-  font-size: 1.1em;
+  font-size: 3.5vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -615,7 +629,7 @@ html, body {
   }
   #s2Accent2 {
     height: 63em;
-    bottom: -47em;
+    bottom: -49em;
     left: 0em;
   }
   #aboutMeMenu {
@@ -654,7 +668,7 @@ html, body {
     left: 5em;
   }
   #s2Accent3 {
-    bottom: 0;
+    bottom: -3vh;
     margin: -20px 0;
   }
   #aboutMe {
