@@ -8,7 +8,7 @@ $screen-lg: 1115px;
 
 $pHeight: 405vh;
 $s1H: 100vh;
-$s2H: 120vh;
+$s2H: 105vh;
 $s3H: 165vh;
 
 /* MIXINS */
@@ -63,6 +63,7 @@ html, body {
 
 /* S1 - Slide 1 */
 #s1 {
+    z-index: 1;
     font-family: 'Roboto', sans-serif;
     height: $s1H;
     width: 100%;
@@ -158,6 +159,7 @@ html, body {
 }
 
 #s2Accent1 {
+    z-index: 1;
     position: absolute;
     top: -1vh;
     height: auto;
@@ -175,18 +177,19 @@ html, body {
 #s2Content {
     @include flexCenter();
     justify-content: space-between;
-    height: 103vh;
+    margin-top: 3em;
+    height: 90vh;
     width: 100%;
-    overflow: hidden;
 
 }
+
 
 #s2Title {
-    font-size: 4vh;
+    font-size: 3.5vh;
     color: $lightshade;
     font-family: 'Roboto', sans-serif;
-    margin-top: 2vh;
 }
+
 
 /* Skill wheel */
 
@@ -254,42 +257,42 @@ html, body {
     transform: rotate(115deg);
 }
 
-#skillWheel .skillImgCont:nth-child(3) {
+#skillWheel .skillImgCont:nth-child(4) {
     transform: rotate(0deg) translate(19vh);
 }
 
-#skillWheel .skillImgCont:nth-child(4) {
+#skillWheel .skillImgCont:nth-child(5) {
     transform: rotate(45deg) translate(19vh) rotate(-45deg);
 }
 
-#skillWheel .skillImgCont:nth-child(5) {
+#skillWheel .skillImgCont:nth-child(6) {
     transform: rotate(90deg) translate(19vh) rotate(-90deg);
 
 }
 
-#skillWheel .skillImgCont:nth-child(6) {
+#skillWheel .skillImgCont:nth-child(7) {
     transform: rotate(135deg) translate(19vh) rotate(-135deg);
 }
 
-#skillWheel .skillImgCont:nth-child(7) {
+#skillWheel .skillImgCont:nth-child(8) {
     transform: rotate(180deg) translate(19vh) rotate(-180deg);
 }
 
-#skillWheel .skillImgCont:nth-child(8) {
+#skillWheel .skillImgCont:nth-child(9) {
     transform: rotate(225deg) translate(19vh) rotate(-225deg);
 }
 
-#skillWheel .skillImgCont:nth-child(9) {
+#skillWheel .skillImgCont:nth-child(10) {
     transform: rotate(270deg) translate(19vh) rotate(-270deg);
 }
 
-#skillWheel .skillImgCont:nth-child(10) {
+#skillWheel .skillImgCont:nth-child(11) {
     transform: rotate(315deg) translate(19vh) rotate(-315deg);
 }
 
 /* About Me */
 #s2Footer {
-    height: 35vh;
+    height: 42h;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -303,7 +306,7 @@ html, body {
     flex-direction: column;
     height: fit-content;
     min-height: 20vh;
-    max-height: 35vh;
+    max-height: 42vh;
     width: 80vw;
     color: $darkShade;
     overflow: hidden;
@@ -350,7 +353,8 @@ html, body {
 
 
 .footerDesc {
-    font-size: 2.5vh;
+    overflow-y: auto;
+    font-size: 2.4vh;
     padding: 0.5em;
 }
 
@@ -360,6 +364,22 @@ html, body {
 
 #backEndDesc {
     display: none;
+}
+
+.languages {
+    color: #e76f00;
+}
+
+.frameworks {
+    color: #68bd45;
+}
+
+.dB {
+    color: #014861;
+}
+
+.footDesc {
+    font-style: italic;
 }
 
 #frontEndDesc {

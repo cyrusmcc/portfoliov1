@@ -62,9 +62,9 @@
 
             <div class="content" id="s2Content">
 
-                <div class="title" id="s2Title">Skills</div>
-
                 <div id="skillWheel">
+
+                    <div class="title" id="s2Title">Skills</div>
 
                     <div class="mask" id="skillImgMask"></div>
 
@@ -110,11 +110,11 @@
                     <div id="aboutMe">
 
                     <div id="aboutMeMenu">
-                        <div class="menuNav" id="menuNav1" onmouseover="overAboutMe()">
+                        <div class="menuNav" id="menuNav1" onmouseover="onMouseOverSkill(this)">
                              <span class="navText">About me</span></div>
-                        <div class="menuNav" id="menuNav2" onmouseover="overBack()">
+                        <div class="menuNav" id="menuNav2" onmouseover="onMouseOverSkill(this)">
                              <span class="navText">Back End</span></div>
-                        <div class="menuNav" id="menuNav3" onmouseover="overFront()">
+                        <div class="menuNav" id="menuNav3" onmouseover="onMouseOverSkill(this)">
                              <span class="navText">Front End</span> </div>
                     </div>
 
@@ -126,7 +126,13 @@
                     </span>
 
                     <span class="footerDesc" id="backEndDesc">
-                        Java, Spring Framework, MySQL, Hibernate
+                        I have experience building applications in <span class="languages footDesc">Java</span> and <span class="languages footDesc">C</span>.
+                        When I develop the back ends for my projects I utilize the 
+                        <span class="frameworks footDesc">Spring framework</span> alongside the
+                        <span class="frameworks footDesc">Spring Boot, Spring Security, Spring MVC,</span>and <span class="frameworks footDesc">Spring REST</span>
+                        configurations. I use relational databases such as <span class="dB footDesc">MySQL</span> for my data
+                        persistence and tools such as <span class="dB footDesc">Hibernate & Spring JPA</span> to map the data
+                        to my programs.
                     </span>
 
                     <span class="footerDesc" id="frontEndDesc">
