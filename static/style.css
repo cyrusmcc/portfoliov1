@@ -333,7 +333,7 @@ html, body {
 
 /* About Me */
 #s2Footer {
-  height: 42h;
+  height: 42vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -712,6 +712,9 @@ html, body {
   .project {
     font-size: 2.3vh;
     width: 28%;
+  }
+  #p1Img1 {
+    width: 55%;
   }
   #s3Title {
     font-size: 4vh;
