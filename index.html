@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,32 +33,38 @@
                         <span id="firstName">Cyrus</span>
                         <span id="lastName">McCormick</span>
                     </div>
-                    
+
                     <div id="role">
                         Back End Web Dev
                     </div>
 
                 </div>
 
-                    <div class="linkCont" id="s1LinkCont">
+                <div class="linkCont" id="s1LinkCont">
 
-                        <a href="https://github.com/cyrusmcc" target="_blank" class="link" id="githubLink">github.com/cyrusmcc</a>
-                        <a href="https://www.linkedin.com/in/cyrusmcc/" target="_blank" class="link" id="linkedInLink">linkedin.com/in/cyrusmcc</a>
-                        <a href="mailto:cyrusmcc@hotmail.com" class="link" target="_blank" id="emailLink">cyrusmcc@hotmail.com</a>
-                        <a class="link" id="resume" href="">resume</a>
+                    <a href="https://github.com/cyrusmcc" target="_blank" class="link"
+                        id="githubLink">github.com/cyrusmcc</a>
+                    <a href="https://www.linkedin.com/in/cyrusmcc/" target="_blank" class="link"
+                        id="linkedInLink">linkedin.com/in/cyrusmcc</a>
+                    <a href="mailto:cyrusmcc@hotmail.com" class="link" target="_blank"
+                        id="emailLink">cyrusmcc@hotmail.com</a>
+                    <a class="link" id="resume" href="">resume</a>
 
-                    </div>
+                </div>
+
 
             </div>
 
-            </div>
+            <div id="arrow">></div>
+
+        </div>
 
 
 
         <div class="slide" id="s2">
 
             <div class="accent" id="s2Accent1">
-                <img id="waveDown"src="assets/wavefacedown.svg" alt="accent image">
+                <img id="waveDown" src="assets/wavefacedown.svg" alt="accent image">
             </div>
 
             <div class="content" id="s2Content">
@@ -83,7 +90,8 @@
                     </div>
 
                     <div class="skillImgCont" id="skillImgont4">
-                        <img class="skillImg" id="skillImg4" src="assets/hibernate.svg" alt="hibernate logo" id="hibernateImg">
+                        <img class="skillImg" id="skillImg4" src="assets/hibernate.svg" alt="hibernate logo"
+                            id="hibernateImg">
                     </div>
 
                     <div class="skillImgCont" id="skillImgCont5">
@@ -91,7 +99,8 @@
                     </div>
 
                     <div class="skillImgCont" id="skillImgCont6">
-                        <img class="skillImg" id="skillImg6" src="assets/spring.svg" alt="spring framework logo" id="springImg">
+                        <img class="skillImg" id="skillImg6" src="assets/spring.svg" alt="spring framework logo"
+                            id="springImg">
                     </div>
 
                     <div class="skillImgCont" id="skillImgCont7">
@@ -109,38 +118,50 @@
 
                     <div id="aboutMe">
 
-                    <div id="aboutMeMenu">
-                        <div class="menuNav" id="menuNav1" onmouseover="onMouseOverSkill(this)">
-                             <span class="navText">About me</span></div>
-                        <div class="menuNav" id="menuNav2" onmouseover="onMouseOverSkill(this)">
-                             <span class="navText">Back End</span></div>
-                        <div class="menuNav" id="menuNav3" onmouseover="onMouseOverSkill(this)">
-                             <span class="navText">Front End</span> </div>
+                        <div id="aboutMeMenu">
+                            <div class="menuNav" id="menuNav1" onclick="onClickSkill(this)">
+                                <span class="navText">About me</span>
+                            </div>
+                            <div class="menuNav" id="menuNav2" onclick="onClickSkill(this)">
+                                <span class="navText">Back End</span>
+                            </div>
+                            <div class="menuNav" id="menuNav3" onclick="onClickSkill(this)">
+                                <span class="navText">Front End</span>
+                            </div>
+                        </div>
+
+                        <span class="footerDesc" id="aboutMeDesc">
+                            Hello! My name is Cyrus, I am an undergraduate student majoring in Computer Science at the
+                            University of New Mexico.
+                            I am focused on developing full stack applications as I enjoy all parts of the development
+                            process, from inception to deployement and beyond.
+                            I believe that innovation stems from our commitment to the process of iteration. When I am
+                            not developing side projects I enjoy volunteering at the shelter
+                            and dabbling in wildlife photography. Iced tea and Scifi are two of my favorite things.
+                        </span>
+
+                        <span class="footerDesc" id="backEndDesc">
+                            I have experience building applications in <span class="languages footDesc">Java</span> and
+                            <span class="languages footDesc">C</span>.
+                            When I develop the back ends for my projects I utilize the
+                            <span class="frameworks footDesc">Spring framework</span> alongside the
+                            <span class="frameworks footDesc">Spring Boot, Spring Security, Spring MVC,</span>and <span
+                                class="frameworks footDesc">Spring REST</span>
+                            configurations. I use relational databases such as <span class="dB footDesc">MySQL</span>
+                            for my data
+                            persistence and tools such as <span class="dB footDesc">Hibernate & Spring JPA</span> to map
+                            the data
+                            to my programs.
+                        </span>
+
+                        <span class="footerDesc" id="frontEndDesc">
+                            I have experience building program clients using <span class="languages footDesc">HTML,
+                                CSS</span> and <span class="languages footDesc">JavaScript</span>.
+                            When I develop the front ends for my projects I utilize the
+                            <span class="frameworks footDesc">- framework</span>. I've used templating engines such as
+                            <span class="dB footDesc">Thymeleaf</span> to connect to
+                            data models in MVC based projects.
                     </div>
-
-                    <span class="footerDesc" id="aboutMeDesc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum, ullam, natus numquam voluptatibus
-                        vel ducimus consequatur dolorum modi animi necessitatibus consectetur quis quaerat assumenda? Debitis delectus
-                        libero perspiciatis. Similique maiores facere recusandae soluta et deleniti fugiat non illum quasi cumque.
-                        Itaque, quidem! Dolorem officiis excepturi eos animi exercitationem vero!
-                    </span>
-
-                    <span class="footerDesc" id="backEndDesc">
-                        I have experience building applications in <span class="languages footDesc">Java</span> and <span class="languages footDesc">C</span>.
-                        When I develop the back ends for my projects I utilize the 
-                        <span class="frameworks footDesc">Spring framework</span> alongside the
-                        <span class="frameworks footDesc">Spring Boot, Spring Security, Spring MVC,</span>and <span class="frameworks footDesc">Spring REST</span>
-                        configurations. I use relational databases such as <span class="dB footDesc">MySQL</span> for my data
-                        persistence and tools such as <span class="dB footDesc">Hibernate & Spring JPA</span> to map the data
-                        to my programs.
-                    </span>
-
-                    <span class="footerDesc" id="frontEndDesc">
-                        I have experience building program clients using <span class="languages footDesc">HTML, CSS</span> and <span class="languages footDesc">JavaScript</span>.
-                        When I develop the front ends for my projects I utilize the 
-                        <span class="frameworks footDesc">- framework</span>. I've used templating engines such as <span class="dB footDesc">Thymeleaf</span> to connect to
-                        data models in MVC based projects. 
-                </div>
 
                     <div class="accent" id="s2Accent2">
                         <img id="gradientBlob" src="assets/blob.svg">
@@ -166,39 +187,66 @@
 
                 <div id="projectCont">
 
-                    <fieldset class="project" id="p1" onclick="onClickProject(this, projectText1, p1Img1)">
+                    <fieldset class="project" id="p1" onclick="onClickProject(this, projectContent1, p1Img1)">
                         <legend class="projectLegend">Productivity Tracker</legend>
-                        <div class="projectText" id="projectText1"> <span>I needed a way to keep track of my daily tasks but I was unsatisfied with the various productivity tools online. 
-                                                                The new year was approaching and instead of buying a new planner or switching to a new program, I decided to build an application   
-                                                                that allowed me to keep track of my daily productivity levels without micromanaging my day,so I built <i>produceDaily</i>. </span>               
-                         </div>
-                         
-                         <div class="projectImg">
-                         <img id="p1Img1" src="assets/productivityimg.png" alt="image of productivity project">
-                        </div>
+                        <div class="projectContents" id="projectContent1">
+                            <div class="projectText" id="projectText1"> <span>I needed a way to keep track of my daily
+                                    tasks
+                                    but I was unsatisfied with the various productivity tools online.
+                                    The new year was approaching and instead of buying a new planner or switching to a
+                                    new
+                                    program, I decided to build an application
+                                    that allowed me to keep track of my daily productivity levels without micromanaging
+                                    my
+                                    day,so I built <i>produceDaily</i>. </span>
+                            </div>
 
-                        <div class="projectFooter">
-                            <div class="projectFooterTitle">Tech</div>
-                            <ul class="projectList">
-                                <li>Backend: Java, Spring Boot, Spring Data JPA, Spring Security, MySQL</li>
-                                <li>Frontend: HTML, SASS, JavaScript, Thymeleaf</li>
-                            </ul>
-                            <a class="projectLink" href="https://github.com/cyrusmcc/productivity-app">
-                                Github Repository</a>
-                        </div>
+                            <div class="projectImgCont">
+                                <img class="pImg" id="p1Img1" src="assets/productivityimg.png" alt="image of productivity project">
+                            </div>
 
+                            <div class="projectFooter">
+                                <div class="projectFooterTitle">Tech</div>
+                                <ul class="projectList">
+                                    <li>Backend: Java, Spring Boot, Spring Data JPA, Spring Security, MySQL</li>
+                                    <li>Frontend: HTML, SASS, JavaScript, Thymeleaf</li>
+                                </ul>
+                                <a class="projectLink" href="https://github.com/cyrusmcc/productivity-app">
+                                    Github Repository</a>
+                            </div>
+                        </div>
                     </fieldset>
 
-                    <fieldset class="project" id="p2" onclick="onClickProject(this, projectText2)">
-                        <legend class="projectLegend">WIP</legend>
-                        <div class="projectText" id="projectText2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
-                        <div class="projectButton" id="p2Button">+</div>
+                    <fieldset class="project" id="p2" onclick="onClickProject(this, projectContent2, p2Img1)">
+                        <legend class="projectLegend">Portfolio</legend>
+                        <div class="projectContents" id="projectContent2">
+                            <div class="projectText" id="projectText2">
+                                My personal portfolio site was developed to house my contact information, skills, and projects.
+                                This site also serves as an ongoing project that I can use to expand my front end skills and test 
+                                new technologies on.
+                            </div>
+
+                            <div class="projectImgCont" id="projectImgCont2">
+                                <div id="p2Img1Mask"></div>
+
+                                <img class="pImg" id="p2Img1" src="assets/portfoliogif.gif" alt="image of productivity project">
+                            
+                            </div>
+
+                            <div class="projectFooter">
+                                <div class="projectFooterTitle">Tech</div>
+                                <ul class="projectList">
+                                    <li>Frontend: HTML, SASS, JavaScript</li>
+                                </ul>
+                                <a class="projectLink" href="https://github.com/cyrusmcc/cyrusmcc.github.io">
+                                    Github Repository</a>
+                            </div>
+                        </div>
                     </fieldset>
 
                     <fieldset class="project" id="p3" onclick="onClickProject(this, projectText3)">
                         <legend class="projectLegend">WIP</legend>
-                        <div class="projectText" id="projectText3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit.</div>
-                        <div class="projectButton" id="p3Button">+</div>
+                        <div class="projectText" id="projectText3">To come</div>
                     </fieldset>
 
                 </div>
@@ -206,15 +254,14 @@
             </div>
 
 
-        </div> 
-
-
+        </div>
 
     </div>
 
-</div>
-    
+    </div>
+
     <script src="static/js/main.js"></script>
 
 </body>
+
 </html>

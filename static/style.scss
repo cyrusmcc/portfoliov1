@@ -63,6 +63,7 @@ html, body {
 
 /* S1 - Slide 1 */
 #s1 {
+    position: relative;
     z-index: 1;
     font-family: 'Roboto', sans-serif;
     height: $s1H;
@@ -75,7 +76,7 @@ html, body {
 
 #s1Content {
     @include flexCenter();
-    height: 80vh;
+    height: 90vh;
     animation: dropDownFade 2s;
 
 }
@@ -152,6 +153,16 @@ html, body {
     color: #025f60;
 }
 
+
+#arrow {
+    transform: rotate(90deg);
+    font-size: 2.8vh;
+    position: absolute;
+    bottom: 1em;
+    color: #031634;
+    animation: fadeIn 3s ease-in;
+}
+
 @keyframes dropDownFade {
     0% {
         transform: translate3d(0, -10px, 0);
@@ -180,7 +191,6 @@ html, body {
         opacity: 1;
     }
 }
-
 
 /* S2 - Slide 2 */
 #s2 {
@@ -325,7 +335,7 @@ html, body {
 
 /* About Me */
 #s2Footer {
-    height: 42vh;
+    height: 45vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -339,7 +349,7 @@ html, body {
     flex-direction: column;
     height: fit-content;
     min-height: 20vh;
-    max-height: 42vh;
+    max-height: 44vh;
     width: 80vw;
     color: $darkShade;
     overflow: hidden;
@@ -363,6 +373,7 @@ html, body {
 }
 
 .menuNav {
+    cursor: pointer;
     padding: 0.2em;
     text-align: center;
     width: 100%;
@@ -501,7 +512,7 @@ html, body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 45vh;
+    height: 35vh;
 }
 
 .projectImg {
@@ -560,7 +571,11 @@ html, body {
 
 .projectText {
     margin-top: 0.2em;
-    mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
+}
+
+.projectContents {
+    mask-image: linear-gradient(black 16%, transparent 26%);;
+
 }
 
 #p1 {
@@ -568,9 +583,28 @@ html, body {
     position: relative;
 }
 
-#p1Img1 {
+.projectImgCont {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 2em 0;
+}
+
+#p2Img1Mask {
+    background: #fbf7ef;
+    border: thick solid $lightshade;
+    border-radius: 3px;
+    height: 18em;
+    width: 65%;
+    opacity: 0.5;
+}
+
+#p2Img1 {
+    display: none;
+}
+
+.pImg {
     height: auto;
-    width: 85%;
+    width: 65%;
     border-radius: 3px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -590,15 +624,19 @@ html, body {
 
     /* s1 - slide 1 */
     #s1ImgCont1 {
-        height: 5.5em;
-        width: 5.5em;
+        height: 4em;
+        width: 4em;
     }
 
     #portrait {
-        width: 5.5em;
+        width: 4em;
     }
 
     /* s2 - slide 2 */
+    #s2Content {
+        margin-top: 2em;
+    }
+
     #s2Accent1 {
         top: 0;
         margin: -13px 0;
@@ -618,11 +656,7 @@ html, body {
 
     .project {
         font-size: 3vh;
-        width: 80%;
-    }
-
-    #p1Img1 {
-        width: 60%;
+        width: 65%;
     }
 
 }
@@ -631,7 +665,8 @@ html, body {
 
 
     .parent {
-        grid-template-rows: 100vh 120vh 165vh;
+        height: 265vh;
+        grid-template-rows: 100vh 120vh 45vh;
     }
 
     /* s1 - slide 1 */
@@ -651,9 +686,15 @@ html, body {
     }
 
     #s2Content {
+        margin-top: 3em;
         height: 90vh;
         font-size: 3.4vh;
         justify-content: space-between;
+    }
+
+    #s2Footer {
+        display: flex;
+        align-items: center;
     }
 
     #s2Accent1 {
@@ -694,6 +735,7 @@ html, body {
     .project {
         font-size: 2.3vh;
         width: 28%;
+        height: 26vh;
     }
 
     #s3Title {

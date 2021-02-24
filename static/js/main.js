@@ -2,7 +2,7 @@ var p1Counter = 0;
 var p2Counter = 0;
 var p3Counter = 0;
 
-function onMouseOverSkill(skillTab) {
+function onClickSkill(skillTab) {
 
     var skillSelect = skillTab.id;
 
@@ -178,9 +178,9 @@ function onClickProject(project, projectText, projectImg) {
        
         } else if(p1Counter == 1){
             
-            document.getElementById(projectId).style.height = "45vh";
+            document.getElementById(projectId).style.height = "26vh";
             
-            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(black 16%, transparent 26%)";
            
             document.getElementById(projectImg).style.opacity = "0.5";
 
@@ -194,7 +194,9 @@ function onClickProject(project, projectText, projectImg) {
        
             document.getElementById(projectId).style.height = "auto";
 
-            document.getElementById(projectImg).style.opacity = "1";
+            document.getElementById('p2Img1Mask').style.display = "none";
+
+            document.getElementById(projectImg).style.display = "block";
     
             document.getElementById(projectTextId).style.webkitMaskImage = "none";
    
@@ -202,12 +204,13 @@ function onClickProject(project, projectText, projectImg) {
        
         } else if(p2Counter == 1){
            
-            document.getElementById(projectId).style.height = "45vh";
+            document.getElementById(projectId).style.height = "26vh";
 
-            document.getElementById(projectImg).style.opacity = "0.5";
+            document.getElementById('p2Img1Mask').style.display = "block";
 
-           
-            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
+            document.getElementById(projectImg).style.display = "none";
+
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(black 16%, transparent 26%)";
            
             p2Counter = 0;
         }
@@ -219,7 +222,7 @@ function onClickProject(project, projectText, projectImg) {
         
             document.getElementById(projectId).style.height = "auto";
 
-            document.getElementById(projectImg).style.opacity = "1";
+            //document.getElementById(projectImg).style.opacity = "1";
     
             document.getElementById(projectTextId).style.webkitMaskImage = "none";
    
@@ -227,14 +230,13 @@ function onClickProject(project, projectText, projectImg) {
        
         } else if(p3Counter == 1){
            
-            document.getElementById(projectId).style.height = "45vh";
+            document.getElementById(projectId).style.height = "26vh";
 
             document.getElementById(projectImg).style.opacity = "0.5em";
            
-            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(to bottom, black 48%, transparent 96%)";
+            document.getElementById(projectTextId).style.webkitMaskImage = "linear-gradient(black 16%, transparent 26%)";
            
             p3Counter = 0;
         }
     }
-
 }

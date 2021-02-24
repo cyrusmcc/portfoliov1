@@ -28,6 +28,7 @@ html, body {
 
 /* S1 - Slide 1 */
 #s1 {
+  position: relative;
   z-index: 1;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
@@ -58,7 +59,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80vh;
+  height: 90vh;
   -webkit-animation: dropDownFade 2s;
           animation: dropDownFade 2s;
 }
@@ -147,6 +148,17 @@ html, body {
 
 #s1LinkCont *:hover {
   color: #025f60;
+}
+
+#arrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 2.8vh;
+  position: absolute;
+  bottom: 1em;
+  color: #031634;
+  -webkit-animation: fadeIn 3s ease-in;
+          animation: fadeIn 3s ease-in;
 }
 
 @-webkit-keyframes dropDownFade {
@@ -393,7 +405,7 @@ html, body {
 
 /* About Me */
 #s2Footer {
-  height: 42vh;
+  height: 45vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,7 +432,7 @@ html, body {
   height: -moz-fit-content;
   height: fit-content;
   min-height: 20vh;
-  max-height: 42vh;
+  max-height: 44vh;
   width: 80vw;
   color: #031634;
   overflow: hidden;
@@ -447,6 +459,7 @@ html, body {
 }
 
 .menuNav {
+  cursor: pointer;
   padding: 0.2em;
   text-align: center;
   width: 100%;
@@ -601,7 +614,7 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 45vh;
+  height: 35vh;
 }
 
 .projectImg {
@@ -670,10 +683,13 @@ html, body {
 
 .projectText {
   margin-top: 0.2em;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(48%, black), color-stop(96%, transparent));
-  -webkit-mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
-          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(48%, black), color-stop(96%, transparent));
-          mask-image: linear-gradient(to bottom, black 48%, transparent 96%);
+}
+
+.projectContents {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(16%, black), color-stop(26%, transparent));
+  -webkit-mask-image: linear-gradient(black 16%, transparent 26%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(16%, black), color-stop(26%, transparent));
+          mask-image: linear-gradient(black 16%, transparent 26%);
 }
 
 #p1 {
@@ -681,9 +697,32 @@ html, body {
   position: relative;
 }
 
-#p1Img1 {
+.projectImgCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em 0 2em 0;
+}
+
+#p2Img1Mask {
+  background: #fbf7ef;
+  border: thick solid #fbf7ef;
+  border-radius: 3px;
+  height: 18em;
+  width: 65%;
+  opacity: 0.5;
+}
+
+#p2Img1 {
+  display: none;
+}
+
+.pImg {
   height: auto;
-  width: 85%;
+  width: 65%;
   border-radius: 3px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -701,13 +740,16 @@ html, body {
 @media only screen and (min-width: 610px) {
   /* s1 - slide 1 */
   #s1ImgCont1 {
-    height: 5.5em;
-    width: 5.5em;
+    height: 4em;
+    width: 4em;
   }
   #portrait {
-    width: 5.5em;
+    width: 4em;
   }
   /* s2 - slide 2 */
+  #s2Content {
+    margin-top: 2em;
+  }
   #s2Accent1 {
     top: 0;
     margin: -13px 0;
@@ -723,17 +765,15 @@ html, body {
   /* s3 - slide 3 */
   .project {
     font-size: 3vh;
-    width: 80%;
-  }
-  #p1Img1 {
-    width: 60%;
+    width: 65%;
   }
 }
 
 @media only screen and (min-width: 1115px) {
   .parent {
-    -ms-grid-rows: 100vh 120vh 165vh;
-        grid-template-rows: 100vh 120vh 165vh;
+    height: 265vh;
+    -ms-grid-rows: 100vh 120vh 45vh;
+        grid-template-rows: 100vh 120vh 45vh;
   }
   /* s1 - slide 1 */
   #s1ImgCont1 {
@@ -748,11 +788,20 @@ html, body {
     height: 120vh;
   }
   #s2Content {
+    margin-top: 3em;
     height: 90vh;
     font-size: 3.4vh;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  #s2Footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #s2Accent1 {
     top: 0;
@@ -790,6 +839,7 @@ html, body {
   .project {
     font-size: 2.3vh;
     width: 28%;
+    height: 26vh;
   }
   #s3Title {
     font-size: 4vh;
