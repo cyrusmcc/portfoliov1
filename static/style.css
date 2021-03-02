@@ -236,6 +236,7 @@ html, body {
   background-color: #031634;
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 
 #s2Accent1 {
@@ -458,23 +459,21 @@ html, body {
   font-weight: bold;
 }
 
-.menuNav {
+#aboutMeMenu > div {
+  width: 100%;
   cursor: pointer;
   padding: 0.2em;
   text-align: center;
-  width: 100%;
-  border: solid thin #031634;
-  border-left: none;
-  border-top: 0;
+  border-bottom: solid thin #031634;
+}
+
+.menuNav {
   opacity: 0.3;
 }
 
-#menuNav1 {
+.selected {
+  text-align: center;
   opacity: 1;
-}
-
-#menuNav3 {
-  border-right: none;
 }
 
 .menuNav:hover {
@@ -543,16 +542,16 @@ html, body {
   bottom: -1vh;
 }
 
-#waveFaceUpWhite {
-  margin: -5px 0;
-  height: inherit;
-  width: inherit;
-  -webkit-user-drag: none;
-}
-
 /* S3 - Slide 3 */
 #s3 {
-  background-color: #fbf7ef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #031634;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -560,7 +559,14 @@ html, body {
   margin-bottom: 5vh;
 }
 
+#waveFaceUpWhite {
+  height: inherit;
+  width: inherit;
+  -webkit-user-drag: none;
+}
+
 #s3Content {
+  background-color: #fbf7ef;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -766,6 +772,9 @@ html, body {
   .project {
     font-size: 3vh;
     width: 65%;
+  }
+  .projectText {
+    font-size: 2.5vh;
   }
 }
 

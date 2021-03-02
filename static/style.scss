@@ -199,6 +199,7 @@ html, body {
     background-color: $darkShade;
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 #s2Accent1 {
@@ -372,29 +373,26 @@ html, body {
     font-weight: bold;
 }
 
-.menuNav {
+#aboutMeMenu > div {
+    width: 100%;
     cursor: pointer;
     padding: 0.2em;
     text-align: center;
-    width: 100%;
-    border: solid thin $darkShade;
-    border-left: none;
-    border-top: 0;
+    border-bottom: solid thin $darkShade;
+}
+
+.menuNav {
     opacity: 0.3;
 }
 
-#menuNav1 {
+.selected{
+    text-align: center;
     opacity: 1;
 }
 
-#menuNav3 {
-    border-right: none;
-}
-
-.menuNav:hover {
+ .menuNav:hover{
     opacity: 1;
 }
-
 
 .footerDesc {
     overflow-y: auto;
@@ -458,23 +456,24 @@ html, body {
     bottom: -1vh;
 }
 
+/* S3 - Slide 3 */
+#s3{
+    display: flex;
+    flex-direction: column;
+    background-color: $darkShade;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
 #waveFaceUpWhite {
-    margin: -5px 0;
     height: inherit;
     width: inherit;
     -webkit-user-drag: none;
 }
 
-/* S3 - Slide 3 */
-#s3{
-    background-color: $lightshade;
-    height: fit-content;
-    width: 100%;
-    margin-bottom: 5vh;
-
-}
-
 #s3Content {
+    background-color: $lightshade;
     max-height: fit-content;
     width: 100%;
 }
@@ -657,6 +656,10 @@ html, body {
     .project {
         font-size: 3vh;
         width: 65%;
+    }
+
+    .projectText {
+        font-size: 2.5vh;
     }
 
 }
