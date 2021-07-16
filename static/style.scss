@@ -111,7 +111,7 @@ html, body {
     text-align: center;
     font-size: 3.5vh;
     font-weight: bold;
-    margin-bottom: 0;
+    margin-bottom: 0.2em;
 }
 
 
@@ -133,11 +133,10 @@ html, body {
     margin: 0;
     font-size: 2.5vh;
     display: flex;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     height: 15em;
-    width: 15em;
+    width: 14em;
     border-radius: 4px;
     background-color: $lightshade;
     animation: fadeIn 3s ease-in;
@@ -146,32 +145,41 @@ html, body {
 #s1LinkCont * {
     text-decoration: none;
     color: $lightshade;
-    font-weight: bold;
     cursor: pointer;
 }
 
 #s1LinkCont *:hover {
-    color: $darkAccent;
+    color: $darkShade;
 }
 
 #s1linkContAccentContainer {
-    background-color: $lightAccent;
+    //background-color: $lightAccent;
     position: relative;
     padding: 0.5em;
     border-radius: 4px;
-    box-shadow: 0 4px 8px 0 RGB(0 0 0/20%), 0 6px 20px 0 RGB(0 0 0/19%);
+   // box-shadow: 0 4px 8px 0 RGB(0 0 0/20%), 0 6px 20px 0 RGB(0 0 0/19%);
 }
 
 .link-box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: $lightAccent;
     align-items: center;
-    padding: 0 0.8em 0 0.8em;
-    margin: 0.2em;
+    padding: 0 0.8em 0 0.2em;
+    margin: 0 0.2em 0 0.2em;
     border-radius: 4px;
     height: 2.2em;
+}
+
+.link-box-img-cont {
+    background-color: $lightshade;
+    height: 1.6em;
+    width: 1.6em;
+    border-radius: 4px;
+    margin: 0.2em 0.4em 0.2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link-box-img {
@@ -496,6 +504,8 @@ html, body {
     height: inherit;
     width: inherit;
     -webkit-user-drag: none;
+    position: absolute;
+    bottom: 0;
 }
 
 #s3Content {
@@ -657,6 +667,10 @@ html, body {
         width: 4em;
     }
 
+    #s1linkContAccentContainer {
+        padding: 0.3em;
+    }
+
     /* s2 - slide 2 */
     #s2Content {
         margin-top: 2em;
@@ -707,6 +721,10 @@ html, body {
 
     #portrait {
         width: 2.5em;
+    }
+    
+    #s1linkContAccentContainer {
+        padding: 0.1em;
     }
 
     /* s2 - slide 2 */

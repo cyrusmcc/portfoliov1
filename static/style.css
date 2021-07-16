@@ -100,7 +100,7 @@ html, body {
   text-align: center;
   font-size: 3.5vh;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: 0.2em;
 }
 
 #name {
@@ -123,16 +123,15 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 15em;
-  width: 15em;
+  width: 14em;
   border-radius: 4px;
   background-color: #fbf7ef;
   -webkit-animation: fadeIn 3s ease-in;
@@ -142,39 +141,49 @@ html, body {
 #s1LinkCont * {
   text-decoration: none;
   color: #fbf7ef;
-  font-weight: bold;
   cursor: pointer;
 }
 
 #s1LinkCont *:hover {
-  color: #033649;
+  color: #031634;
 }
 
 #s1linkContAccentContainer {
-  background-color: #025f60;
   position: relative;
   padding: 0.5em;
   border-radius: 4px;
-  -webkit-box-shadow: 0 4px 8px 0 RGB(0 0 0/20%), 0 6px 20px 0 RGB(0 0 0/19%);
-          box-shadow: 0 4px 8px 0 RGB(0 0 0/20%), 0 6px 20px 0 RGB(0 0 0/19%);
 }
 
 .link-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #025f60;
   align-items: center;
-  padding: 0 0.8em 0 0.8em;
-  margin: 0.2em;
+  padding: 0 0.8em 0 0.2em;
+  margin: 0 0.2em 0 0.2em;
   border-radius: 4px;
   height: 2.2em;
+}
+
+.link-box-img-cont {
+  background-color: #fbf7ef;
+  height: 1.6em;
+  width: 1.6em;
+  border-radius: 4px;
+  margin: 0.2em 0.4em 0.2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .link-box-img {
@@ -598,6 +607,8 @@ html, body {
   height: inherit;
   width: inherit;
   -webkit-user-drag: none;
+  position: absolute;
+  bottom: 0;
 }
 
 #s3Content {
@@ -787,6 +798,9 @@ html, body {
   #portrait {
     width: 4em;
   }
+  #s1linkContAccentContainer {
+    padding: 0.3em;
+  }
   /* s2 - slide 2 */
   #s2Content {
     margin-top: 2em;
@@ -826,6 +840,9 @@ html, body {
   }
   #portrait {
     width: 2.5em;
+  }
+  #s1linkContAccentContainer {
+    padding: 0.1em;
   }
   /* s2 - slide 2 */
   #s2 {
