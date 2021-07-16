@@ -65,10 +65,6 @@ html, body {
           animation: dropDownFade 2s;
 }
 
-#s1Content > div {
-  margin-bottom: .6em;
-}
-
 #s1ImgCont1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +72,9 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 50%;
   height: 7em;
   width: 7em;
@@ -88,12 +87,16 @@ html, body {
       -ms-user-select: none;
           user-select: none;
   -webkit-user-drag: none;
+  margin-bottom: 0.6em;
 }
 
 #portrait {
   height: auto;
-  width: 7em;
+  width: 7.6em;
   -webkit-user-drag: none;
+  margin-bottom: -0.4em;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 #nameRole {
@@ -106,6 +109,7 @@ html, body {
 #name {
   color: #033649;
   margin-bottom: 1vh;
+  margin-bottom: .6em;
 }
 
 #role {
