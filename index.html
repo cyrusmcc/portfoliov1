@@ -55,7 +55,9 @@
                             </div>
                             <p class="linkLabel">projects</p>
                         </a>
-                        <a class="link-box link" href="https://drive.google.com/file/d/1Gq9kmv63iCWPFrOY4SnLOnN63uMtlbaw/view?usp=sharing" target="_blank">
+                        <a class="link-box link"
+                            href="https://drive.google.com/file/d/1Gq9kmv63iCWPFrOY4SnLOnN63uMtlbaw/view?usp=sharing"
+                            target="_blank">
                             <div class="link-box-img-cont">
                                 <img class="link-box-img" src="/assets/resume.svg" alt="resume-icon">
                             </div>
@@ -67,7 +69,7 @@
                             </div>
                             <p class="linkLabel">/cyrusmcc</p>
                         </a>
-                        <a class="link-box link" href="https://www.linkedin.com/in/cyrusmcc/" target="_blank"> 
+                        <a class="link-box link" href="https://www.linkedin.com/in/cyrusmcc/" target="_blank">
                             <div class="link-box-img-cont">
                                 <img class="link-box-img" src="/assets/linkedin.svg" alt="linkedin-icon">
                             </div>
@@ -188,7 +190,8 @@
                             I have experience building program clients using <span class="languages footDesc">HTML,
                                 CSS</span> and <span class="languages footDesc">JavaScript</span>.
                             When I develop the front ends for my projects I utilize the
-                            <span class="frameworks footDesc">- framework</span>. I've used templating engines such as
+                            <span class="frameworks footDesc">Vue.js framework</span>. I've used templating engines such
+                            as
                             <span class="dB footDesc">Thymeleaf</span> to connect to
                             data models in MVC based projects.
                     </div>
@@ -277,9 +280,43 @@
                         </div>
                     </fieldset>
 
-                    <fieldset class="project" id="p3" onclick="onClickProject(this, projectText3)">
-                        <legend class="projectLegend">WIP</legend>
-                        <div class="projectText" id="projectText3">To come</div>
+                    <fieldset class="project" id="p3" onclick="onClickProject(this, projectContent3, p3Img1)">
+                        <legend class="projectLegend">Content Management App (WIP)</legend>
+                        <div class="projectContents" id="projectContent3">
+                            <div class="projectText" id="projectText3">
+                                <div class="projectText" id="projectText3">
+                                    While forming ideas for projects I wanted to build, I came to the conclusion
+                                    that most of my projects ideas require the same basic functionalities, so I decided
+                                    to build a content management "framework" that would allow me to easily deploy live
+                                    sites with minimal effort regardless of content type. This project is still heavily
+                                    a
+                                    WIP but will feature user accounts & profiles, authentication & authorization
+                                    through Jwt access & refresh tokens, as well as a flexible content creation system
+                                    that
+                                    will allow for quick addition of blog posts, forum threads, and site specific topic
+                                    content.
+                                </div>
+
+                                <div class="projectImgCont" id="projectImgCont3">
+                                    <div id="p3Img1Mask"></div>
+
+                                    <img class="pImg" id="p3Img1" src="assets/wipIcon.png"
+                                        alt="image of productivity project">
+
+                                </div>
+
+                                <div class="projectFooter">
+                                    <div class="projectFooterTitle">Tech</div>
+                                    <ul class="projectList">
+                                        <li>Backend: Java, Spring Boot, Spring Data JPA, Spring Security, MySQL</li>
+                                        <li>Frontend: HTML, SCSS, JavaScript, Vue.js</li>
+                                    </ul>
+                                    <a class="projectLink" href="https://github.com/cyrusmcc/content-management-app">
+                                        Github Repository</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </fieldset>
 
                 </div>
